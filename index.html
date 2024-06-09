@@ -5,24 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RBConsult 🇧🇭🇸🇦</title>
+
+    <script>
+      function detectTheme() {
+        if (
+          localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+
+      window.addEventListener("load", detectTheme);
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "selector",
+        theme: {
+          extend: {
+            colors: {
+              gold: "#B99855",
+            },
+          },
+        },
+      };
+    </script>
   </head>
-  <body class="bg-[#F3F4F6]">
+  <body class="bg-[#ffffff] dark:bg-[#1A1A1A] text-black dark:text-white">
     <div class="flex flex-col items-center h-screen justify-center">
-      <img src="/logo.png" alt="RBConsult logo" class="w-24 rounded-full" />
-      <h1 class="text-center text-4xl font-bold pt-4">
-        <span class="text-[#005430]">R</span
-        ><span class="text-[#DA291C]">B</span>Consult 🇧🇭🇸🇦
-      </h1>
+      <img
+        src="/logo/logo-square-transparent.png"
+        alt="RBConsult logo"
+        class="w-24 rounded-full"
+      />
+      <h1 class="text-center text-4xl font-bold pt-4 text-gold">RBConsult</h1>
       <h4 class="text-center text-xl">Consultation on its duly 🤝</h4>
 
-      <h3 class="text-2xl font-bold pt-8">Our Work</h3>
+      <h3 class="text-2xl font-bold pt-8 text-gold">Our Work</h3>
       <ul class="text-center">
         <li>💼 Management Consultancy</li>
         <li>💻 Computer Consultancy</li>
       </ul>
 
-      <h3 class="text-2xl font-bold pt-8">Contact Us</h3>
+      <h3 class="text-2xl font-bold pt-8 text-gold">Contact Us</h3>
       <div class="flex flex-row pt-2">
         <a href="mailto:info@rbconsult.bh" class="mx-2">
           <svg
@@ -30,7 +59,7 @@
             viewBox="0 0 512 512"
             width="24"
             height="24"
-            class="fill-[#000000] hover:scale-125 transition-all duration-300 ease-in-out"
+            class="dark:fill-[#ffffff] fill-[#000000] hover:fill-gold hover:scale-125 transition-all duration-300 ease-in-out"
           >
             <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <path
@@ -45,7 +74,7 @@
             viewBox="0 0 512 512"
             width="24"
             height="24"
-            class="fill-[#000000] hover:fill-[#1D9BF0] hover:scale-125 transition-all duration-300 ease-in-out"
+            class="dark:fill-[#ffffff] fill-[#000000] hover:fill-gold hover:scale-125 transition-all duration-300 ease-in-out"
           >
             <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <path
@@ -64,7 +93,7 @@
             viewBox="0 0 448 512"
             width="24"
             height="24"
-            class="fill-[#000000] hover:fill-[#FD2652] hover:scale-125 transition-all duration-300 ease-in-out"
+            class="dark:fill-[#ffffff] fill-[#000000] hover:fill-gold hover:scale-125 transition-all duration-300 ease-in-out"
           >
             <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <path
@@ -83,7 +112,7 @@
             viewBox="0 0 448 512"
             width="24"
             height="24"
-            class="fill-[#000000] hover:fill-[#0B66C2] hover:scale-125 transition-all duration-300 ease-in-out"
+            class="dark:fill-[#ffffff] fill-[#000000] hover:fill-gold hover:scale-125 transition-all duration-300 ease-in-out"
           >
             <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <path
@@ -98,7 +127,7 @@
             viewBox="0 0 496 512"
             width="24"
             height="24"
-            class="fill-[#000000] hover:scale-125 transition-all duration-300 ease-in-out"
+            class="dark:fill-[#ffffff] fill-[#000000] hover:fill-gold hover:scale-125 transition-all duration-300 ease-in-out"
           >
             <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
             <path
@@ -116,5 +145,22 @@
         </div>
       </footer>
     </div>
+
+    <script>
+      function setLight() {
+        localStorage.theme = "light";
+        detectTheme();
+      }
+
+      function setDark() {
+        localStorage.theme = "dark";
+        detectTheme();
+      }
+
+      function setSystem() {
+        localStorage.removeItem("theme");
+        detectTheme();
+      }
+    </script>
   </body>
 </html>
