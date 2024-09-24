@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PostHog by RBConsult</title>
+
+    <script>
+      function detectTheme() {
+        if (
+          localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+
+      window.addEventListener("load", detectTheme);
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "selector",
+        theme: {
+          extend: {
+            colors: {
+              gold: "#B99855",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-white text-xl">
+    <h1 class="text-center text-5xl font-bold pt-8 pb-4 text-gold">
+      PostHog <span class="font-normal text-2xl">by RBConsult</span>
+    </h1>
+
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+      <p class="text-2xl mb-8">
+        تطبيق PostHog يسمح لك بتحسين تجربة عميلك واكتشاف أين تواجههم المشاكل!
+      </p>
+
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold mb-6">مميزات التطبيق:</h2>
+        <ul class="list-disc list-inside space-y-4">
+          <li>تخيّل أنك تشوف العميل ايش سوا في الموقع طيلة استخدامه له!</li>
+          <li>
+            حرفيّا كانّك تتفرج على فيديو، ولكن أكيد المعلومات الحسّاسة يتم طمسها
+            عشان حماية معلومات العميل 🔒.
+          </li>
+          <li>
+            تقدر تتطلع على إحصائيات مفصّلة تعلمك من وين الناس تدخل، أي صفحات
+            يدخلون، عدد الناس اللي اللي دخلوا في يوم معين.
+          </li>
+          <li>تقدر تقارن فترات مخصصة.</li>
+        </ul>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-center mb-12">
+        <img
+          src="images/feature-1.png"
+          alt="تحسين تجربة العميل"
+          class="w-full md:w-1/3"
+        />
+        <img
+          src="images/feature-2.png"
+          alt="إحصائيات مفصّلة"
+          class="w-full md:w-1/3"
+        />
+        <img
+          src="images/feature-3.png"
+          alt="تكامل سهل"
+          class="w-full md:w-1/3"
+        />
+      </div>
+
+      <p class="text-2xl mb-8">
+        كل هذا وأكثر في الباقة المجانية من PostHog اللي تكفّي وتوفّي وزيادة. كل
+        اللي عليك تزور موقع منصة PostHog، تشوف اللي يقدمونه، وإذا جاز لك، نزل
+        هذا التطبيق عشان تربطه مع متجرك في سلّة.
+      </p>
+
+      <p class="text-3xl font-bold text-center">يومك سعيد 😃</p>
+    </div>
+  </body>
+</html>
