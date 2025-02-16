@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      // Run theme detection immediately
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,20 +30,76 @@
       content="https://rbconsult.bh/logo/logo-square-dark-bg.png"
     />
 
-    <script>
-      function detectTheme() {
-        if (
-          localStorage.theme === "dark" ||
-          (!("theme" in localStorage) &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
+    <style>
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
 
-      window.addEventListener("load", detectTheme);
+      .animate-fade-up {
+        opacity: 0;
+        animation: fadeUp 0.5s ease-out forwards;
+        will-change: opacity, transform;
+      }
+
+      .delay-1 {
+        animation-delay: 0.05s;
+      }
+      .delay-2 {
+        animation-delay: 0.1s;
+      }
+      .delay-3 {
+        animation-delay: 0.15s;
+      }
+      .delay-4 {
+        animation-delay: 0.2s;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        will-change: opacity, transform;
+      }
+
+      .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+
+    <script>
+      // Intersection Observer for fade-in sections
+      document.addEventListener("DOMContentLoaded", function () {
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        document.querySelectorAll(".fade-in-section").forEach((section) => {
+          observer.observe(section);
+        });
+      });
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -55,16 +123,20 @@
           <img
             src="/logo/logo-square-transparent.png"
             alt="RBConsult logo"
-            class="w-32 rounded-full shadow-lg"
+            class="w-32 rounded-full shadow-lg animate-fade-up"
           />
-          <h1 class="text-5xl font-bold mt-8 text-gold">RBConsult</h1>
-          <p class="text-xl mt-4 text-gray-600 dark:text-gray-300">
+          <h1 class="text-5xl font-bold mt-8 text-gold animate-fade-up delay-1">
+            RBConsult
+          </h1>
+          <p
+            class="text-xl mt-4 text-gray-600 dark:text-gray-300 animate-fade-up delay-2"
+          >
             Empowering businesses through expert consultation 🤝
           </p>
-          <div class="mt-8">
+          <div class="mt-8 animate-fade-up delay-3">
             <a
               href="#contact"
-              class="bg-gold hover:bg-[#A88744] text-white px-8 py-3 rounded-full transition-all duration-300 inline-block"
+              class="bg-gold hover:bg-[#A88744] text-white px-8 py-3 rounded-full transition-all duration-300 inline-block hover:scale-105"
               >Get in Touch</a
             >
           </div>
@@ -72,7 +144,7 @@
       </div>
 
       <!-- Services Section -->
-      <div class="bg-gray-50 dark:bg-[#222222] py-16">
+      <div class="bg-gray-50 dark:bg-[#222222] py-16 fade-in-section">
         <div class="container mx-auto px-4">
           <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold text-center text-gold mb-4">
@@ -192,7 +264,7 @@
       </div>
 
       <!-- Clients Section -->
-      <div class="py-16">
+      <div class="py-16 fade-in-section">
         <div class="container mx-auto px-4">
           <div class="max-w-3xl mx-auto">
             <h2 class="text-3xl font-bold text-center text-gold mb-12">
@@ -218,7 +290,10 @@
       </div>
 
       <!-- Contact Section -->
-      <div class="bg-gray-50 dark:bg-[#222222] py-16" id="contact">
+      <div
+        class="bg-gray-50 dark:bg-[#222222] py-16 fade-in-section"
+        id="contact"
+      >
         <div class="container mx-auto px-4">
           <div class="max-w-3xl mx-auto text-center">
             <h2 class="text-3xl font-bold text-gold mb-8">Let's Connect</h2>
@@ -313,7 +388,7 @@
       </div>
 
       <!-- Footer -->
-      <footer class="py-8">
+      <footer class="py-8 fade-in-section">
         <div class="container mx-auto px-4">
           <p
             class="text-sm text-gray-600 dark:text-gray-400 font-semibold text-center"

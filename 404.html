@@ -1,10 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      // Run theme detection immediately
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Not Found - RBConsult 🇧🇭🇸🇦</title>
+    <style>
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-up {
+        opacity: 0;
+        animation: fadeUp 0.5s ease-out forwards;
+        will-change: opacity, transform;
+      }
+
+      .delay-1 {
+        animation-delay: 0.05s;
+      }
+      .delay-2 {
+        animation-delay: 0.1s;
+      }
+      .delay-3 {
+        animation-delay: 0.15s;
+      }
+      .delay-4 {
+        animation-delay: 0.2s;
+      }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -17,20 +60,6 @@
           },
         },
       };
-
-      function detectTheme() {
-        if (
-          localStorage.theme === "dark" ||
-          (!("theme" in localStorage) &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
-      }
-
-      window.addEventListener("load", detectTheme);
     </script>
   </head>
   <body class="bg-[#ffffff] dark:bg-[#1A1A1A] text-black dark:text-white">
@@ -41,25 +70,33 @@
             <img
               src="/logo/logo-square-transparent.png"
               alt="RBConsult logo"
-              class="w-24 rounded-full shadow-lg mx-auto"
+              class="w-24 rounded-full shadow-lg mx-auto animate-fade-up"
             />
           </a>
-          <h1 class="text-6xl font-bold text-gold mb-4">404</h1>
-          <h2 class="text-2xl font-semibold mb-4">Page Not Found</h2>
-          <p class="text-gray-600 dark:text-gray-300 mb-8">
+          <h1 class="text-6xl font-bold text-gold mb-4 animate-fade-up delay-1">
+            404
+          </h1>
+          <h2 class="text-2xl font-semibold mb-4 animate-fade-up delay-2">
+            Page Not Found
+          </h2>
+          <p
+            class="text-gray-600 dark:text-gray-300 mb-8 animate-fade-up delay-2"
+          >
             Oops! The page you're looking for doesn't exist. Let's get you back
             on track.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up delay-3"
+          >
             <a
               href="/"
-              class="bg-gold hover:bg-[#A88744] text-white px-8 py-3 rounded-full transition-all duration-300 inline-block"
+              class="bg-gold hover:bg-[#A88744] text-white px-8 py-3 rounded-full transition-all duration-300 inline-block hover:scale-105"
             >
               Return Home
             </a>
             <a
               href="mailto:info@rbconsult.bh"
-              class="border-2 border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-full transition-all duration-300 inline-block"
+              class="border-2 border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-full transition-all duration-300 inline-block hover:scale-105"
             >
               Contact Support
             </a>
