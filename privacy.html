@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RBConsult 🇧🇭🇸🇦</title>
+    <meta
+      name="description"
+      content="RBConsult offers management and computer consultations on their duly!"
+    />
+
+    <meta property="og:title" content="RBConsult 🇧🇭🇸🇦" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rbconsult.bh" />
+    <meta
+      property="og:image"
+      content="https://rbconsult.bh/logo/logo-square-dark-bg.png"
+    />
+
+    <script>
+      function detectTheme() {
+        if (
+          localStorage.theme === "dark" ||
+          (!("theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      }
+
+      window.addEventListener("load", detectTheme);
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "selector",
+        theme: {
+          extend: {
+            colors: {
+              gold: "#B99855",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-[#ffffff] dark:bg-[#1A1A1A] text-black dark:text-white">
+    <div class="flex flex-col items-center min-h-screen justify-center px-4">
+      <a href="/" class="mb-8">
+        <img
+          src="/logo/logo-square-transparent.png"
+          alt="RBConsult logo"
+          class="w-24 rounded-full"
+        />
+      </a>
+      <h1 class="text-center text-4xl font-bold text-gold mb-8">
+        Privacy Policy
+      </h1>
+
+      <div class="max-w-2xl w-full space-y-6">
+        <section>
+          <h2 class="text-2xl font-bold text-gold mb-4">
+            Our Commitment to Privacy
+          </h2>
+          <p class="text-gray-800 dark:text-gray-200">
+            At RBConsult, we take your privacy seriously. We believe in being
+            transparent about our practices while protecting your personal
+            information.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gold mb-4">Data Collection</h2>
+          <p class="text-gray-800 dark:text-gray-200">
+            Our website does not use cookies or tracking tools. We do not
+            collect any personal information through our website.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gold mb-4">
+            Communication Records
+          </h2>
+          <p class="text-gray-800 dark:text-gray-200">
+            When you contact us through email or other communication channels:
+          </p>
+          <ul class="list-disc pl-6 mt-2 text-gray-800 dark:text-gray-200">
+            <li>Your messages and correspondence will be saved and archived</li>
+            <li>This information is used solely for business purposes</li>
+            <li>
+              We maintain these records to provide better service and maintain
+              business relationships
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gold mb-4">Data Security</h2>
+          <p class="text-gray-800 dark:text-gray-200">
+            We implement appropriate security measures to protect any
+            information shared with us through our communication channels.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gold mb-4">Contact Us</h2>
+          <p class="text-gray-800 dark:text-gray-200">
+            If you have any questions about our privacy practices, please
+            contact us at
+            <a href="mailto:info@rbconsult.bh" class="text-gold hover:underline"
+              >info@rbconsult.bh</a
+            >
+          </p>
+        </section>
+      </div>
+
+      <footer class="w-full mt-16 mb-4">
+        <div class="px-4 py-4">
+          <p class="text-sm text-gray-600 font-semibold text-center">
+            2024 © RIYADH AL BAHRAIN CONSULTANCY W.L.L<br />CR No. 175236-1
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
