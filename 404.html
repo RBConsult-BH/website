@@ -1,108 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
-    <script>
-      // Run theme detection immediately
-      if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    </script>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Not Found - RBConsult 🇧🇭🇸🇦</title>
-    <style>
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate-fade-up {
-        opacity: 0;
-        animation: fadeUp 0.5s ease-out forwards;
-        will-change: opacity, transform;
-      }
-
-      .delay-1 {
-        animation-delay: 0.05s;
-      }
-      .delay-2 {
-        animation-delay: 0.1s;
-      }
-      .delay-3 {
-        animation-delay: 0.15s;
-      }
-      .delay-4 {
-        animation-delay: 0.2s;
+    <title>404 - الصفحة غير موجودة</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-gold: #B99855;
+        --color-gold-dark: #A88744;
       }
     </style>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "selector",
-        theme: {
-          extend: {
-            colors: {
-              gold: "#B99855",
-            },
-          },
-        },
-      };
-    </script>
   </head>
-  <body class="bg-[#ffffff] dark:bg-[#1A1A1A] text-black dark:text-white">
-    <div class="min-h-screen flex items-center justify-center">
-      <div class="container mx-auto px-4">
-        <div class="max-w-2xl mx-auto text-center">
-          <a href="/" class="inline-block mb-8">
-            <img
-              src="/logo/logo-square-transparent.png"
-              alt="RBConsult logo"
-              class="w-24 rounded-full shadow-lg mx-auto animate-fade-up"
-            />
+  <body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors">
+    <!-- Language Toggle -->
+    <div class="fixed top-4 left-4 rtl:left-auto rtl:right-4 z-50">
+      <button
+        onclick="toggleLanguage()"
+        class="px-3 py-1.5 text-sm bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-lg transition-colors"
+      >
+        <span class="lang-ar">EN</span>
+        <span class="lang-en hidden">AR</span>
+      </button>
+    </div>
+
+    <div class="min-h-screen flex items-center justify-center px-4">
+      <div class="max-w-md w-full text-center">
+        <!-- Logo -->
+        <a href="/">
+          <img
+            src="/logo/logo-square-transparent.png"
+            alt="RBConsult"
+            class="w-16 h-16 mx-auto mb-8 rounded-2xl shadow-lg hover:scale-105 transition-transform"
+          />
+        </a>
+
+        <!-- 404 -->
+        <h1 class="text-7xl font-bold text-gold mb-4">404</h1>
+        
+        <!-- Message -->
+        <h2 class="text-2xl font-semibold mb-4">
+          <span class="lang-ar">الصفحة غير موجودة</span>
+          <span class="lang-en hidden">Page Not Found</span>
+        </h2>
+        
+        <p class="text-zinc-600 dark:text-zinc-400 mb-8">
+          <span class="lang-ar">عذراً، لا يمكننا العثور على الصفحة التي تبحث عنها</span>
+          <span class="lang-en hidden">Sorry, we couldn't find the page you're looking for</span>
+        </p>
+
+        <!-- Actions -->
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="/"
+            class="px-6 py-2.5 bg-gold hover:bg-gold-dark text-white rounded-lg font-medium transition-colors"
+          >
+            <span class="lang-ar">العودة للرئيسية</span>
+            <span class="lang-en hidden">Back to Home</span>
           </a>
-          <h1 class="text-6xl font-bold text-gold mb-4 animate-fade-up delay-1">
-            404
-          </h1>
-          <h2 class="text-2xl font-semibold mb-4 animate-fade-up delay-2">
-            Page Not Found
-          </h2>
-          <p
-            class="text-gray-600 dark:text-gray-300 mb-8 animate-fade-up delay-2"
+          <a
+            href="mailto:info@rbconsult.bh"
+            class="px-6 py-2.5 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-900 rounded-lg font-medium transition-colors"
           >
-            Oops! The page you're looking for doesn't exist. Let's get you back
-            on track.
-          </p>
-          <div
-            class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up delay-3"
-          >
-            <a
-              href="/"
-              class="bg-gold hover:bg-[#A88744] text-white px-8 py-3 rounded-full transition-all duration-300 inline-block hover:scale-105"
-            >
-              Return Home
-            </a>
-            <a
-              href="mailto:info@rbconsult.bh"
-              class="border-2 border-gold text-gold hover:bg-gold hover:text-white px-8 py-3 rounded-full transition-all duration-300 inline-block hover:scale-105"
-            >
-              Contact Support
-            </a>
-          </div>
+            <span class="lang-ar">تواصل معنا</span>
+            <span class="lang-en hidden">Contact Us</span>
+          </a>
         </div>
       </div>
     </div>
+
+    <script>
+      // Theme detection
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+
+      // Language toggle
+      let currentLang = localStorage.getItem('language') || 'ar';
+      
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('language', lang);
+        
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        
+        // Toggle visibility of language-specific content
+        document.querySelectorAll('.lang-ar').forEach(el => {
+          el.classList.toggle('hidden', lang !== 'ar');
+        });
+        document.querySelectorAll('.lang-en').forEach(el => {
+          el.classList.toggle('hidden', lang !== 'en');
+        });
+        
+        // Update page title
+        document.title = lang === 'ar' 
+          ? '404 - الصفحة غير موجودة'
+          : '404 - Page Not Found';
+      }
+      
+      function toggleLanguage() {
+        setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+      }
+      
+      // Initialize language
+      setLanguage(currentLang);
+    </script>
   </body>
 </html>

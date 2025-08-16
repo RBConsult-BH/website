@@ -1,129 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RBConsult 🇧🇭🇸🇦</title>
+    <title>سياسة الخصوصية - RBConsult</title>
     <meta
       name="description"
-      content="RBConsult offers management and computer consultations on their duly!"
+      content="سياسة الخصوصية لشركة RBConsult - نحمي معلوماتك ونحترم خصوصيتك"
     />
-
-    <meta property="og:title" content="RBConsult 🇧🇭🇸🇦" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rbconsult.bh" />
-    <meta
-      property="og:image"
-      content="https://rbconsult.bh/logo/logo-square-dark-bg.png"
-    />
-
-    <script>
-      function detectTheme() {
-        if (
-          localStorage.theme === "dark" ||
-          (!("theme" in localStorage) &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-        ) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
-        }
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-gold: #B99855;
+        --color-gold-dark: #A88744;
       }
-
-      window.addEventListener("load", detectTheme);
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "selector",
-        theme: {
-          extend: {
-            colors: {
-              gold: "#B99855",
-            },
-          },
-        },
-      };
-    </script>
+    </style>
   </head>
-  <body class="bg-[#ffffff] dark:bg-[#1A1A1A] text-black dark:text-white">
-    <div class="flex flex-col items-center min-h-screen justify-center px-4">
-      <a href="/" class="mb-8">
-        <img
-          src="/logo/logo-square-transparent.png"
-          alt="RBConsult logo"
-          class="w-24 rounded-full"
-        />
-      </a>
-      <h1 class="text-center text-4xl font-bold text-gold mb-8">
-        Privacy Policy
-      </h1>
+  <body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors">
+    <!-- Language Toggle -->
+    <div class="fixed top-4 left-4 rtl:left-auto rtl:right-4 z-50">
+      <button
+        onclick="toggleLanguage()"
+        class="px-3 py-1.5 text-sm bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-lg transition-colors"
+      >
+        <span class="lang-ar">EN</span>
+        <span class="lang-en hidden">AR</span>
+      </button>
+    </div>
 
-      <div class="max-w-2xl w-full space-y-6">
-        <section>
-          <h2 class="text-2xl font-bold text-gold mb-4">
-            Our Commitment to Privacy
-          </h2>
-          <p class="text-gray-800 dark:text-gray-200">
-            At RBConsult, we take your privacy seriously. We believe in being
-            transparent about our practices while protecting your personal
-            information.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-2xl font-bold text-gold mb-4">Data Collection</h2>
-          <p class="text-gray-800 dark:text-gray-200">
-            Our website does not use cookies or tracking tools. We do not
-            collect any personal information through our website.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-2xl font-bold text-gold mb-4">
-            Communication Records
-          </h2>
-          <p class="text-gray-800 dark:text-gray-200">
-            When you contact us through email or other communication channels:
-          </p>
-          <ul class="list-disc pl-6 mt-2 text-gray-800 dark:text-gray-200">
-            <li>Your messages and correspondence will be saved and archived</li>
-            <li>This information is used solely for business purposes</li>
-            <li>
-              We maintain these records to provide better service and maintain
-              business relationships
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 class="text-2xl font-bold text-gold mb-4">Data Security</h2>
-          <p class="text-gray-800 dark:text-gray-200">
-            We implement appropriate security measures to protect any
-            information shared with us through our communication channels.
-          </p>
-        </section>
-
-        <section>
-          <h2 class="text-2xl font-bold text-gold mb-4">Contact Us</h2>
-          <p class="text-gray-800 dark:text-gray-200">
-            If you have any questions about our privacy practices, please
-            contact us at
-            <a href="mailto:info@rbconsult.bh" class="text-gold hover:underline"
-              >info@rbconsult.bh</a
-            >
-          </p>
-        </section>
+    <div class="min-h-screen">
+      <!-- Header -->
+      <div class="border-b border-zinc-200 dark:border-zinc-800 py-4">
+        <div class="container max-w-4xl mx-auto px-4">
+          <a href="/" class="inline-flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <img
+              src="/logo/logo-square-transparent.png"
+              alt="RBConsult"
+              class="w-10 h-10 rounded-xl"
+            />
+            <span class="font-semibold">RBConsult</span>
+          </a>
+        </div>
       </div>
 
-      <footer class="w-full mt-16 mb-4">
-        <div class="px-4 py-4">
-          <p class="text-sm text-gray-600 font-semibold text-center">
-            2024 © RIYADH AL BAHRAIN CONSULTANCY W.L.L<br />CR No. 175236-1
+      <!-- Content -->
+      <div class="container max-w-4xl mx-auto px-4 py-16">
+        <h1 class="text-3xl font-bold mb-8">
+          <span class="lang-ar">سياسة الخصوصية</span>
+          <span class="lang-en hidden">Privacy Policy</span>
+        </h1>
+
+        <div class="prose prose-zinc dark:prose-invert max-w-none">
+          <!-- Introduction -->
+          <section class="mb-8">
+            <p class="text-lg text-zinc-600 dark:text-zinc-400">
+              <span class="lang-ar">نحن في RBConsult نلتزم بحماية خصوصيتك ومعلوماتك الشخصية. توضح هذه السياسة كيف نتعامل مع البيانات.</span>
+              <span class="lang-en hidden">At RBConsult, we are committed to protecting your privacy and personal information. This policy explains how we handle data.</span>
+            </p>
+          </section>
+
+          <!-- No Tracking -->
+          <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">
+              <span class="lang-ar">عدم التتبع</span>
+              <span class="lang-en hidden">No Tracking</span>
+            </h2>
+            <div class="bg-zinc-50 dark:bg-zinc-900 p-6 rounded-lg">
+              <p>
+                <span class="lang-ar">🔒 موقعنا لا يستخدم ملفات تعريف الارتباط (Cookies) أو أي أدوات تتبع. نحن لا نجمع أي معلومات شخصية من خلال الموقع.</span>
+                <span class="lang-en hidden">🔒 Our website does not use cookies or any tracking tools. We do not collect any personal information through the website.</span>
+              </p>
+            </div>
+          </section>
+
+          <!-- Communication -->
+          <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">
+              <span class="lang-ar">سجلات التواصل</span>
+              <span class="lang-en hidden">Communication Records</span>
+            </h2>
+            <p class="mb-4">
+              <span class="lang-ar">عند التواصل معنا عبر البريد الإلكتروني أو قنوات التواصل الأخرى:</span>
+              <span class="lang-en hidden">When you contact us via email or other communication channels:</span>
+            </p>
+            <ul class="list-disc pr-6 space-y-2 text-zinc-700 dark:text-zinc-300">
+              <li>
+                <span class="lang-ar">نحتفظ بسجلات المراسلات لأغراض العمل فقط</span>
+                <span class="lang-en hidden">We keep correspondence records for business purposes only</span>
+              </li>
+              <li>
+                <span class="lang-ar">نستخدم هذه المعلومات لتحسين خدماتنا والحفاظ على علاقات العمل</span>
+                <span class="lang-en hidden">We use this information to improve our services and maintain business relationships</span>
+              </li>
+              <li>
+                <span class="lang-ar">لن نشارك معلوماتك مع أطراف ثالثة دون موافقتك</span>
+                <span class="lang-en hidden">We will not share your information with third parties without your consent</span>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Data Security -->
+          <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">
+              <span class="lang-ar">أمان البيانات</span>
+              <span class="lang-en hidden">Data Security</span>
+            </h2>
+            <p>
+              <span class="lang-ar">نطبق إجراءات أمنية مناسبة لحماية أي معلومات يتم مشاركتها معنا من خلال قنوات التواصل.</span>
+              <span class="lang-en hidden">We implement appropriate security measures to protect any information shared with us through communication channels.</span>
+            </p>
+          </section>
+
+          <!-- Contact -->
+          <section class="mb-8">
+            <h2 class="text-xl font-semibold mb-4">
+              <span class="lang-ar">تواصل معنا</span>
+              <span class="lang-en hidden">Contact Us</span>
+            </h2>
+            <p>
+              <span class="lang-ar">إذا كان لديك أي أسئلة حول سياسة الخصوصية، يرجى التواصل معنا:</span>
+              <span class="lang-en hidden">If you have any questions about our privacy policy, please contact us:</span>
+            </p>
+            <div class="mt-4">
+              <a
+                href="mailto:info@rbconsult.bh"
+                class="inline-flex items-center gap-2 text-gold hover:text-gold-dark transition-colors"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+                info@rbconsult.bh
+              </a>
+            </div>
+          </section>
+
+          <!-- Last Updated -->
+          <section class="pt-8 border-t border-zinc-200 dark:border-zinc-800">
+            <p class="text-sm text-zinc-500">
+              <span class="lang-ar">آخر تحديث: يناير 2025</span>
+              <span class="lang-en hidden">Last updated: January 2025</span>
+            </p>
+          </section>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="border-t border-zinc-200 dark:border-zinc-800 py-8 mt-auto">
+        <div class="container max-w-4xl mx-auto px-4">
+          <p class="text-sm text-zinc-600 dark:text-zinc-400 text-center">
+            © <span id="year"></span> RIYADH AL BAHRAIN CONSULTANCY W.L.L<br />
+            CR No. 175236-1
           </p>
         </div>
       </footer>
     </div>
+
+    <script>
+      // Theme detection
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+
+      // Language toggle
+      let currentLang = localStorage.getItem('language') || 'ar';
+      
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('language', lang);
+        
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        
+        // Toggle visibility of language-specific content
+        document.querySelectorAll('.lang-ar').forEach(el => {
+          el.classList.toggle('hidden', lang !== 'ar');
+        });
+        document.querySelectorAll('.lang-en').forEach(el => {
+          el.classList.toggle('hidden', lang !== 'en');
+        });
+        
+        // Update page title
+        document.title = lang === 'ar' 
+          ? 'سياسة الخصوصية - RBConsult'
+          : 'Privacy Policy - RBConsult';
+      }
+      
+      function toggleLanguage() {
+        setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+      }
+      
+      // Initialize language
+      setLanguage(currentLang);
+      
+      // Set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

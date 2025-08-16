@@ -1,27 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
-    <script>
-      // Run theme detection immediately
-      if (
-        localStorage.theme === "dark" ||
-        (!("theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
-    </script>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RBConsult 🇧🇭🇸🇦</title>
+    <title>RBConsult - استشارات تقنية احترافية</title>
     <meta
       name="description"
-      content="RBConsult offers management and computer consultations on their duly!"
+      content="نساعد الشركات في التحول الرقمي وتطوير الحلول التقنية المبتكرة"
     />
-
     <meta property="og:title" content="RBConsult 🇧🇭🇸🇦" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rbconsult.bh" />
@@ -30,378 +16,216 @@
       content="https://rbconsult.bh/logo/logo-square-dark-bg.png"
     />
 
-    <style>
-      @keyframes fadeUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .animate-fade-up {
-        opacity: 0;
-        animation: fadeUp 0.5s ease-out forwards;
-        will-change: opacity, transform;
-      }
-
-      .delay-1 {
-        animation-delay: 0.05s;
-      }
-      .delay-2 {
-        animation-delay: 0.1s;
-      }
-      .delay-3 {
-        animation-delay: 0.15s;
-      }
-      .delay-4 {
-        animation-delay: 0.2s;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      .fade-in-section {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-        will-change: opacity, transform;
-      }
-
-      .fade-in-section.is-visible {
-        opacity: 1;
-        transform: translateY(0);
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-gold: #B99855;
+        --color-gold-dark: #A88744;
       }
     </style>
-
-    <script>
-      // Intersection Observer for fade-in sections
-      document.addEventListener("DOMContentLoaded", function () {
-        const observerOptions = {
-          root: null,
-          rootMargin: "0px",
-          threshold: 0.1,
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
-        }, observerOptions);
-
-        document.querySelectorAll(".fade-in-section").forEach((section) => {
-          observer.observe(section);
-        });
-      });
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "selector",
-        theme: {
-          extend: {
-            colors: {
-              gold: "#B99855",
-            },
-          },
-        },
-      };
-    </script>
   </head>
-  <body class="bg-[#ffffff] dark:bg-[#1A1A1A] text-black dark:text-white">
-    <div class="min-h-screen">
-      <!-- Hero Section -->
-      <div class="container mx-auto px-4 py-16">
-        <div class="flex flex-col items-center text-center max-w-3xl mx-auto">
-          <img
-            src="/logo/logo-square-transparent.png"
-            alt="RBConsult logo"
-            class="w-32 rounded-full shadow-lg animate-fade-up"
-          />
-          <h1 class="text-5xl font-bold mt-8 text-gold animate-fade-up delay-1">
-            RBConsult
-          </h1>
-          <p
-            class="text-xl mt-4 text-gray-600 dark:text-gray-300 animate-fade-up delay-2"
-          >
-            Empowering businesses through expert consultation 🤝
-          </p>
-          <div class="mt-8 animate-fade-up delay-3">
-            <a
-              href="#contact"
-              class="bg-gold hover:bg-[#A88744] text-white px-8 py-3 rounded-full transition-all duration-300 inline-block hover:scale-105"
-              >Get in Touch</a
-            >
-          </div>
-        </div>
-      </div>
-
-      <!-- Clients Section -->
-      <div class="bg-gray-50 dark:bg-[#222222] py-16 fade-in-section">
-        <div class="container mx-auto px-4">
-          <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gold mb-12">
-              Trusted By
-            </h2>
-            <div class="flex justify-center">
-              <a href="https://abyancapital.sa" target="_blank" class="group">
-                <div
-                  class="bg-white dark:bg-[#2A2A2A] dark:border dark:border-[#404040] rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:scale-105 dark:hover:border-gold"
-                >
-                  <div class="w-48 h-16 flex items-center justify-center">
-                    <img
-                      src="/clients/abyan-capital.png"
-                      alt="Abyan Capital"
-                      class="max-w-full max-h-full grayscale group-hover:grayscale-0 transition-all duration-300 dark:brightness-[1.15]"
-                    />
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Services Section -->
-      <div class="py-16 fade-in-section">
-        <div class="container mx-auto px-4">
-          <div class="max-w-3xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-gold mb-4">
-              Technical Consultancy
-            </h2>
-            <p class="text-center text-gray-600 dark:text-gray-300 mb-12">
-              Empowering businesses with expert technical solutions and
-              integrations
-            </p>
-            <div class="grid md:grid-cols-2 gap-8">
-              <div
-                class="bg-white dark:bg-[#2A2A2A] p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full"
-              >
-                <div>
-                  <div class="text-4xl mb-4">📱</div>
-                  <h3 class="text-xl font-semibold mb-2">
-                    SDK Integration Services
-                  </h3>
-                  <p class="text-gray-600 dark:text-gray-300">
-                    Specialized in Adjust SDK implementation and analytics
-                    integration for mobile applications
-                  </p>
-                  <ul class="mt-4 text-gray-600 dark:text-gray-300 space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-gold mr-2">•</span>
-                      Setup and configuration
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-gold mr-2">•</span>
-                      Event tracking implementation
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-gold mr-2">•</span>
-                      Performance optimization
-                    </li>
-                  </ul>
-                </div>
-                <div class="mt-auto pt-6">
-                  <a
-                    href="mailto:info@rbconsult.bh?subject=SDK%20Integration%20Services%20Inquiry&body=Hi%2C%0A%0AI'm%20interested%20in%20your%20SDK%20integration%20services.%20I'd%20like%20to%20discuss%3A%0A%0A-%20Project%20requirements%0A-%20Timeline%0A-%20Integration%20needs%0A%0ALooking%20forward%20to%20hearing%20from%20you."
-                    class="inline-flex items-center text-sm bg-gold hover:bg-[#A88744] text-white px-4 py-2 rounded-lg transition-all duration-300"
-                  >
-                    <span class="mr-2">Request SDK Service</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div
-                class="bg-white dark:bg-[#2A2A2A] p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col h-full"
-              >
-                <div>
-                  <div class="text-4xl mb-4">🎨</div>
-                  <h3 class="text-xl font-semibold mb-2">UI/UX Consultation</h3>
-                  <p class="text-gray-600 dark:text-gray-300">
-                    Expert guidance on user interface and experience design
-                  </p>
-                  <ul class="mt-4 text-gray-600 dark:text-gray-300 space-y-2">
-                    <li class="flex items-start">
-                      <span class="text-gold mr-2">•</span>
-                      User experience analysis
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-gold mr-2">•</span>
-                      Interface optimization
-                    </li>
-                    <li class="flex items-start">
-                      <span class="text-gold mr-2">•</span>
-                      Design system consultation
-                    </li>
-                  </ul>
-                </div>
-                <div class="mt-auto pt-6">
-                  <a
-                    href="mailto:info@rbconsult.bh?subject=UI%2FUX%20Consultation%20Inquiry&body=Hi%2C%0A%0AI'm%20interested%20in%20your%20UI%2FUX%20consultation%20services.%20I'd%20like%20to%20discuss%3A%0A%0A-%20Current%20challenges%0A-%20Project%20scope%0A-%20Design%20needs%0A%0ALooking%20forward%20to%20hearing%20from%20you."
-                    class="inline-flex items-center text-sm bg-gold hover:bg-[#A88744] text-white px-4 py-2 rounded-lg transition-all duration-300"
-                  >
-                    <span class="mr-2">Request UI/UX Service</span>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="mt-12 text-center">
-              <p class="text-sm text-gray-500 dark:text-gray-400">
-                Successfully implemented Adjust SDK integration for Abyan
-                Capital and other clients
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Contact Section -->
-      <div
-        class="bg-gray-50 dark:bg-[#222222] py-16 fade-in-section"
-        id="contact"
+  <body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors">
+    <!-- Language Toggle -->
+    <div class="fixed top-4 left-4 rtl:left-auto rtl:right-4 z-50">
+      <button
+        onclick="toggleLanguage()"
+        class="px-3 py-1.5 text-sm bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-lg transition-colors"
       >
-        <div class="container mx-auto px-4">
+        <span class="lang-ar">EN</span>
+        <span class="lang-en hidden">AR</span>
+      </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="min-h-screen flex flex-col">
+      <!-- Trusted By Section (Top) -->
+      <div class="border-b border-zinc-200 dark:border-zinc-800 py-3">
+        <div class="container max-w-6xl mx-auto px-4">
+          <div class="flex items-center justify-center gap-4">
+            <span class="text-sm text-zinc-500 dark:text-zinc-400">
+              <span class="lang-ar">موثوق من</span>
+              <span class="lang-en hidden">Trusted by</span>
+            </span>
+            <a
+              href="https://abyancapital.sa"
+              target="_blank"
+              class="group flex items-center"
+            >
+              <img
+                src="/clients/abyan-capital.png"
+                alt="Abyan Capital"
+                class="h-8 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <div class="flex-1 flex items-center">
+        <div class="container max-w-6xl mx-auto px-4 py-20">
           <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-gold mb-8">Let's Connect</h2>
-            <p class="text-gray-600 dark:text-gray-300 mb-8">
-              Reach out to us through any of these channels
+            <!-- Logo -->
+            <img
+              src="/logo/logo-square-transparent.png"
+              alt="RBConsult"
+              class="w-20 h-20 mx-auto mb-8 rounded-2xl shadow-lg"
+            />
+
+            <!-- Main Headline -->
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              <span class="lang-ar">استشارات تقنية تحول أفكارك إلى واقع</span>
+              <span class="lang-en hidden">Technical consulting that transforms ideas into reality</span>
+            </h1>
+
+            <!-- Subheadline -->
+            <p class="text-xl text-zinc-600 dark:text-zinc-400 mb-12 max-w-2xl mx-auto">
+              <span class="lang-ar">نساعد الشركات في بناء حلول تقنية متقدمة من خلال خبرة عميقة في تكامل الأنظمة وتحليل البيانات</span>
+              <span class="lang-en hidden">We help companies build advanced technical solutions through deep expertise in system integration and data analytics</span>
             </p>
-            <div class="flex justify-center items-center space-x-6">
-              <a href="mailto:info@rbconsult.bh" class="group">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  width="32"
-                  height="32"
-                  class="dark:fill-[#ffffff] fill-[#000000] group-hover:fill-gold transition-all duration-300"
-                >
-                  <path
-                    d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
-                  />
-                </svg>
+
+            <!-- CTA -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <a
+                href="mailto:info@rbconsult.bh?subject=استشارة%20تقنية"
+                class="px-8 py-3 bg-gold hover:bg-gold-dark text-white rounded-lg font-medium transition-colors"
+              >
+                <span class="lang-ar">ابدأ مشروعك</span>
+                <span class="lang-en hidden">Start Your Project</span>
               </a>
               <a
-                href="https://twitter.com/rbconsult_bh"
-                target="_blank"
-                class="group"
+                href="#services"
+                class="px-8 py-3 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-900 rounded-lg font-medium transition-colors"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  width="32"
-                  height="32"
-                  class="dark:fill-[#ffffff] fill-[#000000] group-hover:fill-gold transition-all duration-300"
-                >
-                  <path
-                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-                  />
-                </svg>
+                <span class="lang-ar">اكتشف خدماتنا</span>
+                <span class="lang-en hidden">Explore Services</span>
               </a>
-              <a
-                href="https://instagram.com/rbconsult_bh"
-                target="_blank"
-                class="group"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                  width="32"
-                  height="32"
-                  class="dark:fill-[#ffffff] fill-[#000000] group-hover:fill-gold transition-all duration-300"
-                >
-                  <path
-                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://www.linkedin.com/company/rbconsult-bh"
-                target="_blank"
-                class="group"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                  width="32"
-                  height="32"
-                  class="dark:fill-[#ffffff] fill-[#000000] group-hover:fill-gold transition-all duration-300"
-                >
-                  <path
-                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="https://github.com/RBConsult-BH"
-                target="_blank"
-                class="group"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 496 512"
-                  width="32"
-                  height="32"
-                  class="dark:fill-[#ffffff] fill-[#000000] group-hover:fill-gold transition-all duration-300"
-                >
-                  <path
-                    d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                  />
-                </svg>
-              </a>
+            </div>
+
+            <!-- Key Services -->
+            <div id="services" class="grid md:grid-cols-3 gap-6 text-right rtl:text-right ltr:text-left">
+              <!-- SDK Integration -->
+              <div class="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-xl">
+                <div class="text-3xl mb-3">🔧</div>
+                <h3 class="font-semibold mb-2">
+                  <span class="lang-ar">تكامل SDK</span>
+                  <span class="lang-en hidden">SDK Integration</span>
+                </h3>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  <span class="lang-ar">خبرة متخصصة في دمج Adjust SDK وأدوات التحليل للتطبيقات</span>
+                  <span class="lang-en hidden">Specialized expertise in Adjust SDK and analytics integration for apps</span>
+                </p>
+              </div>
+
+              <!-- System Architecture -->
+              <div class="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-xl">
+                <div class="text-3xl mb-3">🏗️</div>
+                <h3 class="font-semibold mb-2">
+                  <span class="lang-ar">بنية الأنظمة</span>
+                  <span class="lang-en hidden">System Architecture</span>
+                </h3>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  <span class="lang-ar">تصميم وبناء أنظمة قابلة للتوسع وآمنة</span>
+                  <span class="lang-en hidden">Design and build scalable, secure systems</span>
+                </p>
+              </div>
+
+              <!-- Data Analytics -->
+              <div class="p-6 bg-zinc-50 dark:bg-zinc-900 rounded-xl">
+                <div class="text-3xl mb-3">📊</div>
+                <h3 class="font-semibold mb-2">
+                  <span class="lang-ar">تحليل البيانات</span>
+                  <span class="lang-en hidden">Data Analytics</span>
+                </h3>
+                <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                  <span class="lang-ar">حلول متقدمة لتتبع الأداء واتخاذ القرارات</span>
+                  <span class="lang-en hidden">Advanced solutions for performance tracking and decision making</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Footer -->
-      <footer class="py-8 fade-in-section">
-        <div class="container mx-auto px-4">
-          <p
-            class="text-sm text-gray-600 dark:text-gray-400 font-semibold text-center"
-          >
-            &copy; <span id="year"></span> RIYADH AL BAHRAIN CONSULTANCY W.L.L<br />
-            CR No. 175236-1 — All rights reserved.
-          </p>
+      <footer class="border-t border-zinc-200 dark:border-zinc-800 py-8">
+        <div class="container max-w-6xl mx-auto px-4">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-sm text-zinc-600 dark:text-zinc-400 text-center md:text-right">
+              © <span id="year"></span> RIYADH AL BAHRAIN CONSULTANCY W.L.L<br />
+              CR No. 175236-1
+            </div>
+            <div class="flex items-center gap-6">
+              <a href="/privacy.html" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
+                <span class="lang-ar">الخصوصية</span>
+                <span class="lang-en hidden">Privacy</span>
+              </a>
+              <a href="mailto:info@rbconsult.bh" class="text-zinc-600 dark:text-zinc-400 hover:text-gold">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+              </a>
+              <a href="https://twitter.com/rbconsult_bh" target="_blank" class="text-zinc-600 dark:text-zinc-400 hover:text-gold">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/company/rbconsult-bh" target="_blank" class="text-zinc-600 dark:text-zinc-400 hover:text-gold">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a href="https://github.com/RBConsult-BH" target="_blank" class="text-zinc-600 dark:text-zinc-400 hover:text-gold">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
+      // Theme detection
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+
+      // Language toggle
+      let currentLang = localStorage.getItem('language') || 'ar';
+      
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('language', lang);
+        
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        
+        // Toggle visibility of language-specific content
+        document.querySelectorAll('.lang-ar').forEach(el => {
+          el.classList.toggle('hidden', lang !== 'ar');
+        });
+        document.querySelectorAll('.lang-en').forEach(el => {
+          el.classList.toggle('hidden', lang !== 'en');
+        });
+        
+        // Update page title
+        document.title = lang === 'ar' 
+          ? 'RBConsult - استشارات تقنية احترافية'
+          : 'RBConsult - Professional Technical Consulting';
+      }
+      
+      function toggleLanguage() {
+        setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+      }
+      
+      // Initialize language
+      setLanguage(currentLang);
+      
+      // Set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
