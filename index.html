@@ -393,10 +393,15 @@
           <p
             class="text-sm text-gray-600 dark:text-gray-400 font-semibold text-center"
           >
-            2025 © RIYADH AL BAHRAIN CONSULTANCY W.L.L<br />CR No. 175236-1
+            &copy; <span id="year"></span> RIYADH AL BAHRAIN CONSULTANCY W.L.L<br />
+            CR No. 175236-1 — All rights reserved.
           </p>
         </div>
       </footer>
     </div>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
