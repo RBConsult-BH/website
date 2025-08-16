@@ -22,6 +22,25 @@
         --color-gold: #B99855;
         --color-gold-dark: #A88744;
       }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(185, 152, 85, 0.3); }
+        50% { box-shadow: 0 0 30px rgba(185, 152, 85, 0.6); }
+      }
+      
+      @keyframes gradient-x {
+        0%, 100% { transform: translateX(0%); }
+        50% { transform: translateX(100%); }
+      }
+      
+      .float-animation { animation: float 3s ease-in-out infinite; }
+      .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+      .gradient-animate { animation: gradient-x 8s ease infinite; }
     </style>
   </head>
   <body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors">
@@ -38,145 +57,293 @@
 
     <!-- Main Container -->
     <div class="min-h-screen flex flex-col">
-      <!-- Trusted By Section (Top) -->
-      <div class="border-b border-zinc-200 dark:border-zinc-800 py-3">
-        <div class="container max-w-6xl mx-auto px-4">
-          <div class="flex items-center justify-center gap-4">
-            <span class="text-sm text-zinc-500 dark:text-zinc-400">
-              <span class="lang-ar">موثوق من</span>
-              <span class="lang-en hidden">Trusted by</span>
-            </span>
-            <a
-              href="https://abyancapital.sa"
-              target="_blank"
-              class="group flex items-center"
-            >
-              <img
-                src="/clients/abyan-capital.png"
-                alt="Abyan Capital"
-                class="h-8 grayscale hover:grayscale-0 transition-all opacity-70 hover:opacity-100"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
 
       <!-- Hero Section -->
-      <div class="flex-1 flex items-center">
-        <div class="container max-w-6xl mx-auto px-4 py-20">
-          <div class="max-w-3xl mx-auto text-center">
+      <div class="flex-1 flex items-center relative overflow-hidden min-h-screen">
+        <!-- Background Grid -->
+        <div class="absolute inset-0 -z-10">
+          <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-gold/20 via-gold/5 to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container max-w-7xl mx-auto px-4 py-20 relative">
+          <!-- Stats Bar -->
+          <div class="flex justify-center mb-12">
+            <div class="inline-flex items-center gap-8 px-6 py-3 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-full">
+              <div class="flex items-center gap-2">
+                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                <span class="text-sm font-medium">
+                  <span class="lang-ar">متاح الآن</span>
+                  <span class="lang-en hidden">Available now</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="max-w-5xl mx-auto text-center">
             <!-- Logo -->
-            <img
-              src="/logo/logo-square-transparent.png"
-              alt="RBConsult"
-              class="w-20 h-20 mx-auto mb-8 rounded-2xl shadow-lg"
-            />
+            <div class="mb-8">
+              <img
+                src="/logo/logo-square-transparent.png"
+                alt="RBConsult"
+                class="w-20 h-20 mx-auto rounded-2xl shadow-lg float-animation"
+              />
+            </div>
 
             <!-- Main Headline -->
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">
-              <span class="lang-ar">استشارات تقنية تحول أفكارك إلى واقع</span>
-              <span class="lang-en hidden">Technical consulting that transforms ideas into reality</span>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight tracking-tight">
+              <span class="lang-ar" style="line-height: 1.2;">
+                <span class="block mb-4">نصمم ونطور</span>
+                <span class="block bg-gradient-to-r from-gold via-gold-dark to-gold bg-clip-text text-transparent">تطبيقات مميزة</span>
+              </span>
+              <span class="lang-en hidden">
+                <span class="block mb-4">We design & build</span>
+                <span class="block bg-gradient-to-r from-gold via-gold-dark to-gold bg-clip-text text-transparent">exceptional apps</span>
+              </span>
             </h1>
 
-            <!-- Subheadline -->
-            <p class="text-xl text-zinc-600 dark:text-zinc-400 mb-12 max-w-2xl mx-auto">
-              <span class="lang-ar">نساعد الشركات في بناء حلول تقنية متقدمة من خلال فريق متخصص في تطوير التطبيقات وتحليل البيانات</span>
-              <span class="lang-en hidden">We help companies build advanced technical solutions through our specialized team in app development and data analytics</span>
-            </p>
+            <!-- Value Props -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+              <div class="px-4 py-2 bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm rounded-full border border-zinc-200/50 dark:border-zinc-700/50">
+                <span class="text-sm font-semibold">
+                  <span class="lang-ar">📱 تطوير كامل</span>
+                  <span class="lang-en hidden">📱 Full Development</span>
+                </span>
+              </div>
+              <div class="px-4 py-2 bg-gold/10 backdrop-blur-sm rounded-full border border-gold/30">
+                <span class="text-sm font-semibold text-gold">
+                  <span class="lang-ar">🎯 Adjust SDK</span>
+                  <span class="lang-en hidden">🎯 Adjust SDK</span>
+                </span>
+              </div>
+            </div>
 
             <!-- CTA -->
             <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
               <a
-                href="mailto:info@rbconsult.bh?subject=استشارة%20تقنية"
-                class="px-8 py-3 bg-gold hover:bg-gold-dark text-white rounded-lg font-medium transition-colors"
+                href="#contact"
+                class="group relative px-10 py-5 bg-gradient-to-r from-gold to-gold-dark text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl text-center overflow-hidden"
               >
-                <span class="lang-ar">ابدأ مشروعك</span>
-                <span class="lang-en hidden">Start Your Project</span>
+                <div class="absolute inset-0 bg-gradient-to-r from-gold-dark to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span class="relative flex items-center justify-center gap-2">
+                  <span class="lang-ar">ابدأ مشروعي</span>
+                  <span class="lang-en hidden">Start My Project</span>
+                  <svg class="w-5 h-5 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </span>
               </a>
               <a
-                href="#services"
-                class="px-8 py-3 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-900 rounded-lg font-medium transition-colors"
+                href="#contact"
+                onclick="selectConsultation()"
+                class="group px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-zinc-300/50 dark:border-zinc-700/50 hover:border-gold/50 hover:bg-gold/5 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 text-center"
               >
-                <span class="lang-ar">اكتشف خدماتنا</span>
-                <span class="lang-en hidden">Explore Services</span>
+                <span class="lang-ar">استشارة مجانية</span>
+                <span class="lang-en hidden">Free Consultation</span>
               </a>
             </div>
 
-            <!-- What We Do -->
-            <div id="services" class="space-y-8">
-              <!-- Main Service -->
-              <div class="bg-zinc-50 dark:bg-zinc-900 rounded-xl p-8">
-                <div class="text-4xl mb-4 text-center">📱</div>
-                <h3 class="text-2xl font-bold text-center mb-4">
-                  <span class="lang-ar">تطوير تطبيقات من الألف إلى الياء</span>
-                  <span class="lang-en hidden">End-to-End App Development</span>
-                </h3>
-                <div class="grid md:grid-cols-4 gap-4 text-center">
-                  <div>
-                    <div class="text-2xl mb-2">🎨</div>
-                    <p class="text-sm font-medium">
-                      <span class="lang-ar">تصميم</span>
-                      <span class="lang-en hidden">Design</span>
-                    </p>
+            <!-- Social Proof -->
+            <div class="text-center mb-24">
+              <p class="text-sm text-zinc-500 dark:text-zinc-400 mb-4">
+                <span class="lang-ar">يثق بنا</span>
+                <span class="lang-en hidden">Trusted by</span>
+              </p>
+              <div class="flex justify-center">
+                <a href="https://abyancapital.sa" target="_blank" class="group">
+                  <img
+                    src="/clients/abyan-capital.png"
+                    alt="Abyan Capital"
+                    class="h-8 grayscale group-hover:grayscale-0 transition-all duration-300 opacity-60 group-hover:opacity-100"
+                  />
+                </a>
+              </div>
+            </div>
+
+            <!-- Services -->
+            <div id="services" class="space-y-6">
+              <!-- App Development -->
+              <div class="group relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <a href="/app-development.html" class="block relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8 transition-all duration-300 hover:border-gold/50 hover:shadow-xl">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                      <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center text-2xl shadow-lg">
+                        📱
+                      </div>
+                      <div>
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-gold transition-colors text-right rtl:text-right ltr:text-left">
+                          <span class="lang-ar">تطوير تطبيقات متكامل</span>
+                          <span class="lang-en hidden">Complete App Development</span>
+                        </h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-right rtl:text-right ltr:text-left">
+                          <span class="lang-ar">من التصميم والبرمجة وصولاً للنشر في المتاجر</span>
+                          <span class="lang-en hidden">From design and development to app store launch</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                      <div class="hidden md:flex items-center gap-4 text-sm text-zinc-500">
+                        <span class="lang-ar">تصميم</span>
+                        <span class="lang-en hidden">Design</span>
+                        <span>•</span>
+                        <span class="lang-ar">برمجة</span>
+                        <span class="lang-en hidden">Development</span>
+                        <span>•</span>
+                        <span class="lang-ar">نشر</span>
+                        <span class="lang-en hidden">Launch</span>
+                      </div>
+                      <div class="w-10 h-10 bg-zinc-100 dark:bg-zinc-800 rounded-full flex items-center justify-center group-hover:bg-gold group-hover:text-white transition-all">
+                        <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <div class="text-2xl mb-2">⚡</div>
-                    <p class="text-sm font-medium">
-                      <span class="lang-ar">تطوير</span>
-                      <span class="lang-en hidden">Development</span>
-                    </p>
-                  </div>
-                  <div>
-                    <div class="text-2xl mb-2">🚀</div>
-                    <p class="text-sm font-medium">
-                      <span class="lang-ar">نشر</span>
-                      <span class="lang-en hidden">Deploy</span>
-                    </p>
-                  </div>
-                  <div>
-                    <div class="text-2xl mb-2">📈</div>
-                    <p class="text-sm font-medium">
-                      <span class="lang-ar">تحليل</span>
-                      <span class="lang-en hidden">Analytics</span>
-                    </p>
-                  </div>
-                </div>
-                <p class="text-center mt-4 text-zinc-600 dark:text-zinc-400">
-                  <span class="lang-ar">فريقنا يتولى كل شيء - من الفكرة إلى النشر في المتاجر</span>
-                  <span class="lang-en hidden">Our team handles everything - from concept to app store launch</span>
-                </p>
+                </a>
               </div>
 
-              <!-- Specialty -->
-              <div class="bg-gradient-to-r from-gold/10 to-gold/5 dark:from-gold/20 dark:to-gold/10 rounded-xl p-8 border border-gold/20">
-                <div class="max-w-2xl mx-auto">
-                  <h3 class="text-xl font-bold mb-3">
-                    <span class="lang-ar">تخصصنا: تكامل Adjust SDK</span>
-                    <span class="lang-en hidden">Our Specialty: Adjust SDK Integration</span>
-                  </h3>
-                  <p class="text-zinc-600 dark:text-zinc-400 mb-4">
-                    <span class="lang-ar">فريقنا يضم خبراء عملوا مع شركات رائدة مثل Tweeq. نقدم حلول تتبع وتحليل متقدمة تثق بها الشركات الكبرى لقياس أداء تطبيقاتها وحملاتها التسويقية.</span>
-                    <span class="lang-en hidden">Our team includes experts who've worked with leading companies like Tweeq. We deliver advanced tracking and analytics solutions trusted by major companies for measuring app performance and marketing campaigns.</span>
-                  </p>
-                  <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-white/50 dark:bg-black/30 rounded-full text-xs font-medium">
-                      <span class="lang-ar">تتبع الأحداث</span>
-                      <span class="lang-en hidden">Event Tracking</span>
-                    </span>
-                    <span class="px-3 py-1 bg-white/50 dark:bg-black/30 rounded-full text-xs font-medium">
-                      <span class="lang-ar">قياس الحملات</span>
-                      <span class="lang-en hidden">Campaign Attribution</span>
-                    </span>
-                    <span class="px-3 py-1 bg-white/50 dark:bg-black/30 rounded-full text-xs font-medium">
-                      <span class="lang-ar">تحليل العائد</span>
-                      <span class="lang-en hidden">ROI Analysis</span>
-                    </span>
-                    <span class="px-3 py-1 bg-white/50 dark:bg-black/30 rounded-full text-xs font-medium">
-                      <span class="lang-ar">منع الاحتيال</span>
-                      <span class="lang-en hidden">Fraud Prevention</span>
-                    </span>
+              <!-- Adjust SDK -->
+              <div class="group relative overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <a href="/adjust-integration.html" class="block relative bg-gradient-to-r from-gold/5 to-gold/10 dark:from-gold/10 dark:to-gold/5 backdrop-blur-sm border border-gold/30 rounded-2xl p-8 transition-all duration-300 hover:border-gold/60 hover:shadow-xl">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-6">
+                      <div class="w-16 h-16 bg-gradient-to-br from-gold to-gold-dark rounded-2xl flex items-center justify-center text-2xl shadow-lg pulse-glow">
+                        🎯
+                      </div>
+                      <div>
+                        <h3 class="text-2xl font-bold mb-2 group-hover:text-gold transition-colors text-right rtl:text-right ltr:text-left">
+                          <span class="lang-ar">تكامل Adjust SDK</span>
+                          <span class="lang-en hidden">Adjust SDK Integration</span>
+                        </h3>
+                        <p class="text-zinc-600 dark:text-zinc-400 text-right rtl:text-right ltr:text-left">
+                          <span class="lang-ar">تتبع دقيق للمستخدمين وحماية ميزانيتك الإعلانية من الهدر</span>
+                          <span class="lang-en hidden">Precise user tracking and protect your ad budget from waste</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                      <div class="hidden md:flex items-center gap-4 text-sm text-zinc-500">
+                        <span class="lang-ar">تتبع</span>
+                        <span class="lang-en hidden">Tracking</span>
+                        <span>•</span>
+                        <span class="lang-ar">حماية</span>
+                        <span class="lang-en hidden">Protection</span>
+                        <span>•</span>
+                        <span class="lang-ar">تحليل</span>
+                        <span class="lang-en hidden">Analytics</span>
+                      </div>
+                      <div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center text-white group-hover:scale-110 transition-transform">
+                        <svg class="w-5 h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                      </div>
+                    </div>
                   </div>
+                </a>
+              </div>
+            </div>
+
+            <!-- Contact Form Section -->
+            <div id="contact" class="mt-24 relative">
+              <!-- Background -->
+              <div class="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5 rounded-3xl blur-3xl"></div>
+              
+              <div class="relative bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-3xl p-8 md:p-12">
+                <div class="text-center mb-8">
+                  <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="lang-ar">جاهز نبدأ مشروعك؟</span>
+                    <span class="lang-en hidden">Ready to start your project?</span>
+                  </h2>
+                  <p class="text-lg text-zinc-600 dark:text-zinc-400">
+                    <span class="lang-ar">شاركنا فكرتك ونتولى الباقي</span>
+                    <span class="lang-en hidden">Share your idea and we'll handle the rest</span>
+                  </p>
                 </div>
+                
+              <div class="max-w-2xl mx-auto">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p class="hidden">
+                    <label>Don't fill this out: <input name="bot-field" /></label>
+                  </p>
+                  
+                  <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-sm font-medium mb-2">
+                        <span class="lang-ar">الاسم</span>
+                        <span class="lang-en hidden">Name</span>
+                      </label>
+                      <input
+                        type="text"
+                        name="name"
+                        required
+                        class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label class="block text-sm font-medium mb-2">
+                        <span class="lang-ar">البريد الإلكتروني</span>
+                        <span class="lang-en hidden">Email</span>
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label class="block text-sm font-medium mb-2">
+                      <span class="lang-ar">نوع المشروع</span>
+                      <span class="lang-en hidden">Project Type</span>
+                    </label>
+                    <select
+                      name="project-type"
+                      required
+                      id="project-type-select"
+                      class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"
+                    >
+                      <option value="" data-ar="اختر..." data-en="Select..."></option>
+                      <option value="free-consultation" data-ar="استشارة مجانية" data-en="Free Consultation"></option>
+                      <option value="new-app" data-ar="تطبيق جديد" data-en="New App Development"></option>
+                      <option value="adjust-integration" data-ar="تكامل Adjust SDK" data-en="Adjust SDK Integration"></option>
+                      <option value="app-optimization" data-ar="تحسين تطبيق موجود" data-en="App Optimization"></option>
+                      <option value="technical-consultation" data-ar="استشارة تقنية مدفوعة" data-en="Paid Technical Consultation"></option>
+                    </select>
+                  </div>
+                  
+                  <div>
+                    <label class="block text-sm font-medium mb-2">
+                      <span class="lang-ar">تفاصيل المشروع</span>
+                      <span class="lang-en hidden">Project Details</span>
+                    </label>
+                    <textarea
+                      name="message"
+                      rows="4"
+                      required
+                      class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold resize-none"
+                    ></textarea>
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    class="w-full px-8 py-4 bg-gradient-to-r from-gold to-gold-dark text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  >
+                    <span class="lang-ar">لنبدأ العمل 🚀</span>
+                    <span class="lang-en hidden">Let's Get Started 🚀</span>
+                  </button>
+                  
+                  <p class="text-sm text-center text-zinc-500 dark:text-zinc-400 font-medium">
+                    <span class="lang-ar">⚡ نرد خلال ساعات، لا أيام</span>
+                    <span class="lang-en hidden">⚡ We respond in hours, not days</span>
+                  </p>
+                </form>
+              </div>
               </div>
             </div>
           </div>
@@ -247,6 +414,15 @@
           el.classList.toggle('hidden', lang !== 'en');
         });
         
+        // Update select options
+        const select = document.getElementById('project-type-select');
+        if (select) {
+          Array.from(select.options).forEach(option => {
+            const text = option.getAttribute(`data-${lang}`);
+            if (text) option.textContent = text;
+          });
+        }
+        
         // Update page title
         document.title = lang === 'ar' 
           ? 'RBConsult - استشارات تقنية احترافية'
@@ -262,6 +438,16 @@
       
       // Set current year
       document.getElementById('year').textContent = new Date().getFullYear();
+      
+      // Function to select consultation option
+      function selectConsultation() {
+        setTimeout(() => {
+          const select = document.getElementById('project-type-select');
+          if (select) {
+            select.value = 'free-consultation';
+          }
+        }, 500);
+      }
     </script>
   </body>
 </html>
