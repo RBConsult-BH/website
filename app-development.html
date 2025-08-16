@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تطوير التطبيقات - RBConsult</title>
+    <meta
+      name="description"
+      content="نطور تطبيقات عالية الجودة من التصميم وحتى النشر في المتاجر"
+    />
+    <meta property="og:title" content="تطوير التطبيقات - RBConsult" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rbconsult.bh/app-development.html" />
+    <meta
+      property="og:image"
+      content="https://rbconsult.bh/logo/logo-square-dark-bg.png"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-gold: #B99855;
+        --color-gold-dark: #A88744;
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+        50% { box-shadow: 0 0 30px rgba(59, 130, 246, 0.6); }
+      }
+      
+      @keyframes gradient-x {
+        0%, 100% { transform: translateX(0%); }
+        50% { transform: translateX(100%); }
+      }
+      
+      .float-animation { animation: float 3s ease-in-out infinite; }
+      .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+      .gradient-animate { animation: gradient-x 8s ease infinite; }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors">
+    <!-- Language Toggle -->
+    <div class="fixed top-4 left-4 rtl:left-auto rtl:right-4 z-50">
+      <button
+        onclick="toggleLanguage()"
+        class="px-3 py-1.5 text-sm bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-lg transition-colors"
+      >
+        <span class="lang-ar">EN</span>
+        <span class="lang-en hidden">AR</span>
+      </button>
+    </div>
+
+    <!-- Main Container -->
+    <div class="min-h-screen flex flex-col relative overflow-hidden">
+      <!-- Background Grid -->
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-blue-500/20 via-blue-500/5 to-transparent rounded-full blur-3xl"></div>
+      </div>
+      
+      <!-- Header -->
+      <div class="border-b border-zinc-200/50 dark:border-zinc-800/50 py-6 bg-white/50 dark:bg-zinc-950/50 backdrop-blur-sm">
+        <div class="container max-w-6xl mx-auto px-4">
+          <a href="/" class="inline-flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <img
+              src="/logo/logo-square-transparent.png"
+              alt="RBConsult"
+              class="w-12 h-12 rounded-xl float-animation shadow-lg"
+            />
+            <span class="font-bold text-lg">RBConsult</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <div class="flex-1 py-20">
+        <div class="container max-w-6xl mx-auto px-4">
+          <!-- Page Header -->
+          <div class="text-center mb-16">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/30 border border-blue-200/50 dark:border-blue-700/50 rounded-full mb-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-2xl pulse-glow">
+                📱
+              </div>
+              <span class="text-sm font-medium text-blue-700 dark:text-blue-300">
+                <span class="lang-ar">تطوير تطبيقات متكامل</span>
+                <span class="lang-en hidden">Complete App Development</span>
+              </span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+              <span class="lang-ar" style="line-height: 1.2;">
+                <span class="block mb-4">نطور تطبيقات</span>
+                <span class="block bg-gradient-to-r from-blue-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">احترافية ومميزة</span>
+              </span>
+              <span class="lang-en hidden">
+                <span class="block mb-4">We develop professional</span>
+                <span class="block bg-gradient-to-r from-blue-500 via-purple-600 to-blue-500 bg-clip-text text-transparent">and exceptional apps</span>
+              </span>
+            </h1>
+            
+            <p class="text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto mb-8 leading-relaxed">
+              <span class="lang-ar">من التصميم والبرمجة وصولاً للنشر في متاجر التطبيقات - نتولى كل شيء</span>
+              <span class="lang-en hidden">From design and development to app store publication - we handle everything</span>
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <a
+                href="#contact"
+                class="group relative px-10 py-5 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl text-center overflow-hidden"
+              >
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span class="relative flex items-center justify-center gap-2">
+                  <span class="lang-ar">ابدأ تطوير تطبيقي</span>
+                  <span class="lang-en hidden">Start App Development</span>
+                  <svg class="w-5 h-5 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </span>
+              </a>
+              <a
+                href="#portfolio"
+                class="group px-10 py-5 bg-white/10 backdrop-blur-sm border-2 border-zinc-300/50 dark:border-zinc-700/50 hover:border-blue-500/50 hover:bg-blue-500/5 rounded-2xl font-bold text-lg transition-all duration-300 hover:scale-105 text-center"
+              >
+                <span class="lang-ar">شاهد أعمالنا</span>
+                <span class="lang-en hidden">View Our Work</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Process Section -->
+          <div id="process" class="mb-20">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <span class="lang-ar">عمليتنا المُجربة</span>
+                <span class="lang-en hidden">Our Proven Process</span>
+              </h2>
+              <p class="text-lg text-zinc-600 dark:text-zinc-400">
+                <span class="lang-ar">خطوات واضحة ومدروسة لضمان نجاح مشروعك</span>
+                <span class="lang-en hidden">Clear and calculated steps to ensure your project's success</span>
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Step 1 -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-indigo-50/50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-6 text-center group-hover:border-blue-500/50 transition-all">
+                  <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 shadow-lg">
+                    💡
+                  </div>
+                  <h3 class="text-xl font-bold mb-2">
+                    <span class="lang-ar">استكشاف الفكرة</span>
+                    <span class="lang-en hidden">Idea Discovery</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 text-sm">
+                    <span class="lang-ar">نفهم رؤيتك ونحللها لنضع الأساس الصحيح</span>
+                    <span class="lang-en hidden">We understand your vision and analyze it to lay the right foundation</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-50/50 to-pink-50/50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-6 text-center group-hover:border-purple-500/50 transition-all">
+                  <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 shadow-lg">
+                    🎨
+                  </div>
+                  <h3 class="text-xl font-bold mb-2">
+                    <span class="lang-ar">التصميم والتخطيط</span>
+                    <span class="lang-en hidden">Design & Planning</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 text-sm">
+                    <span class="lang-ar">تصميمات حديثة وتجربة مستخدم مدروسة</span>
+                    <span class="lang-en hidden">Modern designs and thoughtful user experience</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-green-50/50 to-emerald-50/50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-6 text-center group-hover:border-green-500/50 transition-all">
+                  <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 shadow-lg">
+                    ⚡
+                  </div>
+                  <h3 class="text-xl font-bold mb-2">
+                    <span class="lang-ar">التطوير والبرمجة</span>
+                    <span class="lang-en hidden">Development & Coding</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 text-sm">
+                    <span class="lang-ar">برمجة نظيفة وحلول تقنية متقدمة</span>
+                    <span class="lang-en hidden">Clean code and advanced technical solutions</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-gold/20 to-amber-50/50 dark:from-gold/20 dark:to-amber-900/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-6 text-center group-hover:border-gold/50 transition-all">
+                  <div class="w-16 h-16 bg-gradient-to-br from-gold to-gold-dark rounded-2xl flex items-center justify-center text-2xl mx-auto mb-4 shadow-lg">
+                    🚀
+                  </div>
+                  <h3 class="text-xl font-bold mb-2">
+                    <span class="lang-ar">النشر والإطلاق</span>
+                    <span class="lang-en hidden">Launch & Publishing</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 text-sm">
+                    <span class="lang-ar">نشر احترافي في متاجر التطبيقات</span>
+                    <span class="lang-en hidden">Professional publishing to app stores</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Features Section -->
+          <div id="features" class="mb-20">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <span class="lang-ar">ماذا نقدم لك؟</span>
+                <span class="lang-en hidden">What Do We Offer?</span>
+              </h2>
+              <p class="text-lg text-zinc-600 dark:text-zinc-400">
+                <span class="lang-ar">حلول شاملة لكل احتياجاتك التقنية</span>
+                <span class="lang-en hidden">Comprehensive solutions for all your technical needs</span>
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- Native Development -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-cyan-50/50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-2xl blur-xl"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8 h-full">
+                  <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center text-2xl mb-6">
+                    📱
+                  </div>
+                  <h3 class="text-xl font-bold mb-4">
+                    <span class="lang-ar">تطبيقات أصلية</span>
+                    <span class="lang-en hidden">Native Apps</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    <span class="lang-ar">تطوير تطبيقات iOS و Android باستخدام أحدث التقنيات لضمان الأداء الأمثل</span>
+                    <span class="lang-en hidden">iOS and Android app development using the latest technologies for optimal performance</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Cross-Platform -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-50/50 to-pink-50/50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl blur-xl"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8 h-full">
+                  <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center text-2xl mb-6">
+                    🔄
+                  </div>
+                  <h3 class="text-xl font-bold mb-4">
+                    <span class="lang-ar">تطبيقات متعددة المنصات</span>
+                    <span class="lang-en hidden">Cross-Platform Apps</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    <span class="lang-ar">تطوير تطبيق واحد يعمل على جميع المنصات لتوفير الوقت والتكلفة</span>
+                    <span class="lang-en hidden">Develop one app that works on all platforms to save time and cost</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- UI/UX Design -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-green-50/50 to-emerald-50/50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl blur-xl"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8 h-full">
+                  <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center text-2xl mb-6">
+                    🎨
+                  </div>
+                  <h3 class="text-xl font-bold mb-4">
+                    <span class="lang-ar">تصميم تجربة المستخدم</span>
+                    <span class="lang-en hidden">UI/UX Design</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    <span class="lang-ar">تصميمات عصرية وتجربة مستخدم سلسة تضمن رضا المستخدمين</span>
+                    <span class="lang-en hidden">Modern designs and smooth user experience ensuring user satisfaction</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Backend Development -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-orange-50/50 to-red-50/50 dark:from-orange-900/20 dark:to-red-900/20 rounded-2xl blur-xl"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8 h-full">
+                  <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-xl flex items-center justify-center text-2xl mb-6">
+                    ⚙️
+                  </div>
+                  <h3 class="text-xl font-bold mb-4">
+                    <span class="lang-ar">تطوير الخادم</span>
+                    <span class="lang-en hidden">Backend Development</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    <span class="lang-ar">أنظمة خلفية قوية وآمنة لدعم تطبيقك بأفضل أداء</span>
+                    <span class="lang-en hidden">Powerful and secure backend systems to support your app with optimal performance</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- App Store Optimization -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-indigo-50/50 to-blue-50/50 dark:from-indigo-900/20 dark:to-blue-900/20 rounded-2xl blur-xl"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8 h-full">
+                  <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-xl flex items-center justify-center text-2xl mb-6">
+                    📈
+                  </div>
+                  <h3 class="text-xl font-bold mb-4">
+                    <span class="lang-ar">تحسين المتاجر</span>
+                    <span class="lang-en hidden">App Store Optimization</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    <span class="lang-ar">تحسين تطبيقك لزيادة الظهور والتحميلات في متاجر التطبيقات</span>
+                    <span class="lang-en hidden">Optimize your app to increase visibility and downloads in app stores</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Maintenance & Support -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-teal-50/50 to-cyan-50/50 dark:from-teal-900/20 dark:to-cyan-900/20 rounded-2xl blur-xl"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8 h-full">
+                  <div class="w-16 h-16 bg-teal-100 dark:bg-teal-900 rounded-xl flex items-center justify-center text-2xl mb-6">
+                    🛠️
+                  </div>
+                  <h3 class="text-xl font-bold mb-4">
+                    <span class="lang-ar">الصيانة والدعم</span>
+                    <span class="lang-en hidden">Maintenance & Support</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                    <span class="lang-ar">دعم مستمر وصيانة دورية لضمان استمرارية عمل تطبيقك</span>
+                    <span class="lang-en hidden">Continuous support and regular maintenance to ensure your app's continuity</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Why Choose Us Section -->
+          <div id="why-choose" class="mb-20">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <span class="lang-ar">لماذا تختارنا؟</span>
+                <span class="lang-en hidden">Why Choose Us?</span>
+              </h2>
+              <p class="text-lg text-zinc-600 dark:text-zinc-400">
+                <span class="lang-ar">خبرة تقنية عميقة ونهج احترافي في التطوير</span>
+                <span class="lang-en hidden">Deep technical expertise and professional development approach</span>
+              </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <!-- Quality Focus -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-indigo-50/50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl blur-xl"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8 text-center h-full">
+                  <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center text-2xl mx-auto mb-4">
+                    ⭐
+                  </div>
+                  <h3 class="text-xl font-bold mb-3">
+                    <span class="lang-ar">جودة عالية</span>
+                    <span class="lang-en hidden">High Quality</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 text-sm">
+                    <span class="lang-ar">نركز على الجودة في كل تفصيلة من التصميم والبرمجة</span>
+                    <span class="lang-en hidden">We focus on quality in every detail of design and development</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Latest Technologies -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-green-50/50 to-emerald-50/50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl blur-xl"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8 text-center h-full">
+                  <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center text-2xl mx-auto mb-4">
+                    🚀
+                  </div>
+                  <h3 class="text-xl font-bold mb-3">
+                    <span class="lang-ar">أحدث التقنيات</span>
+                    <span class="lang-en hidden">Latest Technologies</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 text-sm">
+                    <span class="lang-ar">نستخدم أحدث الأدوات والتقنيات لضمان أفضل أداء</span>
+                    <span class="lang-en hidden">We use the latest tools and technologies to ensure optimal performance</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Fast Delivery -->
+              <div class="relative group">
+                <div class="absolute inset-0 bg-gradient-to-r from-purple-50/50 to-pink-50/50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl blur-xl"></div>
+                <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8 text-center h-full">
+                  <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center text-2xl mx-auto mb-4">
+                    ⚡
+                  </div>
+                  <h3 class="text-xl font-bold mb-3">
+                    <span class="lang-ar">تسليم سريع</span>
+                    <span class="lang-en hidden">Fast Delivery</span>
+                  </h3>
+                  <p class="text-zinc-600 dark:text-zinc-400 text-sm">
+                    <span class="lang-ar">نلتزم بالمواعيد ونسلم مشاريعك في الوقت المحدد</span>
+                    <span class="lang-en hidden">We meet deadlines and deliver your projects on time</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Section -->
+          <div id="contact" class="relative">
+            <!-- Background -->
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 rounded-3xl blur-3xl"></div>
+            
+            <div class="relative bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-3xl p-8 md:p-12">
+              <div class="text-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                  <span class="lang-ar">جاهز لتطوير تطبيقك؟</span>
+                  <span class="lang-en hidden">Ready to develop your app?</span>
+                </h2>
+                <p class="text-lg text-zinc-600 dark:text-zinc-400">
+                  <span class="lang-ar">شاركنا فكرتك ونطورها إلى تطبيق احترافي</span>
+                  <span class="lang-en hidden">Share your idea and we'll develop it into a professional app</span>
+                </p>
+              </div>
+              
+            <div class="max-w-2xl mx-auto">
+              <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="project-type" value="new-app" />
+                <p class="hidden">
+                  <label>Don't fill this out: <input name="bot-field" /></label>
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-sm font-medium mb-2">
+                      <span class="lang-ar">الاسم</span>
+                      <span class="lang-en hidden">Name</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label class="block text-sm font-medium mb-2">
+                      <span class="lang-ar">البريد الإلكتروني</span>
+                      <span class="lang-en hidden">Email</span>
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label class="block text-sm font-medium mb-2">
+                    <span class="lang-ar">نوع التطبيق</span>
+                    <span class="lang-en hidden">App Type</span>
+                  </label>
+                  <select
+                    name="app-type"
+                    required
+                    id="app-type-select"
+                    class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  >
+                    <option value="" data-ar="اختر نوع التطبيق..." data-en="Select app type..."></option>
+                    <option value="native-ios" data-ar="تطبيق iOS أصلي" data-en="Native iOS App"></option>
+                    <option value="native-android" data-ar="تطبيق Android أصلي" data-en="Native Android App"></option>
+                    <option value="cross-platform" data-ar="تطبيق متعدد المنصات" data-en="Cross-platform App"></option>
+                    <option value="web-app" data-ar="تطبيق ويب" data-en="Web App"></option>
+                    <option value="not-sure" data-ar="لست متأكد - احتاج استشارة" data-en="Not sure - need consultation"></option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label class="block text-sm font-medium mb-2">
+                    <span class="lang-ar">وصف فكرة التطبيق</span>
+                    <span class="lang-en hidden">App Idea Description</span>
+                  </label>
+                  <textarea
+                    name="message"
+                    rows="5"
+                    required
+                    placeholder=""
+                    id="app-description"
+                    class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                  ></textarea>
+                </div>
+                
+                <button
+                  type="submit"
+                  class="w-full px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-xl font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                >
+                  <span class="lang-ar">ابدأ تطوير تطبيقي 🚀</span>
+                  <span class="lang-en hidden">Start My App Development 🚀</span>
+                </button>
+                
+                <p class="text-sm text-center text-zinc-500 dark:text-zinc-400 font-medium">
+                  <span class="lang-ar">⚡ نرد خلال ساعات مع خطة مفصلة</span>
+                  <span class="lang-en hidden">⚡ We respond within hours with a detailed plan</span>
+                </p>
+              </form>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="border-t border-zinc-200/50 dark:border-zinc-800/50 py-8 bg-white/30 dark:bg-zinc-950/30 backdrop-blur-sm">
+        <div class="container max-w-6xl mx-auto px-4">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-sm text-zinc-600 dark:text-zinc-400 text-center md:text-right">
+              © <span id="year"></span> RIYADH AL BAHRAIN CONSULTANCY W.L.L<br />
+              CR No. 175236-1
+            </div>
+            <div class="flex items-center gap-6">
+              <a href="/" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
+                <span class="lang-ar">الرئيسية</span>
+                <span class="lang-en hidden">Home</span>
+              </a>
+              <a href="/adjust-integration.html" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
+                <span class="lang-ar">Adjust SDK</span>
+                <span class="lang-en hidden">Adjust SDK</span>
+              </a>
+              <a href="/privacy.html" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
+                <span class="lang-ar">الخصوصية</span>
+                <span class="lang-en hidden">Privacy</span>
+              </a>
+              <a href="mailto:info@rbconsult.bh" class="text-zinc-600 dark:text-zinc-400 hover:text-blue-500">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      // Theme detection
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+
+      // Language toggle
+      let currentLang = localStorage.getItem('language') || 'ar';
+      
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('language', lang);
+        
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        
+        // Toggle visibility of language-specific content
+        document.querySelectorAll('.lang-ar').forEach(el => {
+          el.classList.toggle('hidden', lang !== 'ar');
+        });
+        document.querySelectorAll('.lang-en').forEach(el => {
+          el.classList.toggle('hidden', lang !== 'en');
+        });
+        
+        // Update select options
+        const appTypeSelect = document.getElementById('app-type-select');
+        if (appTypeSelect) {
+          Array.from(appTypeSelect.options).forEach(option => {
+            const text = option.getAttribute(`data-${lang}`);
+            if (text) option.textContent = text;
+          });
+        }
+        
+        // Update textarea placeholder
+        const textarea = document.getElementById('app-description');
+        if (textarea) {
+          textarea.placeholder = lang === 'ar' 
+            ? 'مثال: أريد تطبيق للتجارة الإلكترونية يدعم الدفع الإلكتروني ونظام المراجعات...'
+            : 'Example: I want an e-commerce app with online payment support and review system...';
+        }
+        
+        // Update page title
+        document.title = lang === 'ar' 
+          ? 'تطوير التطبيقات - RBConsult'
+          : 'App Development - RBConsult';
+      }
+      
+      function toggleLanguage() {
+        setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+      }
+      
+      // Initialize language
+      setLanguage(currentLang);
+      
+      // Set current year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
