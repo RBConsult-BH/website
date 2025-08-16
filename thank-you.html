@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>شكراً لتواصلك معنا - RBConsult</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-gold: #B99855;
+        --color-gold-dark: #A88744;
+      }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(185, 152, 85, 0.3); }
+        50% { box-shadow: 0 0 30px rgba(185, 152, 85, 0.6); }
+      }
+      
+      .float-animation { animation: float 3s ease-in-out infinite; }
+      .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+    </style>
+  </head>
+  <body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors">
+    <!-- Language Toggle -->
+    <div class="fixed top-4 left-4 rtl:left-auto rtl:right-4 z-50">
+      <button
+        onclick="toggleLanguage()"
+        class="px-3 py-1.5 text-sm bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-lg transition-colors"
+      >
+        <span class="lang-ar">EN</span>
+        <span class="lang-en hidden">AR</span>
+      </button>
+    </div>
+
+    <div class="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
+      <!-- Background Grid -->
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-radial from-gold/20 via-gold/5 to-transparent rounded-full blur-3xl"></div>
+      </div>
+
+      <div class="max-w-lg w-full text-center">
+        <!-- Logo -->
+        <a href="/">
+          <img
+            src="/logo/logo-square-transparent.png"
+            alt="RBConsult"
+            class="w-20 h-20 mx-auto mb-8 rounded-2xl shadow-lg float-animation pulse-glow"
+          />
+        </a>
+
+        <!-- Success Icon -->
+        <div class="w-24 h-24 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-8 shadow-lg">
+          ✅
+        </div>
+        
+        <!-- Main Message -->
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          <span class="lang-ar">تم الإرسال بنجاح!</span>
+          <span class="lang-en hidden">Successfully Sent!</span>
+        </h1>
+        
+        <p class="text-lg text-zinc-600 dark:text-zinc-400 mb-8">
+          <span class="lang-ar">شكراً لتواصلك معنا. سنرد عليك خلال ساعات قليلة</span>
+          <span class="lang-en hidden">Thank you for contacting us. We'll respond within a few hours</span>
+        </p>
+
+        <!-- Response Time -->
+        <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-full mb-8">
+          <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          <span class="text-sm font-medium text-gold">
+            <span class="lang-ar">⚡ رد سريع خلال ساعات</span>
+            <span class="lang-en hidden">⚡ Quick response within hours</span>
+          </span>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-6 mb-8">
+          <h3 class="text-xl font-bold mb-4">
+            <span class="lang-ar">الخطوات التالية</span>
+            <span class="lang-en hidden">Next Steps</span>
+          </h3>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center text-sm font-bold text-gold">1</div>
+              <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                <span class="lang-ar">مراجعة طلبك وتحليل المتطلبات</span>
+                <span class="lang-en hidden">Review your request and analyze requirements</span>
+              </p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center text-sm font-bold text-gold">2</div>
+              <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                <span class="lang-ar">التواصل معك لمناقشة التفاصيل</span>
+                <span class="lang-en hidden">Contact you to discuss details</span>
+              </p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center text-sm font-bold text-gold">3</div>
+              <p class="text-sm text-zinc-600 dark:text-zinc-400">
+                <span class="lang-ar">تقديم خطة العمل والتسعير</span>
+                <span class="lang-en hidden">Provide work plan and pricing</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="/"
+            class="px-6 py-3 bg-gold hover:bg-gold-dark text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            <span class="lang-ar">العودة للرئيسية</span>
+            <span class="lang-en hidden">Back to Home</span>
+          </a>
+          <a
+            href="/app-development.html"
+            class="px-6 py-3 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-900 rounded-xl font-medium transition-colors"
+          >
+            <span class="lang-ar">خدماتنا</span>
+            <span class="lang-en hidden">Our Services</span>
+          </a>
+          <a
+            href="mailto:info@rbconsult.bh"
+            class="px-6 py-3 border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-900 rounded-xl font-medium transition-colors"
+          >
+            <span class="lang-ar">مراسلة مباشرة</span>
+            <span class="lang-en hidden">Direct Email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Theme detection
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+
+      // Language toggle
+      let currentLang = localStorage.getItem('language') || 'ar';
+      
+      function setLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('language', lang);
+        
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+        
+        // Toggle visibility of language-specific content
+        document.querySelectorAll('.lang-ar').forEach(el => {
+          el.classList.toggle('hidden', lang !== 'ar');
+        });
+        document.querySelectorAll('.lang-en').forEach(el => {
+          el.classList.toggle('hidden', lang !== 'en');
+        });
+        
+        // Update page title
+        document.title = lang === 'ar' 
+          ? 'شكراً لتواصلك معنا - RBConsult'
+          : 'Thank you for contacting us - RBConsult';
+      }
+      
+      function toggleLanguage() {
+        setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+      }
+      
+      // Initialize language
+      setLanguage(currentLang);
+    </script>
+  </body>
+</html>

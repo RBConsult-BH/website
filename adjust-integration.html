@@ -519,7 +519,7 @@
               </div>
               
             <div class="max-w-2xl mx-auto">
-              <form name="contact" method="POST" netlify netlify-honeypot="bot-field" class="space-y-4">
+              <form name="contact" method="POST" action="/thank-you.html" netlify netlify-honeypot="bot-field" class="space-y-4">
                 <input type="hidden" name="form-name" value="contact" />
                 <input type="hidden" name="project-type" value="adjust-integration" />
                 <p class="hidden">
@@ -554,39 +554,6 @@
                   </div>
                 </div>
 
-                <div>
-                  <label class="block text-sm font-medium mb-2">
-                    <span class="lang-ar">اسم التطبيق</span>
-                    <span class="lang-en hidden">App Name</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="app-name"
-                    required
-                    class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"
-                  />
-                </div>
-                
-                <div>
-                  <label class="block text-sm font-medium mb-2">
-                    <span class="lang-ar">منصة التطبيق</span>
-                    <span class="lang-en hidden">App Platform</span>
-                  </label>
-                  <select
-                    name="platform"
-                    required
-                    id="platform-select"
-                    class="w-full px-4 py-3 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold"
-                  >
-                    <option value="" data-ar="اختر المنصة..." data-en="Select platform..."></option>
-                    <option value="ios" data-ar="iOS" data-en="iOS"></option>
-                    <option value="android" data-ar="Android" data-en="Android"></option>
-                    <option value="both" data-ar="iOS و Android" data-en="iOS & Android"></option>
-                    <option value="react-native" data-ar="React Native" data-en="React Native"></option>
-                    <option value="flutter" data-ar="Flutter" data-en="Flutter"></option>
-                    <option value="other" data-ar="منصة أخرى" data-en="Other Platform"></option>
-                  </select>
-                </div>
                 
                 <div>
                   <label class="block text-sm font-medium mb-2">
