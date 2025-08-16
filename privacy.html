@@ -15,6 +15,13 @@
         --color-gold: #B99855;
         --color-gold-dark: #A88744;
       }
+      
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+      }
+      
+      .float-animation { animation: float 3s ease-in-out infinite; }
     </style>
   </head>
   <body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors">
@@ -29,130 +36,217 @@
       </button>
     </div>
 
-    <div class="min-h-screen">
+    <div class="min-h-screen flex flex-col relative overflow-hidden">
+      <!-- Background Grid -->
+      <div class="absolute inset-0 -z-10">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gradient-radial from-gold/10 via-gold/5 to-transparent rounded-full blur-3xl"></div>
+      </div>
+      
       <!-- Header -->
-      <div class="border-b border-zinc-200 dark:border-zinc-800 py-4">
+      <div class="border-b border-zinc-200/50 dark:border-zinc-800/50 py-6 bg-white/50 dark:bg-zinc-950/50 backdrop-blur-sm">
         <div class="container max-w-4xl mx-auto px-4">
           <a href="/" class="inline-flex items-center gap-3 hover:opacity-80 transition-opacity">
             <img
               src="/logo/logo-square-transparent.png"
               alt="RBConsult"
-              class="w-10 h-10 rounded-xl"
+              class="w-12 h-12 rounded-xl float-animation shadow-lg"
             />
-            <span class="font-semibold">RBConsult</span>
+            <span class="font-bold text-lg">RBConsult</span>
           </a>
         </div>
       </div>
 
       <!-- Content -->
-      <div class="container max-w-4xl mx-auto px-4 py-16">
-        <h1 class="text-3xl font-bold mb-8">
-          <span class="lang-ar">سياسة الخصوصية</span>
-          <span class="lang-en hidden">Privacy Policy</span>
-        </h1>
+      <div class="flex-1 container max-w-4xl mx-auto px-4 py-16 relative">
+        <!-- Page Header -->
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center gap-2 px-4 py-2 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-full mb-6">
+            <div class="w-2 h-2 bg-gold rounded-full"></div>
+            <span class="text-sm font-medium text-gold">
+              <span class="lang-ar">الخصوصية والأمان</span>
+              <span class="lang-en hidden">Privacy & Security</span>
+            </span>
+          </div>
+          
+          <h1 class="text-4xl md:text-5xl font-black mb-6 leading-tight">
+            <span class="lang-ar">سياسة الخصوصية</span>
+            <span class="lang-en hidden">Privacy Policy</span>
+          </h1>
+          
+          <p class="text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+            <span class="lang-ar">نلتزم بحماية خصوصيتك ومعلوماتك الشخصية بأعلى معايير الأمان</span>
+            <span class="lang-en hidden">We are committed to protecting your privacy and personal information with the highest security standards</span>
+          </p>
+        </div>
 
-        <div class="prose prose-zinc dark:prose-invert max-w-none">
-          <!-- Introduction -->
-          <section class="mb-8">
-            <p class="text-lg text-zinc-600 dark:text-zinc-400">
-              <span class="lang-ar">نحن في RBConsult نلتزم بحماية خصوصيتك ومعلوماتك الشخصية. توضح هذه السياسة كيف نتعامل مع البيانات.</span>
-              <span class="lang-en hidden">At RBConsult, we are committed to protecting your privacy and personal information. This policy explains how we handle data.</span>
-            </p>
-          </section>
+        <div class="space-y-8">
 
-          <!-- No Tracking -->
-          <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-4">
-              <span class="lang-ar">عدم التتبع</span>
-              <span class="lang-en hidden">No Tracking</span>
-            </h2>
-            <div class="bg-zinc-50 dark:bg-zinc-900 p-6 rounded-lg">
-              <p>
-                <span class="lang-ar">🔒 موقعنا لا يستخدم ملفات تعريف الارتباط (Cookies) أو أي أدوات تتبع. نحن لا نجمع أي معلومات شخصية من خلال الموقع.</span>
-                <span class="lang-en hidden">🔒 Our website does not use cookies or any tracking tools. We do not collect any personal information through the website.</span>
-              </p>
+          <!-- No Tracking Section -->
+          <section class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-green-50/50 to-emerald-50/50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-2xl blur-xl"></div>
+            <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                  🔒
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold mb-4 text-green-700 dark:text-green-400">
+                    <span class="lang-ar">عدم التتبع</span>
+                    <span class="lang-en hidden">No Tracking</span>
+                  </h2>
+                  <p class="text-lg leading-relaxed">
+                    <span class="lang-ar">موقعنا لا يستخدم ملفات تعريف الارتباط أو أي أدوات تتبع. نحن لا نجمع أي معلومات شخصية من خلال تصفح الموقع.</span>
+                    <span class="lang-en hidden">Our website does not use cookies or any tracking tools. We do not collect any personal information through website browsing.</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
 
-          <!-- Communication -->
-          <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-4">
-              <span class="lang-ar">سجلات التواصل</span>
-              <span class="lang-en hidden">Communication Records</span>
-            </h2>
-            <p class="mb-4">
-              <span class="lang-ar">عند التواصل معنا عبر البريد الإلكتروني أو قنوات التواصل الأخرى:</span>
-              <span class="lang-en hidden">When you contact us via email or other communication channels:</span>
-            </p>
-            <ul class="list-disc pr-6 space-y-2 text-zinc-700 dark:text-zinc-300">
-              <li>
-                <span class="lang-ar">نحتفظ بسجلات المراسلات لأغراض العمل فقط</span>
-                <span class="lang-en hidden">We keep correspondence records for business purposes only</span>
-              </li>
-              <li>
-                <span class="lang-ar">نستخدم هذه المعلومات لتحسين خدماتنا والحفاظ على علاقات العمل</span>
-                <span class="lang-en hidden">We use this information to improve our services and maintain business relationships</span>
-              </li>
-              <li>
-                <span class="lang-ar">لن نشارك معلوماتك مع أطراف ثالثة دون موافقتك</span>
-                <span class="lang-en hidden">We will not share your information with third parties without your consent</span>
-              </li>
-            </ul>
+          <!-- Communication Section -->
+          <section class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-blue-50/50 to-indigo-50/50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl blur-xl"></div>
+            <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8">
+              <div class="flex items-start gap-4 mb-6">
+                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                  💬
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold mb-4">
+                    <span class="lang-ar">سجلات التواصل</span>
+                    <span class="lang-en hidden">Communication Records</span>
+                  </h2>
+                  <p class="text-lg leading-relaxed mb-6">
+                    <span class="lang-ar">عند التواصل معنا عبر البريد الإلكتروني أو النماذج:</span>
+                    <span class="lang-en hidden">When you contact us via email or forms:</span>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
+                  <p class="text-zinc-700 dark:text-zinc-300">
+                    <span class="lang-ar">نحتفظ بسجلات المراسلات لأغراض العمل فقط</span>
+                    <span class="lang-en hidden">We keep correspondence records for business purposes only</span>
+                  </p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
+                  <p class="text-zinc-700 dark:text-zinc-300">
+                    <span class="lang-ar">نستخدم هذه المعلومات لتحسين خدماتنا والحفاظ على علاقات العمل</span>
+                    <span class="lang-en hidden">We use this information to improve our services and maintain business relationships</span>
+                  </p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <div class="w-2 h-2 bg-gold rounded-full mt-3 flex-shrink-0"></div>
+                  <p class="text-zinc-700 dark:text-zinc-300">
+                    <span class="lang-ar">لن نشارك معلوماتك مع أطراف ثالثة دون موافقتك الصريحة</span>
+                    <span class="lang-en hidden">We will not share your information with third parties without your explicit consent</span>
+                  </p>
+                </div>
+              </div>
+            </div>
           </section>
 
-          <!-- Data Security -->
-          <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-4">
-              <span class="lang-ar">أمان البيانات</span>
-              <span class="lang-en hidden">Data Security</span>
-            </h2>
-            <p>
-              <span class="lang-ar">نطبق إجراءات أمنية مناسبة لحماية أي معلومات يتم مشاركتها معنا من خلال قنوات التواصل.</span>
-              <span class="lang-en hidden">We implement appropriate security measures to protect any information shared with us through communication channels.</span>
-            </p>
+          <!-- Data Security Section -->
+          <section class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-gold/10 to-amber-50/50 dark:from-gold/20 dark:to-amber-900/20 rounded-2xl blur-xl"></div>
+            <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-gold/30 rounded-2xl p-8">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-gold/20 dark:bg-gold/30 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                  🛡️
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold mb-4 text-gold">
+                    <span class="lang-ar">أمان البيانات</span>
+                    <span class="lang-en hidden">Data Security</span>
+                  </h2>
+                  <p class="text-lg leading-relaxed">
+                    <span class="lang-ar">نطبق أعلى معايير الحماية الأمنية لضمان سلامة أي معلومات يتم مشاركتها معنا عبر قنوات التواصل المختلفة.</span>
+                    <span class="lang-en hidden">We implement the highest security protection standards to ensure the safety of any information shared with us through various communication channels.</span>
+                  </p>
+                </div>
+              </div>
+            </div>
           </section>
 
-          <!-- Contact -->
-          <section class="mb-8">
-            <h2 class="text-xl font-semibold mb-4">
-              <span class="lang-ar">تواصل معنا</span>
-              <span class="lang-en hidden">Contact Us</span>
-            </h2>
-            <p>
-              <span class="lang-ar">إذا كان لديك أي أسئلة حول سياسة الخصوصية، يرجى التواصل معنا:</span>
-              <span class="lang-en hidden">If you have any questions about our privacy policy, please contact us:</span>
-            </p>
-            <div class="mt-4">
-              <a
-                href="mailto:info@rbconsult.bh"
-                class="inline-flex items-center gap-2 text-gold hover:text-gold-dark transition-colors"
-              >
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-                info@rbconsult.bh
-              </a>
+          <!-- Contact Section -->
+          <section class="relative">
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-50/50 to-pink-50/50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl blur-xl"></div>
+            <div class="relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-8">
+              <div class="flex items-start gap-4 mb-6">
+                <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                  📧
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold mb-4">
+                    <span class="lang-ar">تواصل معنا</span>
+                    <span class="lang-en hidden">Contact Us</span>
+                  </h2>
+                  <p class="text-lg leading-relaxed mb-6">
+                    <span class="lang-ar">لديك أسئلة حول سياسة الخصوصية؟ نحن هنا للمساعدة</span>
+                    <span class="lang-en hidden">Have questions about our privacy policy? We're here to help</span>
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="mailto:info@rbconsult.bh"
+                  class="group inline-flex items-center gap-3 px-6 py-3 bg-gold hover:bg-gold-dark text-white rounded-xl font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                  </svg>
+                  info@rbconsult.bh
+                </a>
+                <a
+                  href="/"
+                  class="inline-flex items-center gap-3 px-6 py-3 bg-white/50 dark:bg-zinc-800/50 hover:bg-white/80 dark:hover:bg-zinc-800/80 border border-zinc-200/50 dark:border-zinc-700/50 rounded-xl font-medium transition-all duration-300 hover:scale-105"
+                >
+                  <span class="lang-ar">العودة للرئيسية</span>
+                  <span class="lang-en hidden">Back to Home</span>
+                </a>
+              </div>
             </div>
           </section>
 
           <!-- Last Updated -->
-          <section class="pt-8 border-t border-zinc-200 dark:border-zinc-800">
-            <p class="text-sm text-zinc-500">
-              <span class="lang-ar">آخر تحديث: يناير 2025</span>
-              <span class="lang-en hidden">Last updated: January 2025</span>
-            </p>
+          <section class="pt-8 mt-8 border-t border-zinc-200/50 dark:border-zinc-800/50">
+            <div class="text-center">
+              <p class="text-sm text-zinc-500 dark:text-zinc-400">
+                <span class="lang-ar">آخر تحديث: يناير 2025</span>
+                <span class="lang-en hidden">Last updated: January 2025</span>
+              </p>
+            </div>
           </section>
         </div>
       </div>
 
       <!-- Footer -->
-      <footer class="border-t border-zinc-200 dark:border-zinc-800 py-8 mt-auto">
+      <footer class="border-t border-zinc-200/50 dark:border-zinc-800/50 py-8 bg-white/30 dark:bg-zinc-950/30 backdrop-blur-sm">
         <div class="container max-w-4xl mx-auto px-4">
-          <p class="text-sm text-zinc-600 dark:text-zinc-400 text-center">
-            © <span id="year"></span> RIYADH AL BAHRAIN CONSULTANCY W.L.L<br />
-            CR No. 175236-1
-          </p>
+          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-sm text-zinc-600 dark:text-zinc-400 text-center md:text-right">
+              © <span id="year"></span> RIYADH AL BAHRAIN CONSULTANCY W.L.L<br />
+              CR No. 175236-1
+            </div>
+            <div class="flex items-center gap-6">
+              <a href="/" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
+                <span class="lang-ar">الرئيسية</span>
+                <span class="lang-en hidden">Home</span>
+              </a>
+              <a href="mailto:info@rbconsult.bh" class="text-zinc-600 dark:text-zinc-400 hover:text-gold">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
