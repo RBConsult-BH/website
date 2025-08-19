@@ -29,8 +29,8 @@
       }
       
       @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-8px) scale(1.05); }
       }
       
       @keyframes pulse-glow {
@@ -38,7 +38,7 @@
         50% { box-shadow: 0 0 30px rgba(185, 152, 85, 0.6); }
       }
       
-      .float-animation { animation: float 3s ease-in-out infinite; }
+      .float-animation { animation: float 4s ease-in-out infinite; }
       .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
     </style>
   </head>

@@ -31,8 +31,8 @@
       }
       
       @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-8px) scale(1.05); }
       }
       
       @keyframes pulse-glow {
@@ -50,7 +50,7 @@
         50% { transform: scale(1.1); }
       }
       
-      .float-animation { animation: float 3s ease-in-out infinite; }
+      .float-animation { animation: float 4s ease-in-out infinite; }
       .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
       .gradient-animate { animation: gradient-x 8s ease infinite; }
       .target-pulse { animation: target-pulse 2s ease-in-out infinite; }
@@ -83,7 +83,7 @@
             <img
               src="/logo/logo-square-transparent.png"
               alt="RBConsult"
-              class="w-12 h-12 rounded-xl float-animation shadow-lg"
+              class="w-16 h-16 rounded-xl float-animation shadow-lg"
             />
             <span class="font-bold text-lg">RBConsult</span>
           </a>

@@ -31,8 +31,8 @@
       }
       
       @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-10px); }
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-8px) scale(1.05); }
       }
       
       @keyframes pulse-glow {
@@ -45,7 +45,7 @@
         50% { transform: translateX(100%); }
       }
       
-      .float-animation { animation: float 3s ease-in-out infinite; }
+      .float-animation { animation: float 4s ease-in-out infinite; }
       .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
       .gradient-animate { animation: gradient-x 8s ease infinite; }
     </style>
