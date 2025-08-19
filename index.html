@@ -450,7 +450,11 @@
       setLanguage(currentLang);
       
       // Set current year
-      document.getElementById('year').textContent = new Date().getFullYear();
+      const currentYear = new Date().getFullYear();
+      const yearElement = document.getElementById('year');
+      const yearEnElement = document.getElementById('year-en');
+      if (yearElement) yearElement.textContent = currentYear;
+      if (yearEnElement) yearEnElement.textContent = currentYear;
       
       // Function to select consultation option
       function selectConsultation() {

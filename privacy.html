@@ -231,7 +231,8 @@
         <div class="container max-w-4xl mx-auto px-4">
           <div class="flex flex-col md:flex-row justify-between items-center gap-4">
             <div class="text-sm text-zinc-600 dark:text-zinc-400 text-center md:text-right">
-              © <span id="year"></span> RIYADH AL BAHRAIN CONSULTANCY W.L.L<br />
+              <span class="lang-ar">© <span id="year"></span> رياض البحرين للاستشارات ذ.م.م</span>
+              <span class="lang-en hidden">© <span id="year-en"></span> RIYADH AL BAHRAIN CONSULTANCY WLL</span><br />
               CR No. 175236-1
             </div>
             <div class="flex items-center gap-6">
@@ -316,7 +317,11 @@
       setLanguage(currentLang);
       
       // Set current year
-      document.getElementById('year').textContent = new Date().getFullYear();
+      const currentYear = new Date().getFullYear();
+      const yearElement = document.getElementById('year');
+      const yearEnElement = document.getElementById('year-en');
+      if (yearElement) yearElement.textContent = currentYear;
+      if (yearEnElement) yearEnElement.textContent = currentYear;
     </script>
   </body>
 </html>
