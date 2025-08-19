@@ -6,21 +6,21 @@
     <title>RBConsult - تطوير التطبيقات والحلول التقنية في البحرين</title>
     <meta
       name="description"
-      content="خدمات تطوير التطبيقات والحلول التقنية المتطورة في البحرين. تخصصنا في تطوير تطبيقات الجوال وتكامل Adjust SDK والاستشارات التقنية. Professional app development and technical solutions in Bahrain."
+      content="نطور تطبيقات الجوال والحلول التقنية المتطورة في البحرين. نبني تطبيقات iOS وAndroid ونقوم بتكامل Adjust SDK. Professional mobile app development and technical solutions in Bahrain."
     />
     <meta
       name="keywords"
-      content="تطوير التطبيقات, تطبيقات الجوال, Adjust SDK, البحرين, RBConsult, app development, mobile apps, Bahrain, technical consulting"
+      content="تطوير التطبيقات, تطبيقات الجوال, برمجة, تطوير البرمجيات, Adjust SDK, البحرين, RBConsult, app development, mobile apps, software development, programming, Bahrain"
     />
     <meta name="author" content="RBConsult - RIYADH AL BAHRAIN CONSULTANCY WLL" />
     <meta property="og:title" content="RBConsult - تطوير التطبيقات والحلول التقنية" />
-    <meta property="og:description" content="خدمات تطوير التطبيقات والحلول التقنية المتطورة في البحرين - Professional app development and technical solutions in Bahrain" />
+    <meta property="og:description" content="نطور تطبيقات الجوال والحلول التقنية في البحرين - Professional mobile app development and software solutions in Bahrain" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rbconsult.bh" />
     <meta property="og:image" content="https://rbconsult.bh/logo/logo-square-dark-bg.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="RBConsult - App Development & Technical Solutions" />
-    <meta name="twitter:description" content="Professional app development and technical consulting services in Bahrain" />
+    <meta name="twitter:description" content="Professional mobile app development and software solutions in Bahrain" />
     <link rel="icon" type="image/png" href="/logo/logo-square-transparent.png" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -31,13 +31,33 @@
       }
       
       @keyframes float {
-        0%, 100% { transform: translateY(0px) scale(1); }
-        50% { transform: translateY(-8px) scale(1.05); }
+        0%, 100% { transform: translateY(0px) scale(1) rotate(0deg); }
+        25% { transform: translateY(-10px) scale(1.05) rotate(-3deg); }
+        50% { transform: translateY(-15px) scale(1.1) rotate(3deg); }
+        75% { transform: translateY(-10px) scale(1.05) rotate(-3deg); }
       }
       
       @keyframes pulse-glow {
-        0%, 100% { box-shadow: 0 0 20px rgba(185, 152, 85, 0.3); }
-        50% { box-shadow: 0 0 30px rgba(185, 152, 85, 0.6); }
+        0%, 100% { 
+          box-shadow: 0 0 20px rgba(185, 152, 85, 0.3), 
+                      0 0 40px rgba(185, 152, 85, 0.2),
+                      0 0 60px rgba(185, 152, 85, 0.1);
+          filter: brightness(1);
+        }
+        50% { 
+          box-shadow: 0 0 30px rgba(185, 152, 85, 0.6),
+                      0 0 60px rgba(185, 152, 85, 0.4),
+                      0 0 90px rgba(185, 152, 85, 0.2);
+          filter: brightness(1.1);
+        }
+      }
+      
+      @keyframes spin-bounce {
+        0% { transform: rotate(0deg) scale(1); }
+        25% { transform: rotate(90deg) scale(1.1); }
+        50% { transform: rotate(180deg) scale(1); }
+        75% { transform: rotate(270deg) scale(1.1); }
+        100% { transform: rotate(360deg) scale(1); }
       }
       
       @keyframes gradient-x {
@@ -93,7 +113,8 @@
               <img
                 src="/logo/logo-square-transparent.png"
                 alt="RBConsult"
-                class="w-20 h-20 mx-auto rounded-2xl shadow-lg float-animation"
+                class="w-32 h-32 mx-auto rounded-2xl shadow-2xl float-animation pulse-glow hover:rotate-12 hover:scale-110 transition-all duration-500 cursor-pointer"
+                style="animation: float 3s ease-in-out infinite, pulse-glow 2s ease-in-out infinite;"
               />
             </div>
 
