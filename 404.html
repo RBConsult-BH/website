@@ -86,6 +86,19 @@
       </div>
     </div>
 
+    <!-- Footer -->
+    <footer class="fixed bottom-0 w-full py-4 bg-white/30 dark:bg-zinc-950/30 backdrop-blur-sm border-t border-zinc-200/50 dark:border-zinc-800/50">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <div class="text-xs text-zinc-500 dark:text-zinc-400">
+            <span class="lang-ar">© <span id="year"></span> رياض البحرين للاستشارات ذ.م.م</span>
+            <span class="lang-en hidden">© <span id="year-en"></span> RIYADH AL BAHRAIN CONSULTANCY WLL</span><br />
+            CR No. 175236-1
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script>
       // Theme detection
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -122,6 +135,13 @@
       
       // Initialize language
       setLanguage(currentLang);
+      
+      // Set current year
+      const currentYear = new Date().getFullYear();
+      const yearElement = document.getElementById('year');
+      const yearEnElement = document.getElementById('year-en');
+      if (yearElement) yearElement.textContent = currentYear;
+      if (yearEnElement) yearEnElement.textContent = currentYear;
     </script>
   </body>
 </html>
