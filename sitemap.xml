@@ -1,58 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
+  <!-- Homepage - Primary Landing Page -->
   <url>
     <loc>https://rbconsult.bh/</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rbconsult.bh/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rbconsult.bh/?lang=en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://rbconsult.bh/"/>
-    <lastmod>2025-08-22</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://rbconsult.bh/og-image.png</image:loc>
+      <image:caption>RBConsult - Leading App Development Company in Bahrain</image:caption>
+    </image:image>
   </url>
 
-  <url>
-    <loc>https://rbconsult.bh/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rbconsult.bh/about.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rbconsult.bh/about.html?lang=en"/>
-    <lastmod>2025-08-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
+  <!-- Core Service Pages - High Priority -->
   <url>
     <loc>https://rbconsult.bh/app-development.html</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rbconsult.bh/app-development.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rbconsult.bh/app-development.html?lang=en"/>
-    <lastmod>2025-08-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://rbconsult.bh/og-image.png</image:loc>
+      <image:caption>Mobile App Development Services Bahrain - iOS & Android</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://rbconsult.bh/adjust-integration.html</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rbconsult.bh/adjust-integration.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rbconsult.bh/adjust-integration.html?lang=en"/>
-    <lastmod>2025-08-22</lastmod>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://rbconsult.bh/og-image.png</image:loc>
+      <image:caption>Adjust SDK Integration Experts Bahrain - Mobile Attribution</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Company Information -->
+  <url>
+    <loc>https://rbconsult.bh/about.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rbconsult.bh/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rbconsult.bh/about.html?lang=en"/>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://rbconsult.bh/contact.html</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rbconsult.bh/contact.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rbconsult.bh/contact.html?lang=en"/>
-    <lastmod>2025-08-22</lastmod>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
+  <!-- User Journey Pages -->
+  <url>
+    <loc>https://rbconsult.bh/thank-you.html</loc>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://rbconsult.bh/thank-you.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://rbconsult.bh/thank-you.html?lang=en"/>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Legal & Policy Pages -->
   <url>
     <loc>https://rbconsult.bh/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rbconsult.bh/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rbconsult.bh/privacy.html?lang=en"/>
-    <lastmod>2025-01-19</lastmod>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -61,7 +89,7 @@
     <loc>https://rbconsult.bh/terms.html</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rbconsult.bh/terms.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rbconsult.bh/terms.html?lang=en"/>
-    <lastmod>2025-01-19</lastmod>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -70,7 +98,7 @@
     <loc>https://rbconsult.bh/refund-policy.html</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rbconsult.bh/refund-policy.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rbconsult.bh/refund-policy.html?lang=en"/>
-    <lastmod>2025-01-19</lastmod>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -79,37 +107,29 @@
     <loc>https://rbconsult.bh/delivery-policy.html</loc>
     <xhtml:link rel="alternate" hreflang="ar" href="https://rbconsult.bh/delivery-policy.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://rbconsult.bh/delivery-policy.html?lang=en"/>
-    <lastmod>2025-01-19</lastmod>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
-  <url>
-    <loc>https://rbconsult.bh/thank-you.html</loc>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://rbconsult.bh/thank-you.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://rbconsult.bh/thank-you.html?lang=en"/>
-    <lastmod>2025-08-22</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-
+  <!-- Portfolio/Products - External but Important -->
   <url>
     <loc>https://rbconsult.bh/salla-apps/posthog/</loc>
-    <lastmod>2025-01-19</lastmod>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://rbconsult.bh/salla-apps/posthog/faq.html</loc>
-    <lastmod>2025-01-19</lastmod>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
 
   <url>
     <loc>https://rbconsult.bh/salla-apps/posthog/privacy.html</loc>
-    <lastmod>2025-01-19</lastmod>
+    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
