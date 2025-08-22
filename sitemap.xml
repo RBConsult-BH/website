@@ -15,7 +15,7 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://rbconsult.bh/og-image.png</image:loc>
-      <image:caption>RBConsult - Leading App Development Company in Bahrain</image:caption>
+      <image:caption>RBConsult - Mobile Apps & Websites Development</image:caption>
     </image:image>
   </url>
 
@@ -29,7 +29,7 @@
     <priority>0.95</priority>
     <image:image>
       <image:loc>https://rbconsult.bh/og-image.png</image:loc>
-      <image:caption>Mobile App Development Services Bahrain - iOS & Android</image:caption>
+      <image:caption>Professional Mobile App Development - Flutter & Native</image:caption>
     </image:image>
   </url>
 
@@ -42,7 +42,7 @@
     <priority>0.95</priority>
     <image:image>
       <image:loc>https://rbconsult.bh/og-image.png</image:loc>
-      <image:caption>Adjust SDK Integration Experts Bahrain - Mobile Attribution</image:caption>
+      <image:caption>Adjust SDK Integration Services</image:caption>
     </image:image>
   </url>
 
@@ -112,26 +112,5 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- Portfolio/Products - External but Important -->
-  <url>
-    <loc>https://rbconsult.bh/salla-apps/posthog/</loc>
-    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://rbconsult.bh/salla-apps/posthog/faq.html</loc>
-    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://rbconsult.bh/salla-apps/posthog/privacy.html</loc>
-    <lastmod>2025-08-22T12:00:00+03:00</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
 
 </urlset>
