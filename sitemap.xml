@@ -15,7 +15,7 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://rbconsult.bh/og-image.png</image:loc>
-      <image:caption>RBConsult - Mobile Apps & Websites Development</image:caption>
+      <image:caption>RBConsult - Mobile Apps and Websites Development</image:caption>
     </image:image>
   </url>
 
@@ -29,7 +29,7 @@
     <priority>0.95</priority>
     <image:image>
       <image:loc>https://rbconsult.bh/og-image.png</image:loc>
-      <image:caption>Professional Mobile App Development - Flutter & Native</image:caption>
+      <image:caption>Professional Mobile App Development - Flutter and Native</image:caption>
     </image:image>
   </url>
 
@@ -111,6 +111,5 @@
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
-
 
 </urlset>
