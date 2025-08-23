@@ -1,652 +1,1096 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mobile Apps & Websites | RBConsult - Flutter & Modern Development</title>
-    <meta
-      name="description"
-      content="Professional mobile apps & websites development using Flutter and modern technologies. Expert team delivering premium solutions with Adjust SDK integration for businesses worldwide."
-    />
-    <meta
-      name="keywords"
-      content="app development Bahrain, تطوير التطبيقات البحرين, mobile app company Bahrain, iOS development Manama, Android development Bahrain, Adjust SDK integration, software company Bahrain, tech consultancy Bahrain, app developer Manama, Gulf region apps, GCC mobile development, React Native Bahrain, Flutter development, Gudaibiya tech company"
-    />
-    <meta name="author" content="RBConsult - RIYADH AL BAHRAIN CONSULTANCY WLL" />
-    <meta property="og:title" content="Mobile Apps & Websites | RBConsult - Premium Technology Partner" />
-    <meta property="og:description" content="Professional mobile applications and websites using Flutter and modern development. Premium technology consultancy serving businesses globally with quality-obsessed approach." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rbconsult.bh" />
-    <meta property="og:image" content="https://rbconsult.bh/og-image.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="rbconsult.bh" />
-    <meta property="twitter:url" content="https://rbconsult.bh" />
-    <meta name="twitter:title" content="Mobile Apps & Websites | RBConsult - Flutter Development" />
-    <meta name="twitter:description" content="Professional mobile apps and websites using Flutter and modern technologies. Quality-focused development with Adjust SDK integration for global businesses." />
-    <meta name="twitter:image" content="https://rbconsult.bh/og-image.png" />
-    <link rel="canonical" href="https://rbconsult.bh/" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <link rel="icon" type="image/png" href="/logo/logo-square-transparent.png" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Mobile Apps & Websites | RBConsult - Flutter & Modern Development
+        </title>
+        <meta
+            name="description"
+            content="Professional mobile apps & websites development using Flutter and modern technologies. Expert team delivering premium solutions with Adjust SDK integration for businesses worldwide."
+        />
+        <meta
+            name="keywords"
+            content="app development Bahrain, تطوير التطبيقات البحرين, mobile app company Bahrain, iOS development Manama, Android development Bahrain, Adjust SDK integration, software company Bahrain, tech consultancy Bahrain, app developer Manama, Gulf region apps, GCC mobile development, React Native Bahrain, Flutter development, Gudaibiya tech company"
+        />
+        <meta
+            name="author"
+            content="RBConsult - RIYADH AL BAHRAIN CONSULTANCY WLL"
+        />
+        <meta
+            property="og:title"
+            content="Mobile Apps & Websites | RBConsult - Premium Technology Partner"
+        />
+        <meta
+            property="og:description"
+            content="Professional mobile applications and websites using Flutter and modern development. Premium technology consultancy serving businesses globally with quality-obsessed approach."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rbconsult.bh" />
+        <meta property="og:image" content="https://rbconsult.bh/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="rbconsult.bh" />
+        <meta property="twitter:url" content="https://rbconsult.bh" />
+        <meta
+            name="twitter:title"
+            content="Mobile Apps & Websites | RBConsult - Flutter Development"
+        />
+        <meta
+            name="twitter:description"
+            content="Professional mobile apps and websites using Flutter and modern technologies. Quality-focused development with Adjust SDK integration for global businesses."
+        />
+        <meta
+            name="twitter:image"
+            content="https://rbconsult.bh/og-image.png"
+        />
+        <link rel="canonical" href="https://rbconsult.bh/" />
+        <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
 
-    <!-- Local Business Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "@id": "https://rbconsult.bh/#organization",
-      "name": "RBConsult - RIYADH AL BAHRAIN CONSULTANCY WLL",
-      "alternateName": "RBConsult",
-      "description": "Mobile app development company specializing in Flutter, iOS, and Android development with Adjust SDK integration.",
-      "url": "https://rbconsult.bh",
-      "telephone": "+973 3958 7730",
-      "email": "info@rbconsult.bh",
-      "foundingDate": "2024",
-      "priceRange": "$$",
-      "currenciesAccepted": "BHD, USD",
-      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
-      "openingHours": "Mo-Su 09:00-21:00",
-      "areaServed": {
-        "@type": "Place",
-        "name": "Worldwide"
-      },
-      "serviceType": "Technology Consultancy",
-      "knowsAbout": [
-        "iOS Development",
-        "Android Development", 
-        "React Native",
-        "Flutter",
-        "Website Development",
-        "Web Applications",
-        "Adjust SDK",
-        "Mobile Attribution",
-        "Software Development"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Technology Development Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "iOS App Development",
-              "description": "Professional iOS application development for iPhone and iPad"
+        <!-- Local Business Schema Markup -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "@id": "https://rbconsult.bh/#organization",
+                "name": "RBConsult - RIYADH AL BAHRAIN CONSULTANCY WLL",
+                "alternateName": "RBConsult",
+                "description": "Mobile app development company specializing in Flutter, iOS, and Android development with Adjust SDK integration.",
+                "url": "https://rbconsult.bh",
+                "telephone": "+973 3958 7730",
+                "email": "info@rbconsult.bh",
+                "foundingDate": "2024",
+                "priceRange": "$$",
+                "currenciesAccepted": "BHD, USD",
+                "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+                "openingHours": "24/7",
+                "areaServed": {
+                    "@type": "Place",
+                    "name": "Worldwide"
+                },
+                "serviceType": "Technology Consultancy",
+                "knowsAbout": [
+                    "iOS Development",
+                    "Android Development",
+                    "React Native",
+                    "Flutter",
+                    "Website Development",
+                    "Web Applications",
+                    "Adjust SDK",
+                    "Mobile Attribution",
+                    "Software Development"
+                ],
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Technology Development Services",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "iOS App Development",
+                                "description": "Professional iOS application development for iPhone and iPad"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Android App Development",
+                                "description": "Native Android application development for smartphones and tablets"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Website Development",
+                                "description": "Professional website and web application development"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Adjust SDK Integration",
+                                "description": "Mobile attribution and analytics integration using Adjust SDK"
+                            }
+                        }
+                    ]
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5.0",
+                    "reviewCount": "12",
+                    "bestRating": "5",
+                    "worstRating": "1"
+                },
+                "sameAs": [
+                    "https://twitter.com/rbconsult_bh",
+                    "https://www.linkedin.com/company/rbconsult-bh",
+                    "https://github.com/RBConsult-BH"
+                ]
             }
-          },
-          {
-            "@type": "Offer", 
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Android App Development",
-              "description": "Native Android application development for smartphones and tablets"
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <style type="text/tailwindcss">
+            @theme {
+                --color-gold: #b99855;
+                --color-gold-dark: #a88744;
             }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service", 
-              "name": "Website Development",
-              "description": "Professional website and web application development"
+
+            @keyframes float {
+                0%,
+                100% {
+                    transform: translateY(0px) scale(1) rotate(0deg);
+                }
+                25% {
+                    transform: translateY(-10px) scale(1.05) rotate(-3deg);
+                }
+                50% {
+                    transform: translateY(-15px) scale(1.1) rotate(3deg);
+                }
+                75% {
+                    transform: translateY(-10px) scale(1.05) rotate(-3deg);
+                }
             }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service", 
-              "name": "Adjust SDK Integration",
-              "description": "Mobile attribution and analytics integration using Adjust SDK"
+
+            @keyframes pulse-glow {
+                0%,
+                100% {
+                    box-shadow:
+                        0 0 20px rgba(185, 152, 85, 0.3),
+                        0 0 40px rgba(185, 152, 85, 0.2),
+                        0 0 60px rgba(185, 152, 85, 0.1);
+                    filter: brightness(1);
+                }
+                50% {
+                    box-shadow:
+                        0 0 30px rgba(185, 152, 85, 0.6),
+                        0 0 60px rgba(185, 152, 85, 0.4),
+                        0 0 90px rgba(185, 152, 85, 0.2);
+                    filter: brightness(1.1);
+                }
             }
-          }
-        ]
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "12",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
-      "sameAs": [
-        "https://twitter.com/rbconsult_bh",
-        "https://www.linkedin.com/company/rbconsult-bh", 
-        "https://github.com/RBConsult-BH"
-      ]
-    }
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
-      @theme {
-        --color-gold: #B99855;
-        --color-gold-dark: #A88744;
-      }
-      
-      @keyframes float {
-        0%, 100% { transform: translateY(0px) scale(1) rotate(0deg); }
-        25% { transform: translateY(-10px) scale(1.05) rotate(-3deg); }
-        50% { transform: translateY(-15px) scale(1.1) rotate(3deg); }
-        75% { transform: translateY(-10px) scale(1.05) rotate(-3deg); }
-      }
-      
-      @keyframes pulse-glow {
-        0%, 100% { 
-          box-shadow: 0 0 20px rgba(185, 152, 85, 0.3), 
-                      0 0 40px rgba(185, 152, 85, 0.2),
-                      0 0 60px rgba(185, 152, 85, 0.1);
-          filter: brightness(1);
-        }
-        50% { 
-          box-shadow: 0 0 30px rgba(185, 152, 85, 0.6),
-                      0 0 60px rgba(185, 152, 85, 0.4),
-                      0 0 90px rgba(185, 152, 85, 0.2);
-          filter: brightness(1.1);
-        }
-      }
-      
-      @keyframes spin-bounce {
-        0% { transform: rotate(0deg) scale(1); }
-        25% { transform: rotate(90deg) scale(1.1); }
-        50% { transform: rotate(180deg) scale(1); }
-        75% { transform: rotate(270deg) scale(1.1); }
-        100% { transform: rotate(360deg) scale(1); }
-      }
-      
-      @keyframes gradient-x {
-        0%, 100% { transform: translateX(0%); }
-        50% { transform: translateX(100%); }
-      }
-      
-      .float-animation { animation: float 4s ease-in-out infinite; }
-      .pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
-      .gradient-animate { animation: gradient-x 8s ease infinite; }
-    </style>
-  </head>
-  <body class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors">
-    <!-- Floating WhatsApp Button -->
-    <a
-      href="https://wa.me/97339587730"
-      target="_blank"
-      class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
-      aria-label="WhatsApp"
+
+            @keyframes spin-bounce {
+                0% {
+                    transform: rotate(0deg) scale(1);
+                }
+                25% {
+                    transform: rotate(90deg) scale(1.1);
+                }
+                50% {
+                    transform: rotate(180deg) scale(1);
+                }
+                75% {
+                    transform: rotate(270deg) scale(1.1);
+                }
+                100% {
+                    transform: rotate(360deg) scale(1);
+                }
+            }
+
+            @keyframes gradient-x {
+                0%,
+                100% {
+                    transform: translateX(0%);
+                }
+                50% {
+                    transform: translateX(100%);
+                }
+            }
+
+            .float-animation {
+                animation: float 4s ease-in-out infinite;
+            }
+            .pulse-glow {
+                animation: pulse-glow 2s ease-in-out infinite;
+            }
+            .gradient-animate {
+                animation: gradient-x 8s ease infinite;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100 transition-colors"
     >
-      <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-      </svg>
-      <div class="absolute -top-12 right-0 rtl:right-auto rtl:left-0 bg-zinc-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-        <span class="lang-ar">تحدث معنا على واتساب</span>
-        <span class="lang-en hidden">Chat on WhatsApp</span>
-      </div>
-    </a>
-    <!-- Language Toggle -->
-    <div class="fixed top-4 left-4 rtl:left-auto rtl:right-4 z-50">
-      <button
-        onclick="toggleLanguage()"
-        class="px-3 py-1.5 text-sm bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-lg transition-colors"
-      >
-        <span class="lang-ar">EN</span>
-        <span class="lang-en hidden">AR</span>
-      </button>
-    </div>
-
-    <!-- Main Container -->
-    <div class="min-h-screen flex flex-col">
-
-      <!-- Hero Section -->
-      <div class="flex-1 flex items-center relative overflow-hidden min-h-screen">
-        <!-- Background Grid -->
-        <div class="absolute inset-0 -z-10">
-          <div class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-          <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-gold/20 via-gold/5 to-transparent rounded-full blur-3xl"></div>
+        <!-- Floating WhatsApp Button -->
+        <a
+            href="https://wa.me/97339587730"
+            target="_blank"
+            class="fixed bottom-6 right-6 rtl:right-auto rtl:left-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 group"
+            aria-label="WhatsApp"
+        >
+            <svg
+                class="w-8 h-8 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                />
+            </svg>
+            <div
+                class="absolute -top-12 right-0 rtl:right-auto rtl:left-0 bg-zinc-900 text-white px-3 py-1 rounded-lg text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap"
+            >
+                <span class="lang-ar">تحدث معنا على واتساب</span>
+                <span class="lang-en hidden">Chat on WhatsApp</span>
+            </div>
+        </a>
+        <!-- Language Toggle -->
+        <div class="fixed top-4 left-4 rtl:left-auto rtl:right-4 z-50">
+            <button
+                onclick="toggleLanguage()"
+                class="px-3 py-1.5 text-sm bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-lg transition-colors"
+            >
+                <span class="lang-ar">EN</span>
+                <span class="lang-en hidden">AR</span>
+            </button>
         </div>
-        
-        <div class="container max-w-7xl mx-auto px-4 py-16 relative">
-          <!-- Stats Bar -->
-          <div class="flex justify-center mb-12">
-            <div class="inline-flex items-center gap-8 px-6 py-3 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-full">
-              <div class="flex items-center gap-2">
-                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                <span class="text-sm font-medium">
-                  <span class="lang-ar">متاح الآن</span>
-                  <span class="lang-en hidden">Available now</span>
-                </span>
-              </div>
-            </div>
-          </div>
 
-          <div class="max-w-5xl mx-auto text-center">
-            <!-- Logo -->
-            <div class="mb-8">
-              <img
-                src="/logo/logo-square-transparent.png"
-                alt="RBConsult"
-                class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto rounded-2xl shadow-2xl float-animation pulse-glow hover:rotate-12 hover:scale-110 transition-all duration-500 cursor-pointer"
-                style="animation: float 3s ease-in-out infinite, pulse-glow 2s ease-in-out infinite;"
-              />
-            </div>
-
-            <!-- Main Headline -->
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-black mb-6 leading-tight tracking-tight">
-              <span class="lang-ar" style="line-height: 1.2;">
-                <span class="block mb-2">فكرتك تبقى مجرد فكرة؟</span>
-                <span class="block bg-gradient-to-r from-gold via-gold-dark to-gold bg-clip-text text-transparent">نحولها لتطبيق حقيقي</span>
-              </span>
-              <span class="lang-en hidden">
-                <span class="block mb-2">Stop talking about your app idea</span>
-                <span class="block bg-gradient-to-r from-gold via-gold-dark to-gold bg-clip-text text-transparent">Let's build it for real</span>
-              </span>
-            </h1>
-
-            <!-- Value Props -->
-            <div class="flex flex-wrap justify-center gap-3 mb-8 px-4">
-              <div class="px-3 py-1.5 bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm rounded-full border border-zinc-200/50 dark:border-zinc-700/50">
-                <span class="text-xs font-medium">
-                  <span class="lang-ar">📱 تطوير كامل</span>
-                  <span class="lang-en hidden">📱 Full Development</span>
-                </span>
-              </div>
-              <div class="px-3 py-1.5 bg-gold/10 backdrop-blur-sm rounded-full border border-gold/30">
-                <span class="text-xs font-medium text-gold">
-                  <span class="lang-ar">🎯 Adjust SDK</span>
-                  <span class="lang-en hidden">🎯 Adjust SDK</span>
-                </span>
-              </div>
-              <div class="px-3 py-1.5 bg-green-50 dark:bg-green-900/20 backdrop-blur-sm rounded-full border border-green-200 dark:border-green-700">
-                <span class="text-xs font-medium text-green-600 dark:text-green-400">
-                  <span class="lang-ar">⚡ تسليم سريع</span>
-                  <span class="lang-en hidden">⚡ Fast delivery</span>
-                </span>
-              </div>
-            </div>
-
-            <!-- CTA -->
-            <div class="space-y-4 mb-12">
-              <!-- Main CTAs -->
-              <div class="flex flex-col sm:flex-row gap-3 justify-center">
-                <a
-                  href="#contact"
-                  class="group relative px-6 py-3 bg-gradient-to-r from-gold to-gold-dark text-white rounded-xl font-semibold text-base transition-all duration-300 hover:scale-105 hover:shadow-xl text-center overflow-hidden"
-                >
-                  <div class="absolute inset-0 bg-gradient-to-r from-gold-dark to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <span class="relative flex items-center justify-center gap-2">
-                    <span class="lang-ar">ابدأ مشروعي</span>
-                    <span class="lang-en hidden">Start My Project</span>
-                    <svg class="w-4 h-4 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                  </span>
-                </a>
-                <a
-                  href="#contact"
-                  onclick="selectConsultation()"
-                  class="group px-6 py-3 bg-white/10 backdrop-blur-sm border border-zinc-300/50 dark:border-zinc-700/50 hover:border-gold/50 hover:bg-gold/5 rounded-xl font-semibold text-base transition-all duration-300 hover:scale-105 text-center"
-                >
-                  <span class="lang-ar">استشارة مجانية</span>
-                  <span class="lang-en hidden">Free Consultation</span>
-                </a>
-              </div>
-              
-              <!-- WhatsApp CTA -->
-              <div class="text-center">
-                <a
-                  href="https://wa.me/97339587730?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A8%D9%86%D8%A7%D8%A1%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A"
-                  target="_blank"
-                  class="inline-flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium text-sm transition-all duration-300 hover:scale-105"
-                >
-                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                  </svg>
-                  <span class="lang-ar">أو تحدث معنا على واتساب</span>
-                  <span class="lang-en hidden">Or chat with us on WhatsApp</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Social Proof -->
-            <div class="text-center mb-20">
-              <p class="text-base text-zinc-500 dark:text-zinc-400 mb-6">
-                <span class="lang-ar">يثق بنا</span>
-                <span class="lang-en hidden">Trusted by</span>
-              </p>
-              <div class="flex justify-center">
-                <a href="https://abyancapital.sa" target="_blank" class="group">
-                  <img
-                    src="/clients/abyan-capital.png"
-                    alt="Abyan Capital"
-                    class="h-12 grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
-                  />
-                </a>
-              </div>
-            </div>
-
-            <!-- Services -->
-            <div id="services" class="space-y-6">
-              <!-- App Development -->
-              <div class="group relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <a href="/app-development.html" class="block relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-gold/50 hover:shadow-xl">
-                  <div class="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-4">
-                    <div class="flex items-center gap-4 sm:gap-6 flex-1">
-                      <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl shadow-lg flex-shrink-0">
-                        📱
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <h3 class="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 group-hover:text-gold transition-colors text-right rtl:text-right ltr:text-left">
-                          <span class="lang-ar">تطوير تطبيقات متكامل</span>
-                          <span class="lang-en hidden">Complete App Development</span>
-                        </h3>
-                        <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 text-right rtl:text-right ltr:text-left line-clamp-2">
-                          <span class="lang-ar">من التصميم والبرمجة وصولاً للنشر في المتاجر</span>
-                          <span class="lang-en hidden">From design and development to app store launch</span>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex items-center justify-between w-full sm:w-auto sm:gap-4">
-                      <div class="hidden lg:flex items-center gap-4 text-sm text-zinc-500">
-                        <span class="lang-ar">تصميم</span>
-                        <span class="lang-en hidden">Design</span>
-                        <span>•</span>
-                        <span class="lang-ar">برمجة</span>
-                        <span class="lang-en hidden">Development</span>
-                        <span>•</span>
-                        <span class="lang-ar">نشر</span>
-                        <span class="lang-en hidden">Launch</span>
-                      </div>
-                      <div class="w-8 h-8 sm:w-10 sm:h-10 bg-zinc-100 dark:bg-zinc-800 rounded-full flex items-center justify-center group-hover:bg-gold group-hover:text-white transition-all flex-shrink-0">
-                        <svg class="w-4 h-4 sm:w-5 sm:h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              <!-- Adjust SDK -->
-              <div class="group relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <a href="/adjust-integration.html" class="block relative bg-gradient-to-r from-gold/5 to-gold/10 dark:from-gold/10 dark:to-gold/5 backdrop-blur-sm border border-gold/30 rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-gold/60 hover:shadow-xl">
-                  <div class="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-4">
-                    <div class="flex items-center gap-4 sm:gap-6 flex-1">
-                      <div class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-gold to-gold-dark rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl shadow-lg flex-shrink-0">
-                        🎯
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <h3 class="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 group-hover:text-gold transition-colors text-right rtl:text-right ltr:text-left">
-                          <span class="lang-ar">تكامل Adjust SDK</span>
-                          <span class="lang-en hidden">Adjust SDK Integration</span>
-                        </h3>
-                        <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 text-right rtl:text-right ltr:text-left line-clamp-2">
-                          <span class="lang-ar">تكامل Adjust SDK في تطبيقك للتتبع والتحليلات</span>
-                          <span class="lang-en hidden">Integrate Adjust SDK into your app for tracking and analytics</span>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="flex items-center justify-between w-full sm:w-auto sm:gap-4">
-                      <div class="hidden lg:flex items-center gap-4 text-sm text-zinc-500">
-                        <span class="lang-ar">تتبع</span>
-                        <span class="lang-en hidden">Tracking</span>
-                        <span>•</span>
-                        <span class="lang-ar">تحليلات</span>
-                        <span class="lang-en hidden">Analytics</span>
-                        <span>•</span>
-                        <span class="lang-ar">تكامل</span>
-                        <span class="lang-en hidden">Integration</span>
-                      </div>
-                      <div class="w-8 h-8 sm:w-10 sm:h-10 bg-gold rounded-full flex items-center justify-center text-white group-hover:bg-gold-dark transition-all flex-shrink-0">
-                        <svg class="w-4 h-4 sm:w-5 sm:h-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <!-- Contact Form Section -->
-            <div id="contact" class="mt-20 relative">
-              <!-- Background -->
-              <div class="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5 rounded-3xl blur-3xl"></div>
-              
-              <div class="relative bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-3xl p-6 md:p-10">
-                <div class="text-center mb-4">
-                  <h2 class="text-xl md:text-2xl font-bold mb-3">
-                    <span class="lang-ar">جاهز نبدأ مشروعك؟</span>
-                    <span class="lang-en hidden">Ready to start your project?</span>
-                  </h2>
-                  <p class="text-sm text-zinc-600 dark:text-zinc-400">
-                    <span class="lang-ar">تواصل معنا عبر واتساب أو املأ النموذج</span>
-                    <span class="lang-en hidden">Contact us via WhatsApp or fill the form</span>
-                  </p>
+        <!-- Main Container -->
+        <div class="min-h-screen flex flex-col">
+            <!-- Hero Section -->
+            <div
+                class="flex-1 flex items-center relative overflow-hidden min-h-screen"
+            >
+                <!-- Background Grid -->
+                <div class="absolute inset-0 -z-10">
+                    <div
+                        class="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"
+                    ></div>
+                    <div
+                        class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-radial from-gold/20 via-gold/5 to-transparent rounded-full blur-3xl"
+                    ></div>
                 </div>
-                
-                <!-- WhatsApp Quick Contact -->
-                <div class="text-center mb-6">
-                  <a
-                    href="https://wa.me/97339587730?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%AD%D8%AF%D8%AB%20%D8%B9%D9%86%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A"
-                    target="_blank"
-                    class="inline-flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold text-sm transition-all duration-300 hover:opacity-90"
-                  >
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                    </svg>
-                    <span class="lang-ar">محادثة سريعة</span>
-                    <span class="lang-en hidden">Quick Chat</span>
-                    <span class="text-xs opacity-90" dir="ltr">+973 3958 7730</span>
-                  </a>
-                  <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-2">
-                    <span class="lang-ar">أو</span>
-                    <span class="lang-en hidden">or</span>
-                  </p>
+
+                <div class="container max-w-7xl mx-auto px-4 py-16 relative">
+                    <!-- Stats Bar -->
+                    <div class="flex justify-center mb-12">
+                        <div
+                            class="inline-flex items-center gap-8 px-6 py-3 bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-full"
+                        >
+                            <div class="flex items-center gap-2">
+                                <div
+                                    class="w-2 h-2 bg-green-500 rounded-full animate-pulse"
+                                ></div>
+                                <span class="text-sm font-medium">
+                                    <span class="lang-ar">متاح الآن</span>
+                                    <span class="lang-en hidden"
+                                        >Available now</span
+                                    >
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="max-w-5xl mx-auto text-center">
+                        <!-- Logo -->
+                        <div class="mb-8">
+                            <img
+                                src="/logo/logo-square-transparent.png"
+                                alt="RBConsult"
+                                class="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 mx-auto rounded-2xl shadow-2xl float-animation pulse-glow hover:rotate-12 hover:scale-110 transition-all duration-500 cursor-pointer"
+                                style="
+                                    animation:
+                                        float 3s ease-in-out infinite,
+                                        pulse-glow 2s ease-in-out infinite;
+                                "
+                            />
+                        </div>
+
+                        <!-- Main Headline -->
+                        <h1
+                            class="text-3xl md:text-4xl lg:text-5xl font-black mb-6 leading-tight tracking-tight"
+                        >
+                            <span class="lang-ar" style="line-height: 1.2">
+                                <span class="block mb-2"
+                                    >فكرتك تبقى مجرد فكرة؟</span
+                                >
+                                <span
+                                    class="block bg-gradient-to-r from-gold via-gold-dark to-gold bg-clip-text text-transparent"
+                                    >نحولها لتطبيق حقيقي</span
+                                >
+                            </span>
+                            <span class="lang-en hidden">
+                                <span class="block mb-2"
+                                    >Stop talking about your app idea</span
+                                >
+                                <span
+                                    class="block bg-gradient-to-r from-gold via-gold-dark to-gold bg-clip-text text-transparent"
+                                    >Let's build it for real</span
+                                >
+                            </span>
+                        </h1>
+
+                        <!-- Value Props -->
+                        <div
+                            class="flex flex-wrap justify-center gap-3 mb-8 px-4"
+                        >
+                            <div
+                                class="px-3 py-1.5 bg-white/80 dark:bg-zinc-800/80 backdrop-blur-sm rounded-full border border-zinc-200/50 dark:border-zinc-700/50"
+                            >
+                                <span class="text-xs font-medium">
+                                    <span class="lang-ar">📱 تطوير كامل</span>
+                                    <span class="lang-en hidden"
+                                        >📱 Full Development</span
+                                    >
+                                </span>
+                            </div>
+                            <div
+                                class="px-3 py-1.5 bg-gold/10 backdrop-blur-sm rounded-full border border-gold/30"
+                            >
+                                <span class="text-xs font-medium text-gold">
+                                    <span class="lang-ar">🎯 Adjust SDK</span>
+                                    <span class="lang-en hidden"
+                                        >🎯 Adjust SDK</span
+                                    >
+                                </span>
+                            </div>
+                            <div
+                                class="px-3 py-1.5 bg-green-50 dark:bg-green-900/20 backdrop-blur-sm rounded-full border border-green-200 dark:border-green-700"
+                            >
+                                <span
+                                    class="text-xs font-medium text-green-600 dark:text-green-400"
+                                >
+                                    <span class="lang-ar">⚡ تسليم سريع</span>
+                                    <span class="lang-en hidden"
+                                        >⚡ Fast delivery</span
+                                    >
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- CTA -->
+                        <div class="space-y-4 mb-12">
+                            <!-- Main CTAs -->
+                            <div
+                                class="flex flex-col sm:flex-row gap-3 justify-center"
+                            >
+                                <a
+                                    href="#contact"
+                                    class="group relative px-6 py-3 bg-gradient-to-r from-gold to-gold-dark text-white rounded-xl font-semibold text-base transition-all duration-300 hover:scale-105 hover:shadow-xl text-center overflow-hidden"
+                                >
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-r from-gold-dark to-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                    ></div>
+                                    <span
+                                        class="relative flex items-center justify-center gap-2"
+                                    >
+                                        <span class="lang-ar">ابدأ مشروعي</span>
+                                        <span class="lang-en hidden"
+                                            >Start My Project</span
+                                        >
+                                        <svg
+                                            class="w-4 h-4 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform rtl:rotate-180"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                                d="M9 5l7 7-7 7"
+                                            ></path>
+                                        </svg>
+                                    </span>
+                                </a>
+                                <a
+                                    href="#contact"
+                                    onclick="selectConsultation()"
+                                    class="group px-6 py-3 bg-white/10 backdrop-blur-sm border border-zinc-300/50 dark:border-zinc-700/50 hover:border-gold/50 hover:bg-gold/5 rounded-xl font-semibold text-base transition-all duration-300 hover:scale-105 text-center"
+                                >
+                                    <span class="lang-ar">استشارة مجانية</span>
+                                    <span class="lang-en hidden"
+                                        >Free Consultation</span
+                                    >
+                                </a>
+                            </div>
+
+                            <!-- WhatsApp CTA -->
+                            <div class="text-center">
+                                <a
+                                    href="https://wa.me/97339587730?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A8%D9%86%D8%A7%D8%A1%20%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A"
+                                    target="_blank"
+                                    class="inline-flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-medium text-sm transition-all duration-300 hover:scale-105"
+                                >
+                                    <svg
+                                        class="w-4 h-4"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                                        />
+                                    </svg>
+                                    <span class="lang-ar"
+                                        >أو تحدث معنا على واتساب</span
+                                    >
+                                    <span class="lang-en hidden"
+                                        >Or chat with us on WhatsApp</span
+                                    >
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Social Proof -->
+                        <div class="text-center mb-20">
+                            <p
+                                class="text-base text-zinc-500 dark:text-zinc-400 mb-6"
+                            >
+                                <span class="lang-ar">يثق بنا</span>
+                                <span class="lang-en hidden">Trusted by</span>
+                            </p>
+                            <div class="flex justify-center">
+                                <a
+                                    href="https://abyancapital.sa"
+                                    target="_blank"
+                                    class="group"
+                                >
+                                    <img
+                                        src="/clients/abyan-capital.png"
+                                        alt="Abyan Capital"
+                                        class="h-12 grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+                                    />
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Services -->
+                        <div id="services" class="space-y-6">
+                            <!-- App Development -->
+                            <div class="group relative overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-transparent via-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                ></div>
+                                <a
+                                    href="/app-development.html"
+                                    class="block relative bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-gold/50 hover:shadow-xl"
+                                >
+                                    <div
+                                        class="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-4"
+                                    >
+                                        <div
+                                            class="flex items-center gap-4 sm:gap-6 flex-1"
+                                        >
+                                            <div
+                                                class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl shadow-lg flex-shrink-0"
+                                            >
+                                                📱
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <h3
+                                                    class="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 group-hover:text-gold transition-colors text-right rtl:text-right ltr:text-left"
+                                                >
+                                                    <span class="lang-ar"
+                                                        >تطوير تطبيقات
+                                                        متكامل</span
+                                                    >
+                                                    <span class="lang-en hidden"
+                                                        >Complete App
+                                                        Development</span
+                                                    >
+                                                </h3>
+                                                <p
+                                                    class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 text-right rtl:text-right ltr:text-left line-clamp-2"
+                                                >
+                                                    <span class="lang-ar"
+                                                        >من التصميم والبرمجة
+                                                        وصولاً للنشر في
+                                                        المتاجر</span
+                                                    >
+                                                    <span class="lang-en hidden"
+                                                        >From design and
+                                                        development to app store
+                                                        launch</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-center justify-between w-full sm:w-auto sm:gap-4"
+                                        >
+                                            <div
+                                                class="hidden lg:flex items-center gap-4 text-sm text-zinc-500"
+                                            >
+                                                <span class="lang-ar"
+                                                    >تصميم</span
+                                                >
+                                                <span class="lang-en hidden"
+                                                    >Design</span
+                                                >
+                                                <span>•</span>
+                                                <span class="lang-ar"
+                                                    >برمجة</span
+                                                >
+                                                <span class="lang-en hidden"
+                                                    >Development</span
+                                                >
+                                                <span>•</span>
+                                                <span class="lang-ar">نشر</span>
+                                                <span class="lang-en hidden"
+                                                    >Launch</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="w-8 h-8 sm:w-10 sm:h-10 bg-zinc-100 dark:bg-zinc-800 rounded-full flex items-center justify-center group-hover:bg-gold group-hover:text-white transition-all flex-shrink-0"
+                                            >
+                                                <svg
+                                                    class="w-4 h-4 sm:w-5 sm:h-5 rtl:rotate-180"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M9 5l7 7-7 7"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Adjust SDK -->
+                            <div class="group relative overflow-hidden">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-r from-transparent via-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                ></div>
+                                <a
+                                    href="/adjust-integration.html"
+                                    class="block relative bg-gradient-to-r from-gold/5 to-gold/10 dark:from-gold/10 dark:to-gold/5 backdrop-blur-sm border border-gold/30 rounded-2xl p-4 sm:p-6 md:p-8 transition-all duration-300 hover:border-gold/60 hover:shadow-xl"
+                                >
+                                    <div
+                                        class="flex flex-col sm:flex-row items-start sm:items-center sm:justify-between gap-4"
+                                    >
+                                        <div
+                                            class="flex items-center gap-4 sm:gap-6 flex-1"
+                                        >
+                                            <div
+                                                class="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-gradient-to-br from-gold to-gold-dark rounded-lg sm:rounded-xl flex items-center justify-center text-lg sm:text-xl shadow-lg flex-shrink-0"
+                                            >
+                                                🎯
+                                            </div>
+                                            <div class="flex-1 min-w-0">
+                                                <h3
+                                                    class="text-base sm:text-lg md:text-xl font-bold mb-1 sm:mb-2 group-hover:text-gold transition-colors text-right rtl:text-right ltr:text-left"
+                                                >
+                                                    <span class="lang-ar"
+                                                        >تكامل Adjust SDK</span
+                                                    >
+                                                    <span class="lang-en hidden"
+                                                        >Adjust SDK
+                                                        Integration</span
+                                                    >
+                                                </h3>
+                                                <p
+                                                    class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 text-right rtl:text-right ltr:text-left line-clamp-2"
+                                                >
+                                                    <span class="lang-ar"
+                                                        >تكامل Adjust SDK في
+                                                        تطبيقك للتتبع
+                                                        والتحليلات</span
+                                                    >
+                                                    <span class="lang-en hidden"
+                                                        >Integrate Adjust SDK
+                                                        into your app for
+                                                        tracking and
+                                                        analytics</span
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex items-center justify-between w-full sm:w-auto sm:gap-4"
+                                        >
+                                            <div
+                                                class="hidden lg:flex items-center gap-4 text-sm text-zinc-500"
+                                            >
+                                                <span class="lang-ar"
+                                                    >تتبع</span
+                                                >
+                                                <span class="lang-en hidden"
+                                                    >Tracking</span
+                                                >
+                                                <span>•</span>
+                                                <span class="lang-ar"
+                                                    >تحليلات</span
+                                                >
+                                                <span class="lang-en hidden"
+                                                    >Analytics</span
+                                                >
+                                                <span>•</span>
+                                                <span class="lang-ar"
+                                                    >تكامل</span
+                                                >
+                                                <span class="lang-en hidden"
+                                                    >Integration</span
+                                                >
+                                            </div>
+                                            <div
+                                                class="w-8 h-8 sm:w-10 sm:h-10 bg-gold rounded-full flex items-center justify-center text-white group-hover:bg-gold-dark transition-all flex-shrink-0"
+                                            >
+                                                <svg
+                                                    class="w-4 h-4 sm:w-5 sm:h-5 rtl:rotate-180"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                >
+                                                    <path
+                                                        stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M9 5l7 7-7 7"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Contact Form Section -->
+                        <div id="contact" class="mt-20 relative">
+                            <!-- Background -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-gold/5 via-transparent to-gold/5 rounded-3xl blur-3xl"
+                            ></div>
+
+                            <div
+                                class="relative bg-white/50 dark:bg-zinc-900/50 backdrop-blur-sm border border-zinc-200/50 dark:border-zinc-700/50 rounded-3xl p-6 md:p-10"
+                            >
+                                <div class="text-center mb-4">
+                                    <h2
+                                        class="text-xl md:text-2xl font-bold mb-3"
+                                    >
+                                        <span class="lang-ar"
+                                            >جاهز نبدأ مشروعك؟</span
+                                        >
+                                        <span class="lang-en hidden"
+                                            >Ready to start your project?</span
+                                        >
+                                    </h2>
+                                    <p
+                                        class="text-sm text-zinc-600 dark:text-zinc-400"
+                                    >
+                                        <span class="lang-ar"
+                                            >تواصل معنا عبر واتساب أو املأ
+                                            النموذج</span
+                                        >
+                                        <span class="lang-en hidden"
+                                            >Contact us via WhatsApp or fill the
+                                            form</span
+                                        >
+                                    </p>
+                                </div>
+
+                                <!-- WhatsApp Quick Contact -->
+                                <div class="text-center mb-6">
+                                    <a
+                                        href="https://wa.me/97339587730?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%A7%D9%84%D8%AA%D8%AD%D8%AF%D8%AB%20%D8%B9%D9%86%20%D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%8A"
+                                        target="_blank"
+                                        class="inline-flex items-center gap-2 px-4 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg font-semibold text-sm transition-all duration-300 hover:opacity-90"
+                                    >
+                                        <svg
+                                            class="w-4 h-4"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path
+                                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                                            />
+                                        </svg>
+                                        <span class="lang-ar"
+                                            >محادثة سريعة</span
+                                        >
+                                        <span class="lang-en hidden"
+                                            >Quick Chat</span
+                                        >
+                                        <span
+                                            class="text-xs opacity-90"
+                                            dir="ltr"
+                                            >+973 3958 7730</span
+                                        >
+                                    </a>
+                                    <p
+                                        class="text-xs text-zinc-500 dark:text-zinc-400 mt-2"
+                                    >
+                                        <span class="lang-ar">أو</span>
+                                        <span class="lang-en hidden">or</span>
+                                    </p>
+                                </div>
+
+                                <div class="max-w-2xl mx-auto">
+                                    <form
+                                        name="contact"
+                                        method="POST"
+                                        action="/thank-you.html"
+                                        netlify
+                                        netlify-honeypot="bot-field"
+                                        class="space-y-3"
+                                    >
+                                        <input
+                                            type="hidden"
+                                            name="form-name"
+                                            value="contact"
+                                        />
+                                        <p class="hidden">
+                                            <label
+                                                >Don't fill this out:
+                                                <input name="bot-field"
+                                            /></label>
+                                        </p>
+
+                                        <div class="grid md:grid-cols-2 gap-3">
+                                            <div>
+                                                <label
+                                                    class="block text-xs font-medium mb-1"
+                                                >
+                                                    <span class="lang-ar"
+                                                        >الاسم</span
+                                                    >
+                                                    <span class="lang-en hidden"
+                                                        >Name</span
+                                                    >
+                                                </label>
+                                                <input
+                                                    type="text"
+                                                    name="name"
+                                                    required
+                                                    class="w-full px-3 py-2 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-gold text-sm"
+                                                />
+                                            </div>
+
+                                            <div>
+                                                <label
+                                                    class="block text-xs font-medium mb-1"
+                                                >
+                                                    <span class="lang-ar"
+                                                        >البريد الإلكتروني</span
+                                                    >
+                                                    <span class="lang-en hidden"
+                                                        >Email</span
+                                                    >
+                                                </label>
+                                                <input
+                                                    type="email"
+                                                    name="email"
+                                                    required
+                                                    class="w-full px-3 py-2 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-gold text-sm"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <label
+                                                class="block text-xs font-medium mb-1"
+                                            >
+                                                <span class="lang-ar"
+                                                    >نوع المشروع</span
+                                                >
+                                                <span class="lang-en hidden"
+                                                    >Project Type</span
+                                                >
+                                            </label>
+                                            <select
+                                                name="project-type"
+                                                required
+                                                id="project-type-select"
+                                                class="w-full px-3 py-2 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-gold text-sm"
+                                            >
+                                                <option
+                                                    value=""
+                                                    data-ar="اختر..."
+                                                    data-en="Select..."
+                                                ></option>
+                                                <option
+                                                    value="free-consultation"
+                                                    data-ar="استشارة مجانية"
+                                                    data-en="Free Consultation"
+                                                ></option>
+                                                <option
+                                                    value="new-app"
+                                                    data-ar="تطبيق جديد"
+                                                    data-en="New App Development"
+                                                ></option>
+                                                <option
+                                                    value="adjust-integration"
+                                                    data-ar="تكامل Adjust SDK"
+                                                    data-en="Adjust SDK Integration"
+                                                ></option>
+                                                <option
+                                                    value="app-optimization"
+                                                    data-ar="تحسين تطبيق موجود"
+                                                    data-en="App Optimization"
+                                                ></option>
+                                                <option
+                                                    value="technical-consultation"
+                                                    data-ar="استشارة تقنية مدفوعة"
+                                                    data-en="Paid Technical Consultation"
+                                                ></option>
+                                            </select>
+                                        </div>
+
+                                        <div>
+                                            <label
+                                                class="block text-xs font-medium mb-1"
+                                            >
+                                                <span class="lang-ar"
+                                                    >تفاصيل المشروع</span
+                                                >
+                                                <span class="lang-en hidden"
+                                                    >Project Details</span
+                                                >
+                                            </label>
+                                            <textarea
+                                                name="message"
+                                                rows="4"
+                                                required
+                                                class="w-full px-3 py-2 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-gold resize-none text-sm"
+                                            ></textarea>
+                                        </div>
+
+                                        <button
+                                            type="submit"
+                                            class="w-full px-4 py-2 bg-gradient-to-r from-gold to-gold-dark text-white rounded-lg font-medium transition-all duration-300 hover:opacity-90 text-sm"
+                                        >
+                                            <span class="lang-ar"
+                                                >لنبدأ العمل 🚀</span
+                                            >
+                                            <span class="lang-en hidden"
+                                                >Let's Get Started 🚀</span
+                                            >
+                                        </button>
+
+                                        <p
+                                            class="text-xs text-center text-zinc-500 dark:text-zinc-400 font-medium"
+                                        >
+                                            <span class="lang-ar"
+                                                >⚡ نرد خلال ساعات، لا
+                                                أيام</span
+                                            >
+                                            <span class="lang-en hidden"
+                                                >⚡ We respond in hours, not
+                                                days</span
+                                            >
+                                        </p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-              <div class="max-w-2xl mx-auto">
-                <form name="contact" method="POST" action="/thank-you.html" netlify netlify-honeypot="bot-field" class="space-y-3">
-                  <input type="hidden" name="form-name" value="contact" />
-                  <p class="hidden">
-                    <label>Don't fill this out: <input name="bot-field" /></label>
-                  </p>
-                  
-                  <div class="grid md:grid-cols-2 gap-3">
-                    <div>
-                      <label class="block text-xs font-medium mb-1">
-                        <span class="lang-ar">الاسم</span>
-                        <span class="lang-en hidden">Name</span>
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        required
-                        class="w-full px-3 py-2 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-gold text-sm"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label class="block text-xs font-medium mb-1">
-                        <span class="lang-ar">البريد الإلكتروني</span>
-                        <span class="lang-en hidden">Email</span>
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        required
-                        class="w-full px-3 py-2 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-gold text-sm"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div>
-                    <label class="block text-xs font-medium mb-1">
-                      <span class="lang-ar">نوع المشروع</span>
-                      <span class="lang-en hidden">Project Type</span>
-                    </label>
-                    <select
-                      name="project-type"
-                      required
-                      id="project-type-select"
-                      class="w-full px-3 py-2 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-gold text-sm"
+            </div>
+
+            <!-- Footer -->
+            <footer class="border-t border-zinc-200 dark:border-zinc-800 py-8">
+                <div class="container max-w-6xl mx-auto px-4">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center gap-4"
                     >
-                      <option value="" data-ar="اختر..." data-en="Select..."></option>
-                      <option value="free-consultation" data-ar="استشارة مجانية" data-en="Free Consultation"></option>
-                      <option value="new-app" data-ar="تطبيق جديد" data-en="New App Development"></option>
-                      <option value="adjust-integration" data-ar="تكامل Adjust SDK" data-en="Adjust SDK Integration"></option>
-                      <option value="app-optimization" data-ar="تحسين تطبيق موجود" data-en="App Optimization"></option>
-                      <option value="technical-consultation" data-ar="استشارة تقنية مدفوعة" data-en="Paid Technical Consultation"></option>
-                    </select>
-                  </div>
-                  
-                  <div>
-                    <label class="block text-xs font-medium mb-1">
-                      <span class="lang-ar">تفاصيل المشروع</span>
-                      <span class="lang-en hidden">Project Details</span>
-                    </label>
-                    <textarea
-                      name="message"
-                      rows="4"
-                      required
-                      class="w-full px-3 py-2 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-gold resize-none text-sm"
-                    ></textarea>
-                  </div>
-                  
-                  <button
-                    type="submit"
-                    class="w-full px-4 py-2 bg-gradient-to-r from-gold to-gold-dark text-white rounded-lg font-medium transition-all duration-300 hover:opacity-90 text-sm"
-                  >
-                    <span class="lang-ar">لنبدأ العمل 🚀</span>
-                    <span class="lang-en hidden">Let's Get Started 🚀</span>
-                  </button>
-                  
-                  <p class="text-xs text-center text-zinc-500 dark:text-zinc-400 font-medium">
-                    <span class="lang-ar">⚡ نرد خلال ساعات، لا أيام</span>
-                    <span class="lang-en hidden">⚡ We respond in hours, not days</span>
-                  </p>
-                </form>
-              </div>
-              </div>
-            </div>
-          </div>
+                        <div
+                            class="text-sm text-zinc-600 dark:text-zinc-400 text-center md:text-right"
+                        >
+                            <span class="lang-ar"
+                                >© <span id="year"></span> رياض البحرين
+                                للاستشارات ذ.م.م</span
+                            >
+                            <span class="lang-en hidden"
+                                >© <span id="year-en"></span> RIYADH AL BAHRAIN
+                                CONSULTANCY WLL</span
+                            ><br />
+                            CR No. 175236-1
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <a
+                                href="/about.html"
+                                class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                            >
+                                <span class="lang-ar">من نحن</span>
+                                <span class="lang-en hidden">About</span>
+                            </a>
+                            <a
+                                href="/contact.html"
+                                class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                            >
+                                <span class="lang-ar">اتصل بنا</span>
+                                <span class="lang-en hidden">Contact</span>
+                            </a>
+                            <a
+                                href="/terms.html"
+                                class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                            >
+                                <span class="lang-ar">الشروط</span>
+                                <span class="lang-en hidden">Terms</span>
+                            </a>
+                            <a
+                                href="/privacy.html"
+                                class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
+                            >
+                                <span class="lang-ar">الخصوصية</span>
+                                <span class="lang-en hidden">Privacy</span>
+                            </a>
+                            <a
+                                href="mailto:info@rbconsult.bh"
+                                class="text-zinc-600 dark:text-zinc-400 hover:text-gold"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                >
+                                    <path
+                                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                                    />
+                                    <path
+                                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://twitter.com/rbconsult_bh"
+                                target="_blank"
+                                class="text-zinc-600 dark:text-zinc-400 hover:text-gold"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/company/rbconsult-bh"
+                                target="_blank"
+                                class="text-zinc-600 dark:text-zinc-400 hover:text-gold"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://github.com/RBConsult-BH"
+                                target="_blank"
+                                class="text-zinc-600 dark:text-zinc-400 hover:text-gold"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                                    />
+                                </svg>
+                            </a>
+                            <a
+                                href="https://wa.me/97339587730"
+                                target="_blank"
+                                class="text-zinc-600 dark:text-zinc-400 hover:text-green-500"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-      </div>
 
-      <!-- Footer -->
-      <footer class="border-t border-zinc-200 dark:border-zinc-800 py-8">
-        <div class="container max-w-6xl mx-auto px-4">
-          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-sm text-zinc-600 dark:text-zinc-400 text-center md:text-right">
-              <span class="lang-ar">© <span id="year"></span> رياض البحرين للاستشارات ذ.م.م</span>
-              <span class="lang-en hidden">© <span id="year-en"></span> RIYADH AL BAHRAIN CONSULTANCY WLL</span><br />
-              CR No. 175236-1
-            </div>
-            <div class="flex items-center gap-6">
-              <a href="/about.html" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
-                <span class="lang-ar">من نحن</span>
-                <span class="lang-en hidden">About</span>
-              </a>
-              <a href="/contact.html" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
-                <span class="lang-ar">اتصل بنا</span>
-                <span class="lang-en hidden">Contact</span>
-              </a>
-              <a href="/terms.html" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
-                <span class="lang-ar">الشروط</span>
-                <span class="lang-en hidden">Terms</span>
-              </a>
-              <a href="/privacy.html" class="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100">
-                <span class="lang-ar">الخصوصية</span>
-                <span class="lang-en hidden">Privacy</span>
-              </a>
-              <a href="mailto:info@rbconsult.bh" class="text-zinc-600 dark:text-zinc-400 hover:text-gold">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                </svg>
-              </a>
-              <a href="https://twitter.com/rbconsult_bh" target="_blank" class="text-zinc-600 dark:text-zinc-400 hover:text-gold">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                </svg>
-              </a>
-              <a href="https://www.linkedin.com/company/rbconsult-bh" target="_blank" class="text-zinc-600 dark:text-zinc-400 hover:text-gold">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
-              </a>
-              <a href="https://github.com/RBConsult-BH" target="_blank" class="text-zinc-600 dark:text-zinc-400 hover:text-gold">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-              </a>
-              <a href="https://wa.me/97339587730" target="_blank" class="text-zinc-600 dark:text-zinc-400 hover:text-green-500">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+        <script>
+            // Theme detection
+            if (
+                localStorage.theme === "dark" ||
+                (!("theme" in localStorage) &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                document.documentElement.classList.add("dark");
+            }
 
-    <script>
-      // Theme detection
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-      }
+            // Language toggle
+            let currentLang = localStorage.getItem("language") || "ar";
 
-      // Language toggle
-      let currentLang = localStorage.getItem('language') || 'ar';
-      
-      function setLanguage(lang) {
-        currentLang = lang;
-        localStorage.setItem('language', lang);
-        
-        document.documentElement.lang = lang;
-        document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-        
-        // Toggle visibility of language-specific content
-        document.querySelectorAll('.lang-ar').forEach(el => {
-          el.classList.toggle('hidden', lang !== 'ar');
-        });
-        document.querySelectorAll('.lang-en').forEach(el => {
-          el.classList.toggle('hidden', lang !== 'en');
-        });
-        
-        // Update select options
-        const select = document.getElementById('project-type-select');
-        if (select) {
-          Array.from(select.options).forEach(option => {
-            const text = option.getAttribute(`data-${lang}`);
-            if (text) option.textContent = text;
-          });
-        }
-        
-        // Update page title
-        document.title = lang === 'ar' 
-          ? 'تطبيقات ومواقع | RBConsult - Flutter والتطوير الحديث'
-          : 'Mobile Apps & Websites | RBConsult - Flutter & Modern Development';
-      }
-      
-      function toggleLanguage() {
-        setLanguage(currentLang === 'ar' ? 'en' : 'ar');
-      }
-      
-      // Initialize language
-      setLanguage(currentLang);
-      
-      // Set current year
-      const currentYear = new Date().getFullYear();
-      const yearElement = document.getElementById('year');
-      const yearEnElement = document.getElementById('year-en');
-      if (yearElement) yearElement.textContent = currentYear;
-      if (yearEnElement) yearEnElement.textContent = currentYear;
-      
-      // Function to select consultation option
-      function selectConsultation() {
-        setTimeout(() => {
-          const select = document.getElementById('project-type-select');
-          if (select) {
-            select.value = 'free-consultation';
-          }
-        }, 500);
-      }
-    </script>
-  </body>
+            function setLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem("language", lang);
+
+                document.documentElement.lang = lang;
+                document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+                // Toggle visibility of language-specific content
+                document.querySelectorAll(".lang-ar").forEach((el) => {
+                    el.classList.toggle("hidden", lang !== "ar");
+                });
+                document.querySelectorAll(".lang-en").forEach((el) => {
+                    el.classList.toggle("hidden", lang !== "en");
+                });
+
+                // Update select options
+                const select = document.getElementById("project-type-select");
+                if (select) {
+                    Array.from(select.options).forEach((option) => {
+                        const text = option.getAttribute(`data-${lang}`);
+                        if (text) option.textContent = text;
+                    });
+                }
+
+                // Update page title
+                document.title =
+                    lang === "ar"
+                        ? "تطبيقات ومواقع | RBConsult - Flutter والتطوير الحديث"
+                        : "Mobile Apps & Websites | RBConsult - Flutter & Modern Development";
+            }
+
+            function toggleLanguage() {
+                setLanguage(currentLang === "ar" ? "en" : "ar");
+            }
+
+            // Initialize language
+            setLanguage(currentLang);
+
+            // Set current year
+            const currentYear = new Date().getFullYear();
+            const yearElement = document.getElementById("year");
+            const yearEnElement = document.getElementById("year-en");
+            if (yearElement) yearElement.textContent = currentYear;
+            if (yearEnElement) yearEnElement.textContent = currentYear;
+
+            // Function to select consultation option
+            function selectConsultation() {
+                setTimeout(() => {
+                    const select = document.getElementById(
+                        "project-type-select",
+                    );
+                    if (select) {
+                        select.value = "free-consultation";
+                    }
+                }, 500);
+            }
+        </script>
+    </body>
 </html>
