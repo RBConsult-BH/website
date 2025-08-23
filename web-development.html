@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Development | RBConsult - React & Modern Technologies</title>
+    <meta name="description" content="Professional web development services using React, Node.js, and modern technologies. Custom websites and web applications built with quality and performance in mind." />
+    <meta name="keywords" content="web development, website development, React, Node.js, Next.js, تطوير المواقع, تطوير الويب, custom websites" />
+    <meta name="author" content="RBConsult - RIYADH AL BAHRAIN CONSULTANCY WLL" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Web Development | RBConsult" />
+    <meta property="og:description" content="Professional web development using React, Node.js, and modern technologies. Custom websites built with quality." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rbconsult.bh/web-development.html" />
+    <meta property="og:image" content="https://rbconsult.bh/og-image.png" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="rbconsult.bh" />
+    <meta property="twitter:url" content="https://rbconsult.bh/web-development.html" />
+    <meta name="twitter:title" content="Web Development | RBConsult" />
+    <meta name="twitter:description" content="Professional web development using React, Node.js, and modern technologies." />
+    <meta name="twitter:image" content="https://rbconsult.bh/og-image.png" />
+    
+    <link rel="canonical" href="https://rbconsult.bh/web-development.html" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="icon" type="image/png" href="/logo/logo-square-transparent.png" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold': '#B99855',
+                        'gold-dark': '#A88744',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-zinc-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-zinc-100 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-8">
+                    <a href="/" class="flex items-center gap-3">
+                        <img src="/logo/logo-square-transparent.png" alt="RBConsult" class="w-8 h-8">
+                        <span class="font-semibold text-lg">RBConsult</span>
+                    </a>
+                    <div class="hidden md:flex items-center gap-6">
+                        <a href="/" class="text-sm text-zinc-600 hover:text-zinc-900 transition">
+                            <span class="lang-ar">الرئيسية</span>
+                            <span class="lang-en hidden">Home</span>
+                        </a>
+                        <a href="/app-development.html" class="text-sm text-zinc-600 hover:text-zinc-900 transition">
+                            <span class="lang-ar">تطوير التطبيقات</span>
+                            <span class="lang-en hidden">App Development</span>
+                        </a>
+                        <a href="/web-development.html" class="text-sm text-zinc-900 font-medium">
+                            <span class="lang-ar">تطوير المواقع</span>
+                            <span class="lang-en hidden">Web Development</span>
+                        </a>
+                        <a href="/adjust-integration.html" class="text-sm text-zinc-600 hover:text-zinc-900 transition">
+                            <span class="lang-ar">Adjust SDK</span>
+                            <span class="lang-en hidden">Adjust SDK</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button onclick="toggleLanguage()" class="px-3 py-1.5 text-xs bg-zinc-100 hover:bg-zinc-200 rounded-md transition">
+                        <span class="lang-ar">EN</span>
+                        <span class="lang-en hidden">AR</span>
+                    </button>
+                    <a href="https://cal.com/rbconsult/discovery" target="_blank" class="px-4 py-2 bg-zinc-900 text-white text-sm rounded-md hover:bg-zinc-800 transition">
+                        <span class="lang-ar">احجز استشارة</span>
+                        <span class="lang-en hidden">Book Consultation</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="max-w-3xl">
+                <div class="text-sm text-zinc-500 mb-4">
+                    <span class="lang-ar">الخدمات / تطوير المواقع</span>
+                    <span class="lang-en hidden">Services / Web Development</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="lang-ar">تطوير مواقع احترافية</span>
+                    <span class="lang-en hidden">Professional Web Development</span>
+                </h1>
+                <p class="text-xl text-zinc-600 mb-8">
+                    <span class="lang-ar">نبني مواقع وتطبيقات ويب سريعة وآمنة باستخدام أحدث التقنيات. من المواقع التعريفية إلى منصات التجارة الإلكترونية المعقدة.</span>
+                    <span class="lang-en hidden">We build fast, secure websites and web applications using modern technologies. From corporate websites to complex e-commerce platforms.</span>
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://cal.com/rbconsult/discovery" target="_blank" class="px-6 py-3 bg-zinc-900 text-white rounded-md hover:bg-zinc-800 transition">
+                        <span class="lang-ar">ناقش مشروعك</span>
+                        <span class="lang-en hidden">Discuss Your Project</span>
+                    </a>
+                    <a href="https://wa.me/97339587730" target="_blank" class="px-6 py-3 border border-zinc-300 rounded-md hover:bg-zinc-50 transition">
+                        <span class="lang-ar">واتساب</span>
+                        <span class="lang-en hidden">WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Build -->
+    <section class="py-20 bg-zinc-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">
+                    <span class="lang-ar">ماذا نبني</span>
+                    <span class="lang-en hidden">What We Build</span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg p-6 border border-zinc-200">
+                    <h3 class="font-semibold text-lg mb-3">
+                        <span class="lang-ar">مواقع الشركات</span>
+                        <span class="lang-en hidden">Corporate Websites</span>
+                    </h3>
+                    <p class="text-zinc-600 text-sm mb-3">
+                        <span class="lang-ar">مواقع احترافية تعكس هوية شركتك وتجذب العملاء</span>
+                        <span class="lang-en hidden">Professional websites that reflect your brand and attract customers</span>
+                    </p>
+                    <ul class="text-sm text-zinc-500 space-y-1">
+                        <li class="lang-ar">• تصميم متجاوب</li>
+                        <li class="lang-en hidden">• Responsive design</li>
+                        <li class="lang-ar">• محسّن لمحركات البحث</li>
+                        <li class="lang-en hidden">• SEO optimized</li>
+                        <li class="lang-ar">• سرعة عالية</li>
+                        <li class="lang-en hidden">• High performance</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 border border-zinc-200">
+                    <h3 class="font-semibold text-lg mb-3">
+                        <span class="lang-ar">منصات التجارة الإلكترونية</span>
+                        <span class="lang-en hidden">E-commerce Platforms</span>
+                    </h3>
+                    <p class="text-zinc-600 text-sm mb-3">
+                        <span class="lang-ar">متاجر إلكترونية متكاملة مع بوابات الدفع والشحن</span>
+                        <span class="lang-en hidden">Complete online stores with payment and shipping integration</span>
+                    </p>
+                    <ul class="text-sm text-zinc-500 space-y-1">
+                        <li class="lang-ar">• عربة تسوق متقدمة</li>
+                        <li class="lang-en hidden">• Advanced shopping cart</li>
+                        <li class="lang-ar">• بوابات دفع آمنة</li>
+                        <li class="lang-en hidden">• Secure payment gateways</li>
+                        <li class="lang-ar">• إدارة المخزون</li>
+                        <li class="lang-en hidden">• Inventory management</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 border border-zinc-200">
+                    <h3 class="font-semibold text-lg mb-3">
+                        <span class="lang-ar">تطبيقات الويب</span>
+                        <span class="lang-en hidden">Web Applications</span>
+                    </h3>
+                    <p class="text-zinc-600 text-sm mb-3">
+                        <span class="lang-ar">تطبيقات ويب تفاعلية لإدارة الأعمال والعمليات</span>
+                        <span class="lang-en hidden">Interactive web apps for business and process management</span>
+                    </p>
+                    <ul class="text-sm text-zinc-500 space-y-1">
+                        <li class="lang-ar">• لوحات تحكم</li>
+                        <li class="lang-en hidden">• Dashboards</li>
+                        <li class="lang-ar">• أنظمة إدارة</li>
+                        <li class="lang-en hidden">• Management systems</li>
+                        <li class="lang-ar">• واجهات API</li>
+                        <li class="lang-en hidden">• API interfaces</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 border border-zinc-200">
+                    <h3 class="font-semibold text-lg mb-3">
+                        <span class="lang-ar">المواقع التعريفية</span>
+                        <span class="lang-en hidden">Landing Pages</span>
+                    </h3>
+                    <p class="text-zinc-600 text-sm mb-3">
+                        <span class="lang-ar">صفحات هبوط محسّنة للتحويل والحملات التسويقية</span>
+                        <span class="lang-en hidden">Conversion-optimized landing pages for marketing campaigns</span>
+                    </p>
+                    <ul class="text-sm text-zinc-500 space-y-1">
+                        <li class="lang-ar">• تحسين معدل التحويل</li>
+                        <li class="lang-en hidden">• Conversion optimization</li>
+                        <li class="lang-ar">• اختبار A/B</li>
+                        <li class="lang-en hidden">• A/B testing</li>
+                        <li class="lang-ar">• تحليلات متقدمة</li>
+                        <li class="lang-en hidden">• Advanced analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">
+                    <span class="lang-ar">التقنيات المستخدمة</span>
+                    <span class="lang-en hidden">Technologies We Use</span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <h3 class="font-semibold mb-4">Frontend</h3>
+                    <div class="space-y-2 text-sm text-zinc-600">
+                        <div>React.js</div>
+                        <div>Next.js</div>
+                        <div>Vue.js</div>
+                        <div>TypeScript</div>
+                        <div>Tailwind CSS</div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <h3 class="font-semibold mb-4">Backend</h3>
+                    <div class="space-y-2 text-sm text-zinc-600">
+                        <div>Node.js</div>
+                        <div>Express.js</div>
+                        <div>Python</div>
+                        <div>PostgreSQL</div>
+                        <div>MongoDB</div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <h3 class="font-semibold mb-4">Cloud & DevOps</h3>
+                    <div class="space-y-2 text-sm text-zinc-600">
+                        <div>AWS</div>
+                        <div>Google Cloud</div>
+                        <div>Vercel</div>
+                        <div>Netlify</div>
+                        <div>Docker</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="py-20 bg-zinc-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">
+                    <span class="lang-ar">عملية التطوير</span>
+                    <span class="lang-en hidden">Development Process</span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4 font-semibold">1</div>
+                    <h3 class="font-semibold mb-2">
+                        <span class="lang-ar">التخطيط</span>
+                        <span class="lang-en hidden">Planning</span>
+                    </h3>
+                    <p class="text-sm text-zinc-600">
+                        <span class="lang-ar">تحليل المتطلبات ووضع الخطة</span>
+                        <span class="lang-en hidden">Requirements analysis and roadmap</span>
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4 font-semibold">2</div>
+                    <h3 class="font-semibold mb-2">
+                        <span class="lang-ar">التصميم</span>
+                        <span class="lang-en hidden">Design</span>
+                    </h3>
+                    <p class="text-sm text-zinc-600">
+                        <span class="lang-ar">تصميم واجهات المستخدم</span>
+                        <span class="lang-en hidden">UI/UX design and prototyping</span>
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4 font-semibold">3</div>
+                    <h3 class="font-semibold mb-2">
+                        <span class="lang-ar">التطوير</span>
+                        <span class="lang-en hidden">Development</span>
+                    </h3>
+                    <p class="text-sm text-zinc-600">
+                        <span class="lang-ar">برمجة وبناء الموقع</span>
+                        <span class="lang-en hidden">Coding and building</span>
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4 font-semibold">4</div>
+                    <h3 class="font-semibold mb-2">
+                        <span class="lang-ar">النشر</span>
+                        <span class="lang-en hidden">Deploy</span>
+                    </h3>
+                    <p class="text-sm text-zinc-600">
+                        <span class="lang-ar">الاختبار والإطلاق</span>
+                        <span class="lang-en hidden">Testing and launch</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">
+                    <span class="lang-ar">لماذا RBConsult</span>
+                    <span class="lang-en hidden">Why Choose RBConsult</span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">
+                        <span class="lang-ar">أداء عالي</span>
+                        <span class="lang-en hidden">High Performance</span>
+                    </h3>
+                    <p class="text-sm text-zinc-600">
+                        <span class="lang-ar">مواقع سريعة ومحسّنة للأداء</span>
+                        <span class="lang-en hidden">Fast, optimized websites</span>
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">
+                        <span class="lang-ar">أمان متقدم</span>
+                        <span class="lang-en hidden">Secure Development</span>
+                    </h3>
+                    <p class="text-sm text-zinc-600">
+                        <span class="lang-ar">حماية قوية وتشفير البيانات</span>
+                        <span class="lang-en hidden">Strong security and encryption</span>
+                    </p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-semibold mb-2">
+                        <span class="lang-ar">صيانة مستمرة</span>
+                        <span class="lang-en hidden">Ongoing Support</span>
+                    </h3>
+                    <p class="text-sm text-zinc-600">
+                        <span class="lang-ar">دعم وتحديثات منتظمة</span>
+                        <span class="lang-en hidden">Regular updates and maintenance</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-zinc-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">
+                <span class="lang-ar">جاهز لبناء موقعك؟</span>
+                <span class="lang-en hidden">Ready to Build Your Website?</span>
+            </h2>
+            <p class="text-zinc-400 mb-8">
+                <span class="lang-ar">احجز مكالمة استكشافية مجانية لمناقشة مشروعك</span>
+                <span class="lang-en hidden">Book a free discovery call to discuss your project</span>
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="https://cal.com/rbconsult/discovery" target="_blank" class="px-6 py-3 bg-white text-zinc-900 rounded-md hover:bg-zinc-100 transition">
+                    <span class="lang-ar">احجز مكالمة</span>
+                    <span class="lang-en hidden">Book a Call</span>
+                </a>
+                <a href="https://wa.me/97339587730" target="_blank" class="px-6 py-3 border border-zinc-700 rounded-md hover:bg-zinc-800 transition">
+                    <span class="lang-ar">واتساب</span>
+                    <span class="lang-en hidden">WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-zinc-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-zinc-600">
+                    <span class="lang-ar">© 2024 رياض البحرين للاستشارات ذ.م.م</span>
+                    <span class="lang-en hidden">© 2024 RIYADH AL BAHRAIN CONSULTANCY WLL</span>
+                </p>
+                <p class="text-sm text-zinc-600">CR No. 175236-1</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/97339587730" target="_blank" class="fixed bottom-6 right-6 rtl:left-6 rtl:right-auto w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition z-50">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Language toggle
+        let currentLang = localStorage.getItem('language') || 'ar';
+        
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            document.querySelectorAll('.lang-ar').forEach(el => {
+                el.classList.toggle('hidden', lang !== 'ar');
+            });
+            document.querySelectorAll('.lang-en').forEach(el => {
+                el.classList.toggle('hidden', lang !== 'en');
+            });
+        }
+        
+        function toggleLanguage() {
+            setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+        }
+        
+        // Initialize
+        setLanguage(currentLang);
+    </script>
+</body>
+</html>

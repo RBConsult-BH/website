@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Study: Abyan Capital | Adjust SDK Integration | RBConsult</title>
+    <meta name="description" content="How RBConsult successfully integrated Adjust SDK for Abyan Capital, enabling precise user tracking and campaign optimization for their mobile application." />
+    <meta name="keywords" content="case study, Abyan Capital, Adjust SDK, mobile tracking, attribution, دراسة حالة, أبيان كابيتال" />
+    <meta name="author" content="RBConsult - RIYADH AL BAHRAIN CONSULTANCY WLL" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Case Study: Abyan Capital | RBConsult" />
+    <meta property="og:description" content="Successful Adjust SDK integration for Abyan Capital's mobile application" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://rbconsult.bh/case-studies/abyan-capital.html" />
+    <meta property="og:image" content="https://rbconsult.bh/og-image.png" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="rbconsult.bh" />
+    <meta property="twitter:url" content="https://rbconsult.bh/case-studies/abyan-capital.html" />
+    <meta name="twitter:title" content="Case Study: Abyan Capital | RBConsult" />
+    <meta name="twitter:description" content="Successful Adjust SDK integration for Abyan Capital" />
+    <meta name="twitter:image" content="https://rbconsult.bh/og-image.png" />
+    
+    <link rel="canonical" href="https://rbconsult.bh/case-studies/abyan-capital.html" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="icon" type="image/png" href="/logo/logo-square-transparent.png" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold': '#B99855',
+                        'gold-dark': '#A88744',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-zinc-900">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-zinc-100 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center gap-8">
+                    <a href="/" class="flex items-center gap-3">
+                        <img src="/logo/logo-square-transparent.png" alt="RBConsult" class="w-8 h-8">
+                        <span class="font-semibold text-lg">RBConsult</span>
+                    </a>
+                    <div class="hidden md:flex items-center gap-6">
+                        <a href="/" class="text-sm text-zinc-600 hover:text-zinc-900 transition">
+                            <span class="lang-ar">الرئيسية</span>
+                            <span class="lang-en hidden">Home</span>
+                        </a>
+                        <a href="/#services" class="text-sm text-zinc-600 hover:text-zinc-900 transition">
+                            <span class="lang-ar">الخدمات</span>
+                            <span class="lang-en hidden">Services</span>
+                        </a>
+                        <a href="/case-studies/abyan-capital.html" class="text-sm text-zinc-900 font-medium">
+                            <span class="lang-ar">دراسة حالة</span>
+                            <span class="lang-en hidden">Case Study</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button onclick="toggleLanguage()" class="px-3 py-1.5 text-xs bg-zinc-100 hover:bg-zinc-200 rounded-md transition">
+                        <span class="lang-ar">EN</span>
+                        <span class="lang-en hidden">AR</span>
+                    </button>
+                    <a href="https://cal.com/rbconsult/discovery" target="_blank" class="px-4 py-2 bg-zinc-900 text-white text-sm rounded-md hover:bg-zinc-800 transition">
+                        <span class="lang-ar">ابدأ مشروعك</span>
+                        <span class="lang-en hidden">Start Your Project</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 bg-zinc-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-8">
+                <div class="text-sm text-zinc-500 mb-4">
+                    <span class="lang-ar">دراسة حالة</span>
+                    <span class="lang-en hidden">Case Study</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Abyan Capital</h1>
+                <p class="text-xl text-zinc-600">
+                    <span class="lang-ar">تكامل Adjust SDK لتتبع المستخدمين وتحسين الحملات الإعلانية</span>
+                    <span class="lang-en hidden">Adjust SDK Integration for User Tracking and Campaign Optimization</span>
+                </p>
+            </div>
+            
+            <div class="flex justify-center">
+                <img src="/clients/abyan-capital.png" alt="Abyan Capital" class="h-20">
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div>
+                    <h3 class="font-semibold text-sm text-zinc-500 mb-2">
+                        <span class="lang-ar">العميل</span>
+                        <span class="lang-en hidden">Client</span>
+                    </h3>
+                    <p class="text-lg">Abyan Capital</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-sm text-zinc-500 mb-2">
+                        <span class="lang-ar">الصناعة</span>
+                        <span class="lang-en hidden">Industry</span>
+                    </h3>
+                    <p class="text-lg">
+                        <span class="lang-ar">الخدمات المالية</span>
+                        <span class="lang-en hidden">Financial Services</span>
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-sm text-zinc-500 mb-2">
+                        <span class="lang-ar">الخدمة</span>
+                        <span class="lang-en hidden">Service</span>
+                    </h3>
+                    <p class="text-lg">Adjust SDK Integration</p>
+                </div>
+            </div>
+            
+            <div class="prose max-w-none">
+                <h2 class="text-3xl font-bold mb-6">
+                    <span class="lang-ar">التحدي</span>
+                    <span class="lang-en hidden">The Challenge</span>
+                </h2>
+                <p class="text-lg text-zinc-600 mb-8">
+                    <span class="lang-ar">
+                        احتاجت شركة أبيان كابيتال إلى حل شامل لتتبع أداء تطبيقها المحمول وفهم سلوك المستخدمين بشكل أفضل. كانوا يواجهون صعوبات في:
+                    </span>
+                    <span class="lang-en hidden">
+                        Abyan Capital needed a comprehensive solution to track their mobile app performance and better understand user behavior. They were facing challenges with:
+                    </span>
+                </p>
+                <ul class="space-y-2 text-zinc-600 mb-8">
+                    <li class="lang-ar">• قياس فعالية الحملات الإعلانية المختلفة</li>
+                    <li class="lang-ar">• تتبع مصادر تحميل التطبيق</li>
+                    <li class="lang-ar">• فهم رحلة المستخدم داخل التطبيق</li>
+                    <li class="lang-ar">• تحسين معدل الاحتفاظ بالمستخدمين</li>
+                    
+                    <li class="lang-en hidden">• Measuring the effectiveness of different advertising campaigns</li>
+                    <li class="lang-en hidden">• Tracking app download sources</li>
+                    <li class="lang-en hidden">• Understanding user journey within the app</li>
+                    <li class="lang-en hidden">• Improving user retention rates</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 bg-zinc-50">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6">
+                <span class="lang-ar">الحل</span>
+                <span class="lang-en hidden">The Solution</span>
+            </h2>
+            <p class="text-lg text-zinc-600 mb-8">
+                <span class="lang-ar">
+                    قمنا بتنفيذ تكامل شامل لـ Adjust SDK في تطبيق أبيان كابيتال، مما وفر:
+                </span>
+                <span class="lang-en hidden">
+                    We implemented a comprehensive Adjust SDK integration in Abyan Capital's app, providing:
+                </span>
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-white rounded-lg p-6 border border-zinc-200">
+                    <h3 class="font-semibold text-lg mb-3">
+                        <span class="lang-ar">تتبع الأحداث المخصصة</span>
+                        <span class="lang-en hidden">Custom Event Tracking</span>
+                    </h3>
+                    <p class="text-zinc-600 text-sm">
+                        <span class="lang-ar">تنفيذ تتبع دقيق للأحداث المهمة مثل التسجيل، وإتمام الملف الشخصي، والمعاملات</span>
+                        <span class="lang-en hidden">Implemented precise tracking for key events like registration, profile completion, and transactions</span>
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 border border-zinc-200">
+                    <h3 class="font-semibold text-lg mb-3">
+                        <span class="lang-ar">تتبع المصادر</span>
+                        <span class="lang-en hidden">Attribution Tracking</span>
+                    </h3>
+                    <p class="text-zinc-600 text-sm">
+                        <span class="lang-ar">ربط التحميلات والتحويلات بمصادرها الإعلانية الصحيحة</span>
+                        <span class="lang-en hidden">Linking downloads and conversions to their correct advertising sources</span>
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 border border-zinc-200">
+                    <h3 class="font-semibold text-lg mb-3">
+                        <span class="lang-ar">تحليل الأداء</span>
+                        <span class="lang-en hidden">Performance Analytics</span>
+                    </h3>
+                    <p class="text-zinc-600 text-sm">
+                        <span class="lang-ar">لوحة تحكم شاملة لمراقبة أداء التطبيق في الوقت الفعلي</span>
+                        <span class="lang-en hidden">Comprehensive dashboard for real-time app performance monitoring</span>
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-lg p-6 border border-zinc-200">
+                    <h3 class="font-semibold text-lg mb-3">
+                        <span class="lang-ar">التكامل مع الأدوات</span>
+                        <span class="lang-en hidden">Tool Integration</span>
+                    </h3>
+                    <p class="text-zinc-600 text-sm">
+                        <span class="lang-ar">ربط البيانات مع أدوات التحليل والتسويق الأخرى</span>
+                        <span class="lang-en hidden">Connecting data with other analytics and marketing tools</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Section -->
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6">
+                <span class="lang-ar">التنفيذ</span>
+                <span class="lang-en hidden">Implementation</span>
+            </h2>
+            
+            <div class="space-y-6">
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center flex-shrink-0 font-semibold">1</div>
+                    <div>
+                        <h3 class="font-semibold mb-2">
+                            <span class="lang-ar">التحليل والتخطيط</span>
+                            <span class="lang-en hidden">Analysis & Planning</span>
+                        </h3>
+                        <p class="text-zinc-600">
+                            <span class="lang-ar">دراسة متطلبات التتبع وتحديد الأحداث المهمة</span>
+                            <span class="lang-en hidden">Studied tracking requirements and identified key events</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center flex-shrink-0 font-semibold">2</div>
+                    <div>
+                        <h3 class="font-semibold mb-2">
+                            <span class="lang-ar">تكامل SDK</span>
+                            <span class="lang-en hidden">SDK Integration</span>
+                        </h3>
+                        <p class="text-zinc-600">
+                            <span class="lang-ar">دمج Adjust SDK في كود التطبيق لنظامي iOS و Android</span>
+                            <span class="lang-en hidden">Integrated Adjust SDK into app code for both iOS and Android</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center flex-shrink-0 font-semibold">3</div>
+                    <div>
+                        <h3 class="font-semibold mb-2">
+                            <span class="lang-ar">الاختبار</span>
+                            <span class="lang-en hidden">Testing</span>
+                        </h3>
+                        <p class="text-zinc-600">
+                            <span class="lang-ar">اختبار شامل للتأكد من دقة التتبع</span>
+                            <span class="lang-en hidden">Comprehensive testing to ensure tracking accuracy</span>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-4">
+                    <div class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center flex-shrink-0 font-semibold">4</div>
+                    <div>
+                        <h3 class="font-semibold mb-2">
+                            <span class="lang-ar">الإطلاق والمراقبة</span>
+                            <span class="lang-en hidden">Launch & Monitoring</span>
+                        </h3>
+                        <p class="text-zinc-600">
+                            <span class="lang-ar">نشر التحديث ومراقبة الأداء</span>
+                            <span class="lang-en hidden">Deployed update and monitored performance</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 bg-zinc-900 text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">
+                <span class="lang-ar">النتائج</span>
+                <span class="lang-en hidden">Results</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">100%</div>
+                    <p class="text-zinc-400">
+                        <span class="lang-ar">دقة التتبع</span>
+                        <span class="lang-en hidden">Tracking Accuracy</span>
+                    </p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">
+                        <span class="lang-ar">محسّن</span>
+                        <span class="lang-en hidden">Optimized</span>
+                    </div>
+                    <p class="text-zinc-400">
+                        <span class="lang-ar">أداء الحملات الإعلانية</span>
+                        <span class="lang-en hidden">Campaign Performance</span>
+                    </p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">
+                        <span class="lang-ar">فوري</span>
+                        <span class="lang-en hidden">Real-time</span>
+                    </div>
+                    <p class="text-zinc-400">
+                        <span class="lang-ar">تحليلات البيانات</span>
+                        <span class="lang-en hidden">Data Analytics</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-xl text-zinc-300 mb-8">
+                    <span class="lang-ar">
+                        "تمكنا من خلال تكامل Adjust SDK من فهم مستخدمينا بشكل أفضل وتحسين استراتيجياتنا التسويقية بناءً على بيانات دقيقة."
+                    </span>
+                    <span class="lang-en hidden">
+                        "Through Adjust SDK integration, we were able to better understand our users and improve our marketing strategies based on accurate data."
+                    </span>
+                </p>
+                <p class="text-zinc-400">
+                    <span class="lang-ar">- فريق أبيان كابيتال</span>
+                    <span class="lang-en hidden">- Abyan Capital Team</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Used -->
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-8 text-center">
+                <span class="lang-ar">التقنيات المستخدمة</span>
+                <span class="lang-en hidden">Technologies Used</span>
+            </h2>
+            
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="text-center">
+                    <div class="text-2xl font-mono mb-2">Adjust SDK</div>
+                    <div class="text-xs text-zinc-500">Attribution</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-mono mb-2">iOS</div>
+                    <div class="text-xs text-zinc-500">Swift</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-mono mb-2">Android</div>
+                    <div class="text-xs text-zinc-500">Kotlin</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-mono mb-2">Analytics</div>
+                    <div class="text-xs text-zinc-500">Dashboard</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-zinc-50">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">
+                <span class="lang-ar">تحتاج تكامل Adjust SDK لتطبيقك؟</span>
+                <span class="lang-en hidden">Need Adjust SDK Integration for Your App?</span>
+            </h2>
+            <p class="text-zinc-600 mb-8">
+                <span class="lang-ar">دعنا نساعدك في تتبع وتحسين أداء تطبيقك</span>
+                <span class="lang-en hidden">Let us help you track and optimize your app performance</span>
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="https://cal.com/rbconsult/adjust-sdk" target="_blank" class="px-6 py-3 bg-zinc-900 text-white rounded-md hover:bg-zinc-800 transition">
+                    <span class="lang-ar">ناقش مشروع Adjust</span>
+                    <span class="lang-en hidden">Discuss Adjust Project</span>
+                </a>
+                <a href="https://cal.com/rbconsult/discovery" target="_blank" class="px-6 py-3 border border-zinc-300 rounded-md hover:bg-zinc-50 transition">
+                    <span class="lang-ar">استشارة عامة</span>
+                    <span class="lang-en hidden">General Consultation</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-zinc-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-zinc-600">
+                    <span class="lang-ar">© 2024 رياض البحرين للاستشارات ذ.م.م</span>
+                    <span class="lang-en hidden">© 2024 RIYADH AL BAHRAIN CONSULTANCY WLL</span>
+                </p>
+                <p class="text-sm text-zinc-600">CR No. 175236-1</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/97339587730" target="_blank" class="fixed bottom-6 right-6 rtl:left-6 rtl:right-auto w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition z-50">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Language toggle
+        let currentLang = localStorage.getItem('language') || 'ar';
+        
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            
+            document.querySelectorAll('.lang-ar').forEach(el => {
+                el.classList.toggle('hidden', lang !== 'ar');
+            });
+            document.querySelectorAll('.lang-en').forEach(el => {
+                el.classList.toggle('hidden', lang !== 'en');
+            });
+        }
+        
+        function toggleLanguage() {
+            setLanguage(currentLang === 'ar' ? 'en' : 'ar');
+        }
+        
+        // Initialize
+        setLanguage(currentLang);
+    </script>
+</body>
+</html>
