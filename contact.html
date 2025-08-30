@@ -6,23 +6,20 @@
         <title>Contact Us | Schedule a Call | RBConsult</title>
         <meta
             name="description"
-            content="Get in touch with RBConsult for mobile app development, web development, or Adjust SDK integration. Schedule a discovery call or consultation."
+            content="Get in touch with RBConsult for mobile app development, web development, or Adjust SDK integration. Schedule a project scoping call related to your software build."
         />
         <meta
             name="keywords"
-            content="contact RBConsult, schedule consultation, mobile app development, web development, Adjust SDK, technology consultancy"
+            content="contact RBConsult, schedule call, mobile app development, web development, Adjust SDK, software development"
         />
-        <meta
-            name="author"
-            content="RBConsult - Professional Technology Consultancy"
-        />
+        <meta name="author" content="RBConsult" />
         <meta
             property="og:title"
-            content="Contact RBConsult | Schedule a Consultation"
+            content="Contact RBConsult | Schedule a Call"
         />
         <meta
             property="og:description"
-            content="Get in touch with RBConsult for professional technology services. Schedule a discovery call or consultation."
+            content="Get in touch with RBConsult for software development services. Book a discovery call for your project."
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rbconsult.bh/contact.html" />
@@ -35,11 +32,11 @@
         />
         <meta
             name="twitter:title"
-            content="Contact RBConsult | Schedule a Consultation"
+            content="Contact RBConsult | Schedule a Call"
         />
         <meta
             name="twitter:description"
-            content="Get in touch with RBConsult for professional technology services. Schedule a discovery call or consultation."
+            content="Get in touch with RBConsult for software development services. Book a discovery call for your project."
         />
         <meta
             name="twitter:image"
@@ -55,11 +52,9 @@
             type="image/png"
             href="/logo/logo-square-transparent.png"
         />
-
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="bg-white text-zinc-900">
-        <!-- Navigation -->
         <nav
             class="border-b border-zinc-200 bg-white/90 backdrop-blur-sm sticky top-0 z-50"
         >
@@ -97,16 +92,15 @@
                         <a
                             href="https://cal.com/rbconsult/discovery"
                             target="_blank"
+                            rel="noopener"
                             class="text-sm bg-zinc-900 text-white px-4 py-2 rounded-md hover:bg-zinc-800"
+                            >Book a Call</a
                         >
-                            Book a Call
-                        </a>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <!-- Hero Section -->
         <section class="pt-20 pb-16 px-4">
             <div class="max-w-6xl mx-auto">
                 <div class="max-w-3xl mx-auto text-center">
@@ -114,7 +108,7 @@
                         Let's Build Something Great Together
                     </h1>
                     <p class="text-xl text-zinc-600 mb-8">
-                        Schedule a consultation to discuss your project. We're
+                        Schedule a call to discuss your software project. We’re
                         here to help you build exceptional mobile apps and
                         websites.
                     </p>
@@ -122,11 +116,10 @@
             </div>
         </section>
 
-        <!-- Booking Options -->
         <section class="py-16 px-4 bg-zinc-50">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-3xl font-bold mb-12 text-center">
-                    Schedule a Consultation
+                    Schedule a Call
                 </h2>
                 <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <div class="bg-white p-8 rounded-lg border border-zinc-200">
@@ -148,16 +141,16 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">
-                            Discovery Call
+                            Project Discovery Call
                         </h3>
                         <p class="text-zinc-600 mb-6">
-                            30-minute call to discuss your project requirements,
-                            timeline, and how we can help bring your vision to
-                            life.
+                            30-minute call to clarify requirements and timelines
+                            as part of our software development process.
                         </p>
                         <a
                             href="https://cal.com/rbconsult/discovery"
                             target="_blank"
+                            rel="noopener"
                             class="inline-flex items-center px-6 py-3 bg-zinc-900 text-white rounded-md hover:bg-zinc-800 w-full justify-center"
                         >
                             Schedule Discovery Call
@@ -196,18 +189,20 @@
                             </svg>
                         </div>
                         <h3 class="text-xl font-semibold mb-3">
-                            Adjust SDK Consultation
+                            Adjust SDK Session
                         </h3>
                         <p class="text-zinc-600 mb-6">
-                            45-minute technical consultation specifically for
-                            Adjust SDK integration and mobile attribution setup.
+                            45-minute technical session focused on Adjust SDK
+                            implementation and mobile attribution for projects
+                            we deliver.
                         </p>
                         <a
                             href="https://cal.com/rbconsult/adjust-sdk"
                             target="_blank"
+                            rel="noopener"
                             class="inline-flex items-center px-6 py-3 bg-purple-600 text-white rounded-md hover:bg-purple-700 w-full justify-center"
                         >
-                            Book SDK Consultation
+                            Book SDK Session
                             <svg
                                 class="w-4 h-4 ml-2"
                                 fill="none"
@@ -227,16 +222,13 @@
             </div>
         </section>
 
-        <!-- Cal.com Embed Section -->
         <section class="py-16 px-4">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-2xl font-bold mb-8 text-center">
                     Book Directly Below
                 </h2>
                 <div class="bg-white rounded-lg border border-zinc-200 p-2">
-                    <!-- Cal.com inline embed -->
                     <div style="width: 100%; height: 100%; overflow: hidden">
-                        <!-- Cal inline embed code begins -->
                         <div
                             style="width: 100%; height: 100%; overflow: scroll"
                             id="my-cal-inline-discovery"
@@ -287,7 +279,6 @@
                             Cal("init", "discovery", {
                                 origin: "https://app.cal.com",
                             });
-
                             Cal.ns.discovery("inline", {
                                 elementOrSelector: "#my-cal-inline-discovery",
                                 config: {
@@ -296,7 +287,6 @@
                                 },
                                 calLink: "rbconsult/discovery",
                             });
-
                             Cal.ns.discovery("ui", {
                                 cssVarsPerTheme: {
                                     light: { "cal-brand": "#BC9956" },
@@ -306,27 +296,15 @@
                                 layout: "month_view",
                             });
                         </script>
-                        <!-- Cal inline embed code ends -->
                         <script>
-                            // Dynamically adjust iframe height
                             function adjustIframeHeight() {
                                 const iframe =
                                     document.getElementById("cal-embed");
                                 if (iframe) {
-                                    // Set a reasonable default height
                                     iframe.style.height = "650px";
-
-                                    // Try to adjust based on content if possible
-                                    try {
-                                        iframe.onload = function () {
-                                            // Cal.com embeds typically need around 650-700px
-                                            iframe.style.height = "650px";
-                                        };
-                                    } catch (e) {
-                                        console.log(
-                                            "Cross-origin iframe height adjustment not possible",
-                                        );
-                                    }
+                                    iframe.onload = function () {
+                                        iframe.style.height = "650px";
+                                    };
                                 }
                             }
                             adjustIframeHeight();
@@ -336,7 +314,6 @@
             </div>
         </section>
 
-        <!-- Other Contact Methods -->
         <section class="py-16 px-4 bg-zinc-50">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-3xl font-bold mb-12 text-center">
@@ -353,7 +330,7 @@
                                 viewBox="0 0 24 24"
                             >
                                 <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"
                                 />
                             </svg>
                         </div>
@@ -364,10 +341,10 @@
                         <a
                             href="https://wa.me/97339587730"
                             target="_blank"
+                            rel="noopener"
                             class="text-green-600 hover:text-green-700 font-medium"
+                            >+973 3958 7730</a
                         >
-                            +973 3958 7730
-                        </a>
                     </div>
 
                     <div class="text-center">
@@ -395,9 +372,8 @@
                         <a
                             href="mailto:info@rbconsult.bh"
                             class="text-blue-600 hover:text-blue-700 font-medium"
+                            >info@rbconsult.bh</a
                         >
-                            info@rbconsult.bh
-                        </a>
                     </div>
 
                     <div class="text-center">
@@ -414,7 +390,7 @@
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 111.314 0z"
                                 />
                                 <path
                                     stroke-linecap="round"
@@ -434,7 +410,6 @@
             </div>
         </section>
 
-        <!-- Office Hours -->
         <section class="py-16 px-4">
             <div class="max-w-4xl mx-auto text-center">
                 <h2 class="text-2xl font-bold mb-8">Office Hours</h2>
@@ -456,7 +431,6 @@
             </div>
         </section>
 
-        <!-- Footer -->
         <footer class="py-8 px-4 border-t border-zinc-200">
             <div class="max-w-6xl mx-auto">
                 <div
@@ -464,7 +438,7 @@
                 >
                     <div class="mb-4 md:mb-0">
                         <p class="text-sm text-zinc-600">
-                            © 2024 RBConsult. All rights reserved.
+                            © 2025 RBConsult. All rights reserved.
                         </p>
                     </div>
                     <div class="flex space-x-6">
