@@ -1,492 +1,789 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RBConsult | Custom Software Development</title>
-    <meta name="description" content="Professional mobile app and website development. Flutter, React, and modern technologies. Serving businesses globally with quality-focused solutions." />
-    <meta name="keywords" content="software development, mobile app development, web development, Flutter, React, Adjust SDK, custom software, تطوير البرمجيات, تطوير التطبيقات" />
-    <meta name="author" content="RBConsult - RIYADH AL BAHRAIN CONSULTANCY WLL" />
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="RBConsult | Custom Software Development" />
-    <meta property="og:description" content="Professional mobile app and website development using Flutter, React, and modern technologies." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rbconsult.bh" />
-    <meta property="og:image" content="https://rbconsult.bh/og-image.png" />
-    
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="rbconsult.bh" />
-    <meta property="twitter:url" content="https://rbconsult.bh" />
-    <meta name="twitter:title" content="RBConsult | Custom Software Development" />
-    <meta name="twitter:description" content="Professional mobile app and website development using Flutter, React, and modern technologies." />
-    <meta name="twitter:image" content="https://rbconsult.bh/og-image.png" />
-    
-    <link rel="canonical" href="https://rbconsult.bh/" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <link rel="icon" type="image/png" href="/logo/logo-square-transparent.png" />
-    
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "@id": "https://rbconsult.bh/#organization",
-        "name": "RBConsult",
-        "alternateName": "RIYADH AL BAHRAIN CONSULTANCY WLL",
-        "url": "https://rbconsult.bh",
-        "logo": "https://rbconsult.bh/logo/logo-square-transparent.png",
-        "description": "Custom software development company specializing in mobile apps and websites.",
-        "areaServed": {
-            "@type": "Place",
-            "name": "Worldwide"
-        },
-        "serviceType": "Software Development",
-        "knowsAbout": [
-            "Mobile App Development",
-            "Web Development",
-            "Flutter",
-            "React",
-            "Node.js",
-            "Adjust SDK",
-            "Software Architecture"
-        ]
-    }
-    </script>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'gold': '#B99855',
-                        'gold-dark': '#A88744',
-                    }
-                }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RBConsult | Custom Software Development</title>
+        <meta
+            name="description"
+            content="Professional mobile app and website development. Flutter, React, and modern technologies. Serving businesses globally with quality-focused solutions."
+        />
+        <meta
+            name="keywords"
+            content="software development, mobile app development, web development, Flutter, React, Adjust SDK, custom software, تطوير البرمجيات, تطوير التطبيقات"
+        />
+        <meta
+            name="author"
+            content="RBConsult - RIYADH AL BAHRAIN CONSULTANCY WLL"
+        />
+
+        <!-- Open Graph -->
+        <meta
+            property="og:title"
+            content="RBConsult | Custom Software Development"
+        />
+        <meta
+            property="og:description"
+            content="Professional mobile app and website development using Flutter, React, and modern technologies."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rbconsult.bh" />
+        <meta property="og:image" content="https://rbconsult.bh/og-image.png" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="rbconsult.bh" />
+        <meta property="twitter:url" content="https://rbconsult.bh" />
+        <meta
+            name="twitter:title"
+            content="RBConsult | Custom Software Development"
+        />
+        <meta
+            name="twitter:description"
+            content="Professional mobile app and website development using Flutter, React, and modern technologies."
+        />
+        <meta
+            name="twitter:image"
+            content="https://rbconsult.bh/og-image.png"
+        />
+
+        <link rel="canonical" href="https://rbconsult.bh/" />
+        <meta
+            name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            href="/logo/logo-square-transparent.png"
+        />
+
+        <!-- Schema.org -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "@id": "https://rbconsult.bh/#organization",
+                "name": "RBConsult",
+                "alternateName": "RIYADH AL BAHRAIN CONSULTANCY WLL",
+                "url": "https://rbconsult.bh",
+                "logo": "https://rbconsult.bh/logo/logo-square-transparent.png",
+                "description": "Custom software development company specializing in mobile apps and websites.",
+                "areaServed": {
+                    "@type": "Place",
+                    "name": "Worldwide"
+                },
+                "serviceType": "Software Development",
+                "knowsAbout": [
+                    "Mobile App Development",
+                    "Web Development",
+                    "Flutter",
+                    "React",
+                    "Node.js",
+                    "Adjust SDK",
+                    "Software Architecture"
+                ]
             }
-        }
-    </script>
-</head>
-<body class="bg-white text-zinc-900">
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-zinc-100 z-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-8">
-                    <a href="/" class="flex items-center gap-3">
-                        <img src="/logo/logo-square-transparent.png" alt="RBConsult" class="w-8 h-8">
-                        <span class="font-semibold text-lg">RBConsult</span>
+        </script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            gold: "#B99855",
+                            "gold-dark": "#A88744",
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="bg-white text-zinc-900">
+        <!-- Navigation -->
+        <nav
+            class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-zinc-100 z-50"
+        >
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex items-center gap-8">
+                        <a href="/" class="flex items-center gap-3">
+                            <img
+                                src="/logo/logo-square-transparent.png"
+                                alt="RBConsult"
+                                class="w-8 h-8"
+                            />
+                            <span class="font-semibold text-lg">RBConsult</span>
+                        </a>
+                        <div class="hidden md:flex items-center gap-6">
+                            <a
+                                href="#services"
+                                class="text-sm text-zinc-600 hover:text-zinc-900 transition"
+                            >
+                                <span class="lang-ar">الخدمات</span>
+                                <span class="lang-en hidden">Services</span>
+                            </a>
+                            <a
+                                href="/case-studies/abyan-capital.html"
+                                class="text-sm text-zinc-600 hover:text-zinc-900 transition"
+                            >
+                                <span class="lang-ar">دراسة حالة</span>
+                                <span class="lang-en hidden">Case Study</span>
+                            </a>
+                            <a
+                                href="/about.html"
+                                class="text-sm text-zinc-600 hover:text-zinc-900 transition"
+                            >
+                                <span class="lang-ar">من نحن</span>
+                                <span class="lang-en hidden">About</span>
+                            </a>
+                            <a
+                                href="/contact.html"
+                                class="text-sm text-zinc-600 hover:text-zinc-900 transition"
+                            >
+                                <span class="lang-ar">تواصل</span>
+                                <span class="lang-en hidden">Contact</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <button
+                            onclick="toggleLanguage()"
+                            class="px-3 py-1.5 text-xs bg-zinc-100 hover:bg-zinc-200 rounded-md transition"
+                        >
+                            <span class="lang-ar">EN</span>
+                            <span class="lang-en hidden">AR</span>
+                        </button>
+                        <a
+                            href="https://cal.com/rbconsult/discovery"
+                            target="_blank"
+                            class="px-4 py-2 bg-zinc-900 text-white text-sm rounded-md hover:bg-zinc-800 transition"
+                        >
+                            <span class="lang-ar">احجز استشارة</span>
+                            <span class="lang-en hidden"
+                                >Book Consultation</span
+                            >
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="max-w-3xl">
+                    <h1
+                        class="text-4xl md:text-5xl font-bold mb-6 leading-tight"
+                    >
+                        <span class="lang-ar"
+                            >تطوير برمجيات احترافي<br />للأعمال الحديثة</span
+                        >
+                        <span class="lang-en hidden"
+                            >Custom Software Development<br />for Modern
+                            Businesses</span
+                        >
+                    </h1>
+                    <p class="text-xl text-zinc-600 mb-8">
+                        <span class="lang-ar"
+                            >نبني تطبيقات جوال ومواقع ويب احترافية باستخدام
+                            Flutter وReact والتقنيات الحديثة</span
+                        >
+                        <span class="lang-en hidden"
+                            >We build professional mobile applications and
+                            websites using Flutter, React, and modern
+                            technologies</span
+                        >
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a
+                            href="https://cal.com/rbconsult/discovery"
+                            target="_blank"
+                            class="px-6 py-3 bg-zinc-900 text-white rounded-md hover:bg-zinc-800 transition"
+                        >
+                            <span class="lang-ar">ابدأ مشروعك</span>
+                            <span class="lang-en hidden"
+                                >Start Your Project</span
+                            >
+                        </a>
+                        <a
+                            href="/case-studies/abyan-capital.html"
+                            class="px-6 py-3 border border-zinc-300 rounded-md hover:bg-zinc-50 transition"
+                        >
+                            <span class="lang-ar">شاهد أعمالنا</span>
+                            <span class="lang-en hidden">View Our Work</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-zinc-50">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">
+                        <span class="lang-ar">خدماتنا</span>
+                        <span class="lang-en hidden">Our Services</span>
+                    </h2>
+                    <p class="text-zinc-600">
+                        <span class="lang-ar">حلول برمجية متكاملة لأعمالك</span>
+                        <span class="lang-en hidden"
+                            >Complete software solutions for your business</span
+                        >
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Mobile App Development -->
+                    <a
+                        href="/app-development.html"
+                        class="group bg-white rounded-lg p-6 border border-zinc-200 hover:border-zinc-300 transition"
+                    >
+                        <div
+                            class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zinc-200 transition"
+                        >
+                            <svg
+                                class="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">
+                            <span class="lang-ar">تطوير تطبيقات الجوال</span>
+                            <span class="lang-en hidden"
+                                >Mobile App Development</span
+                            >
+                        </h3>
+                        <p class="text-zinc-600 text-sm mb-3">
+                            <span class="lang-ar"
+                                >تطبيقات iOS و Android احترافية باستخدام Flutter
+                                والتقنيات الأصلية</span
+                            >
+                            <span class="lang-en hidden"
+                                >Professional iOS and Android apps using Flutter
+                                and native technologies</span
+                            >
+                        </p>
+                        <div class="text-sm text-zinc-500">
+                            <span class="lang-ar">Flutter • iOS • Android</span>
+                            <span class="lang-en hidden"
+                                >Flutter • iOS • Android</span
+                            >
+                        </div>
                     </a>
-                    <div class="hidden md:flex items-center gap-6">
-                        <a href="#services" class="text-sm text-zinc-600 hover:text-zinc-900 transition">
+
+                    <!-- Web Development -->
+                    <a
+                        href="/web-development.html"
+                        class="group bg-white rounded-lg p-6 border border-zinc-200 hover:border-zinc-300 transition"
+                    >
+                        <div
+                            class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zinc-200 transition"
+                        >
+                            <svg
+                                class="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">
+                            <span class="lang-ar">تطوير مواقع الويب</span>
+                            <span class="lang-en hidden">Web Development</span>
+                        </h3>
+                        <p class="text-zinc-600 text-sm mb-3">
+                            <span class="lang-ar"
+                                >مواقع وتطبيقات ويب حديثة باستخدام React
+                                وNode.js</span
+                            >
+                            <span class="lang-en hidden"
+                                >Modern websites and web applications using
+                                React and Node.js</span
+                            >
+                        </p>
+                        <div class="text-sm text-zinc-500">
+                            <span class="lang-ar"
+                                >React • Node.js • Next.js</span
+                            >
+                            <span class="lang-en hidden"
+                                >React • Node.js • Next.js</span
+                            >
+                        </div>
+                    </a>
+
+                    <!-- Adjust SDK Integration -->
+                    <a
+                        href="/adjust-integration.html"
+                        class="group bg-white rounded-lg p-6 border border-zinc-200 hover:border-zinc-300 transition"
+                    >
+                        <div
+                            class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zinc-200 transition"
+                        >
+                            <svg
+                                class="w-6 h-6"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">
+                            <span class="lang-ar">تكامل Adjust SDK</span>
+                            <span class="lang-en hidden"
+                                >Adjust SDK Integration</span
+                            >
+                        </h3>
+                        <p class="text-zinc-600 text-sm mb-3">
+                            <span class="lang-ar"
+                                >تتبع دقيق للمستخدمين وتحليلات متقدمة
+                                لتطبيقك</span
+                            >
+                            <span class="lang-en hidden"
+                                >Precise user tracking and advanced analytics
+                                for your app</span
+                            >
+                        </p>
+                        <div class="text-sm text-zinc-500">
+                            <span class="lang-ar"
+                                >Attribution • Analytics • Tracking</span
+                            >
+                            <span class="lang-en hidden"
+                                >Attribution • Analytics • Tracking</span
+                            >
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study Preview -->
+        <section class="py-20">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="bg-zinc-900 rounded-2xl p-8 md:p-12 text-white">
+                    <div class="max-w-3xl">
+                        <div class="text-sm text-zinc-400 mb-4">
+                            <span class="lang-ar">دراسة حالة</span>
+                            <span class="lang-en hidden">Case Study</span>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                            Abyan Capital
+                        </h3>
+                        <p class="text-zinc-300 mb-6">
+                            <span class="lang-ar"
+                                >تكامل Adjust SDK لتتبع دقيق للمستخدمين وتحسين
+                                أداء الحملات الإعلانية</span
+                            >
+                            <span class="lang-en hidden"
+                                >Adjust SDK integration for precise user
+                                tracking and campaign optimization</span
+                            >
+                        </p>
+                        <a
+                            href="/case-studies/abyan-capital.html"
+                            class="inline-flex items-center gap-2 text-gold hover:text-gold-dark transition"
+                        >
+                            <span class="lang-ar">اقرأ المزيد</span>
+                            <span class="lang-en hidden">Read More</span>
+                            <svg
+                                class="w-4 h-4 rtl:rotate-180"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                ></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="py-20 bg-zinc-50">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">
+                        <span class="lang-ar">كيف نعمل</span>
+                        <span class="lang-en hidden">How We Work</span>
+                    </h2>
+                    <p class="text-zinc-600">
+                        <span class="lang-ar"
+                            >عملية واضحة ومنظمة من البداية إلى النهاية</span
+                        >
+                        <span class="lang-en hidden"
+                            >Clear and organized process from start to
+                            finish</span
+                        >
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4 font-semibold"
+                        >
+                            1
+                        </div>
+                        <h3 class="font-semibold mb-2">
+                            <span class="lang-ar">الاكتشاف</span>
+                            <span class="lang-en hidden">Discovery</span>
+                        </h3>
+                        <p class="text-sm text-zinc-600">
+                            <span class="lang-ar">نفهم احتياجاتك وأهدافك</span>
+                            <span class="lang-en hidden"
+                                >Understanding your needs and goals</span
+                            >
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4 font-semibold"
+                        >
+                            2
+                        </div>
+                        <h3 class="font-semibold mb-2">
+                            <span class="lang-ar">التخطيط</span>
+                            <span class="lang-en hidden">Planning</span>
+                        </h3>
+                        <p class="text-sm text-zinc-600">
+                            <span class="lang-ar">وضع خطة تفصيلية للمشروع</span>
+                            <span class="lang-en hidden"
+                                >Creating detailed project roadmap</span
+                            >
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4 font-semibold"
+                        >
+                            3
+                        </div>
+                        <h3 class="font-semibold mb-2">
+                            <span class="lang-ar">التطوير</span>
+                            <span class="lang-en hidden">Development</span>
+                        </h3>
+                        <p class="text-sm text-zinc-600">
+                            <span class="lang-ar"
+                                >بناء الحل بأعلى معايير الجودة</span
+                            >
+                            <span class="lang-en hidden"
+                                >Building with highest quality standards</span
+                            >
+                        </p>
+                    </div>
+
+                    <div class="text-center">
+                        <div
+                            class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4 font-semibold"
+                        >
+                            4
+                        </div>
+                        <h3 class="font-semibold mb-2">
+                            <span class="lang-ar">الإطلاق</span>
+                            <span class="lang-en hidden">Launch</span>
+                        </h3>
+                        <p class="text-sm text-zinc-600">
+                            <span class="lang-ar">نشر وتسليم المشروع</span>
+                            <span class="lang-en hidden"
+                                >Deploying and delivering your project</span
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack -->
+        <section class="py-20">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">
+                        <span class="lang-ar">التقنيات المستخدمة</span>
+                        <span class="lang-en hidden">Technologies We Use</span>
+                    </h2>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-8">
+                    <div class="text-center">
+                        <div class="text-3xl mb-2 font-mono">Flutter</div>
+                        <div class="text-xs text-zinc-500">Mobile</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-2 font-mono">React</div>
+                        <div class="text-xs text-zinc-500">Frontend</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-2 font-mono">Node.js</div>
+                        <div class="text-xs text-zinc-500">Backend</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-2 font-mono">Swift</div>
+                        <div class="text-xs text-zinc-500">iOS</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-2 font-mono">Kotlin</div>
+                        <div class="text-xs text-zinc-500">Android</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl mb-2 font-mono">Adjust</div>
+                        <div class="text-xs text-zinc-500">Analytics</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-20 bg-zinc-900 text-white">
+            <div class="max-w-6xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-4">
+                    <span class="lang-ar">جاهز لبدء مشروعك؟</span>
+                    <span class="lang-en hidden"
+                        >Ready to Start Your Project?</span
+                    >
+                </h2>
+                <p class="text-zinc-400 mb-8">
+                    <span class="lang-ar"
+                        >احجز مكالمة استكشافية مجانية لمناقشة مشروعك</span
+                    >
+                    <span class="lang-en hidden"
+                        >Book a free discovery call to discuss your
+                        project</span
+                    >
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a
+                        href="https://cal.com/rbconsult/discovery"
+                        target="_blank"
+                        class="px-6 py-3 bg-white text-zinc-900 rounded-md hover:bg-zinc-100 transition"
+                    >
+                        <span class="lang-ar">احجز مكالمة</span>
+                        <span class="lang-en hidden">Book a Call</span>
+                    </a>
+                    <a
+                        href="https://wa.me/97339587730"
+                        target="_blank"
+                        class="px-6 py-3 border border-zinc-700 rounded-md hover:bg-zinc-800 transition"
+                    >
+                        <span class="lang-ar">واتساب</span>
+                        <span class="lang-en hidden">WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-12 border-t border-zinc-200">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid md:grid-cols-4 gap-8 mb-8">
+                    <div>
+                        <img
+                            src="/logo/logo-square-transparent.png"
+                            alt="RBConsult"
+                            class="w-10 h-10 mb-4"
+                        />
+                        <p class="text-sm text-zinc-600">
+                            <span class="lang-ar">تطوير برمجيات احترافي</span>
+                            <span class="lang-en hidden"
+                                >Professional Software Development</span
+                            >
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold mb-3">
                             <span class="lang-ar">الخدمات</span>
                             <span class="lang-en hidden">Services</span>
-                        </a>
-                        <a href="/case-studies/abyan-capital.html" class="text-sm text-zinc-600 hover:text-zinc-900 transition">
-                            <span class="lang-ar">دراسة حالة</span>
-                            <span class="lang-en hidden">Case Study</span>
-                        </a>
-                        <a href="/about.html" class="text-sm text-zinc-600 hover:text-zinc-900 transition">
-                            <span class="lang-ar">من نحن</span>
-                            <span class="lang-en hidden">About</span>
-                        </a>
-                        <a href="/contact.html" class="text-sm text-zinc-600 hover:text-zinc-900 transition">
-                            <span class="lang-ar">تواصل</span>
-                            <span class="lang-en hidden">Contact</span>
-                        </a>
+                        </h4>
+                        <ul class="space-y-2 text-sm text-zinc-600">
+                            <li>
+                                <a
+                                    href="/app-development.html"
+                                    class="hover:text-zinc-900"
+                                >
+                                    <span class="lang-ar">تطوير التطبيقات</span>
+                                    <span class="lang-en hidden"
+                                        >App Development</span
+                                    >
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/web-development.html"
+                                    class="hover:text-zinc-900"
+                                >
+                                    <span class="lang-ar">تطوير المواقع</span>
+                                    <span class="lang-en hidden"
+                                        >Web Development</span
+                                    >
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/adjust-integration.html"
+                                    class="hover:text-zinc-900"
+                                >
+                                    <span class="lang-ar">Adjust SDK</span>
+                                    <span class="lang-en hidden"
+                                        >Adjust SDK</span
+                                    >
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold mb-3">
+                            <span class="lang-ar">الشركة</span>
+                            <span class="lang-en hidden">Company</span>
+                        </h4>
+                        <ul class="space-y-2 text-sm text-zinc-600">
+                            <li>
+                                <a
+                                    href="/about.html"
+                                    class="hover:text-zinc-900"
+                                >
+                                    <span class="lang-ar">من نحن</span>
+                                    <span class="lang-en hidden">About</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/case-studies/abyan-capital.html"
+                                    class="hover:text-zinc-900"
+                                >
+                                    <span class="lang-ar">دراسة حالة</span>
+                                    <span class="lang-en hidden"
+                                        >Case Study</span
+                                    >
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/contact.html"
+                                    class="hover:text-zinc-900"
+                                >
+                                    <span class="lang-ar">تواصل</span>
+                                    <span class="lang-en hidden">Contact</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-semibold mb-3">
+                            <span class="lang-ar">قانوني</span>
+                            <span class="lang-en hidden">Legal</span>
+                        </h4>
+                        <ul class="space-y-2 text-sm text-zinc-600">
+                            <li>
+                                <a
+                                    href="/terms.html"
+                                    class="hover:text-zinc-900"
+                                >
+                                    <span class="lang-ar">الشروط</span>
+                                    <span class="lang-en hidden">Terms</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/privacy.html"
+                                    class="hover:text-zinc-900"
+                                >
+                                    <span class="lang-ar">الخصوصية</span>
+                                    <span class="lang-en hidden">Privacy</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <div class="flex items-center gap-3">
-                    <button onclick="toggleLanguage()" class="px-3 py-1.5 text-xs bg-zinc-100 hover:bg-zinc-200 rounded-md transition">
-                        <span class="lang-ar">EN</span>
-                        <span class="lang-en hidden">AR</span>
-                    </button>
-                    <a href="https://cal.com/rbconsult/discovery" target="_blank" class="px-4 py-2 bg-zinc-900 text-white text-sm rounded-md hover:bg-zinc-800 transition">
-                        <span class="lang-ar">احجز استشارة</span>
-                        <span class="lang-en hidden">Book Consultation</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="max-w-3xl">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                    <span class="lang-ar">تطوير برمجيات احترافي<br>للأعمال الحديثة</span>
-                    <span class="lang-en hidden">Custom Software Development<br>for Modern Businesses</span>
-                </h1>
-                <p class="text-xl text-zinc-600 mb-8">
-                    <span class="lang-ar">نبني تطبيقات جوال ومواقع ويب احترافية باستخدام Flutter وReact والتقنيات الحديثة</span>
-                    <span class="lang-en hidden">We build professional mobile applications and websites using Flutter, React, and modern technologies</span>
-                </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="https://cal.com/rbconsult/discovery" target="_blank" class="px-6 py-3 bg-zinc-900 text-white rounded-md hover:bg-zinc-800 transition">
-                        <span class="lang-ar">ابدأ مشروعك</span>
-                        <span class="lang-en hidden">Start Your Project</span>
-                    </a>
-                    <a href="/case-studies/abyan-capital.html" class="px-6 py-3 border border-zinc-300 rounded-md hover:bg-zinc-50 transition">
-                        <span class="lang-ar">شاهد أعمالنا</span>
-                        <span class="lang-en hidden">View Our Work</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-zinc-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">
-                    <span class="lang-ar">خدماتنا</span>
-                    <span class="lang-en hidden">Our Services</span>
-                </h2>
-                <p class="text-zinc-600">
-                    <span class="lang-ar">حلول برمجية متكاملة لأعمالك</span>
-                    <span class="lang-en hidden">Complete software solutions for your business</span>
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-6">
-                <!-- Mobile App Development -->
-                <a href="/app-development.html" class="group bg-white rounded-lg p-6 border border-zinc-200 hover:border-zinc-300 transition">
-                    <div class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zinc-200 transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-lg mb-2">
-                        <span class="lang-ar">تطوير تطبيقات الجوال</span>
-                        <span class="lang-en hidden">Mobile App Development</span>
-                    </h3>
-                    <p class="text-zinc-600 text-sm mb-3">
-                        <span class="lang-ar">تطبيقات iOS و Android احترافية باستخدام Flutter والتقنيات الأصلية</span>
-                        <span class="lang-en hidden">Professional iOS and Android apps using Flutter and native technologies</span>
-                    </p>
-                    <div class="text-sm text-zinc-500">
-                        <span class="lang-ar">Flutter • iOS • Android</span>
-                        <span class="lang-en hidden">Flutter • iOS • Android</span>
-                    </div>
-                </a>
-
-                <!-- Web Development -->
-                <a href="/web-development.html" class="group bg-white rounded-lg p-6 border border-zinc-200 hover:border-zinc-300 transition">
-                    <div class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zinc-200 transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-lg mb-2">
-                        <span class="lang-ar">تطوير مواقع الويب</span>
-                        <span class="lang-en hidden">Web Development</span>
-                    </h3>
-                    <p class="text-zinc-600 text-sm mb-3">
-                        <span class="lang-ar">مواقع وتطبيقات ويب حديثة باستخدام React وNode.js</span>
-                        <span class="lang-en hidden">Modern websites and web applications using React and Node.js</span>
-                    </p>
-                    <div class="text-sm text-zinc-500">
-                        <span class="lang-ar">React • Node.js • Next.js</span>
-                        <span class="lang-en hidden">React • Node.js • Next.js</span>
-                    </div>
-                </a>
-
-                <!-- Adjust SDK Integration -->
-                <a href="/adjust-integration.html" class="group bg-white rounded-lg p-6 border border-zinc-200 hover:border-zinc-300 transition">
-                    <div class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zinc-200 transition">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="font-semibold text-lg mb-2">
-                        <span class="lang-ar">تكامل Adjust SDK</span>
-                        <span class="lang-en hidden">Adjust SDK Integration</span>
-                    </h3>
-                    <p class="text-zinc-600 text-sm mb-3">
-                        <span class="lang-ar">تتبع دقيق للمستخدمين وتحليلات متقدمة لتطبيقك</span>
-                        <span class="lang-en hidden">Precise user tracking and advanced analytics for your app</span>
-                    </p>
-                    <div class="text-sm text-zinc-500">
-                        <span class="lang-ar">Attribution • Analytics • Tracking</span>
-                        <span class="lang-en hidden">Attribution • Analytics • Tracking</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Case Study Preview -->
-    <section class="py-20">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="bg-zinc-900 rounded-2xl p-8 md:p-12 text-white">
-                <div class="max-w-3xl">
-                    <div class="text-sm text-zinc-400 mb-4">
-                        <span class="lang-ar">دراسة حالة</span>
-                        <span class="lang-en hidden">Case Study</span>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-bold mb-4">Abyan Capital</h3>
-                    <p class="text-zinc-300 mb-6">
-                        <span class="lang-ar">تكامل Adjust SDK لتتبع دقيق للمستخدمين وتحسين أداء الحملات الإعلانية</span>
-                        <span class="lang-en hidden">Adjust SDK integration for precise user tracking and campaign optimization</span>
-                    </p>
-                    <a href="/case-studies/abyan-capital.html" class="inline-flex items-center gap-2 text-gold hover:text-gold-dark transition">
-                        <span class="lang-ar">اقرأ المزيد</span>
-                        <span class="lang-en hidden">Read More</span>
-                        <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Process Section -->
-    <section class="py-20 bg-zinc-50">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">
-                    <span class="lang-ar">كيف نعمل</span>
-                    <span class="lang-en hidden">How We Work</span>
-                </h2>
-                <p class="text-zinc-600">
-                    <span class="lang-ar">عملية واضحة ومنظمة من البداية إلى النهاية</span>
-                    <span class="lang-en hidden">Clear and organized process from start to finish</span>
-                </p>
-            </div>
-            
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="text-center">
-                    <div class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4 font-semibold">1</div>
-                    <h3 class="font-semibold mb-2">
-                        <span class="lang-ar">الاكتشاف</span>
-                        <span class="lang-en hidden">Discovery</span>
-                    </h3>
+                <div
+                    class="pt-8 border-t border-zinc-200 flex flex-col md:flex-row justify-between items-center gap-4"
+                >
                     <p class="text-sm text-zinc-600">
-                        <span class="lang-ar">نفهم احتياجاتك وأهدافك</span>
-                        <span class="lang-en hidden">Understanding your needs and goals</span>
+                        <span class="lang-ar"
+                            >© 2025 رياض البحرين للاستشارات ذ.م.م</span
+                        >
+                        <span class="lang-en hidden"
+                            >© 2025 RIYADH AL BAHRAIN CONSULTANCY WLL</span
+                        >
                     </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4 font-semibold">2</div>
-                    <h3 class="font-semibold mb-2">
-                        <span class="lang-ar">التخطيط</span>
-                        <span class="lang-en hidden">Planning</span>
-                    </h3>
-                    <p class="text-sm text-zinc-600">
-                        <span class="lang-ar">وضع خطة تفصيلية للمشروع</span>
-                        <span class="lang-en hidden">Creating detailed project roadmap</span>
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4 font-semibold">3</div>
-                    <h3 class="font-semibold mb-2">
-                        <span class="lang-ar">التطوير</span>
-                        <span class="lang-en hidden">Development</span>
-                    </h3>
-                    <p class="text-sm text-zinc-600">
-                        <span class="lang-ar">بناء الحل بأعلى معايير الجودة</span>
-                        <span class="lang-en hidden">Building with highest quality standards</span>
-                    </p>
-                </div>
-                
-                <div class="text-center">
-                    <div class="w-12 h-12 bg-zinc-900 text-white rounded-lg flex items-center justify-center mx-auto mb-4 font-semibold">4</div>
-                    <h3 class="font-semibold mb-2">
-                        <span class="lang-ar">الإطلاق</span>
-                        <span class="lang-en hidden">Launch</span>
-                    </h3>
-                    <p class="text-sm text-zinc-600">
-                        <span class="lang-ar">نشر وتسليم المشروع</span>
-                        <span class="lang-en hidden">Deploying and delivering your project</span>
-                    </p>
+                    <p class="text-sm text-zinc-600">CR No. 175236-1</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
 
-    <!-- Tech Stack -->
-    <section class="py-20">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold mb-4">
-                    <span class="lang-ar">التقنيات المستخدمة</span>
-                    <span class="lang-en hidden">Technologies We Use</span>
-                </h2>
-            </div>
-            
-            <div class="flex flex-wrap justify-center gap-8">
-                <div class="text-center">
-                    <div class="text-3xl mb-2 font-mono">Flutter</div>
-                    <div class="text-xs text-zinc-500">Mobile</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl mb-2 font-mono">React</div>
-                    <div class="text-xs text-zinc-500">Frontend</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl mb-2 font-mono">Node.js</div>
-                    <div class="text-xs text-zinc-500">Backend</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl mb-2 font-mono">Swift</div>
-                    <div class="text-xs text-zinc-500">iOS</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl mb-2 font-mono">Kotlin</div>
-                    <div class="text-xs text-zinc-500">Android</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl mb-2 font-mono">Adjust</div>
-                    <div class="text-xs text-zinc-500">Analytics</div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <!-- WhatsApp Float -->
+        <a
+            href="https://wa.me/97339587730"
+            target="_blank"
+            class="fixed bottom-6 right-6 rtl:left-6 rtl:right-auto w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition z-50"
+        >
+            <svg
+                class="w-7 h-7 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"
+                />
+            </svg>
+        </a>
 
-    <!-- CTA Section -->
-    <section class="py-20 bg-zinc-900 text-white">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-4">
-                <span class="lang-ar">جاهز لبدء مشروعك؟</span>
-                <span class="lang-en hidden">Ready to Start Your Project?</span>
-            </h2>
-            <p class="text-zinc-400 mb-8">
-                <span class="lang-ar">احجز مكالمة استكشافية مجانية لمناقشة مشروعك</span>
-                <span class="lang-en hidden">Book a free discovery call to discuss your project</span>
-            </p>
-            <div class="flex flex-wrap gap-4 justify-center">
-                <a href="https://cal.com/rbconsult/discovery" target="_blank" class="px-6 py-3 bg-white text-zinc-900 rounded-md hover:bg-zinc-100 transition">
-                    <span class="lang-ar">احجز مكالمة</span>
-                    <span class="lang-en hidden">Book a Call</span>
-                </a>
-                <a href="https://wa.me/97339587730" target="_blank" class="px-6 py-3 border border-zinc-700 rounded-md hover:bg-zinc-800 transition">
-                    <span class="lang-ar">واتساب</span>
-                    <span class="lang-en hidden">WhatsApp</span>
-                </a>
-            </div>
-        </div>
-    </section>
+        <script>
+            // Language toggle
+            let currentLang = localStorage.getItem("language") || "ar";
 
-    <!-- Footer -->
-    <footer class="py-12 border-t border-zinc-200">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div>
-                    <img src="/logo/logo-square-transparent.png" alt="RBConsult" class="w-10 h-10 mb-4">
-                    <p class="text-sm text-zinc-600">
-                        <span class="lang-ar">تطوير برمجيات احترافي</span>
-                        <span class="lang-en hidden">Professional Software Development</span>
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-3">
-                        <span class="lang-ar">الخدمات</span>
-                        <span class="lang-en hidden">Services</span>
-                    </h4>
-                    <ul class="space-y-2 text-sm text-zinc-600">
-                        <li><a href="/app-development.html" class="hover:text-zinc-900">
-                            <span class="lang-ar">تطوير التطبيقات</span>
-                            <span class="lang-en hidden">App Development</span>
-                        </a></li>
-                        <li><a href="/web-development.html" class="hover:text-zinc-900">
-                            <span class="lang-ar">تطوير المواقع</span>
-                            <span class="lang-en hidden">Web Development</span>
-                        </a></li>
-                        <li><a href="/adjust-integration.html" class="hover:text-zinc-900">
-                            <span class="lang-ar">Adjust SDK</span>
-                            <span class="lang-en hidden">Adjust SDK</span>
-                        </a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-3">
-                        <span class="lang-ar">الشركة</span>
-                        <span class="lang-en hidden">Company</span>
-                    </h4>
-                    <ul class="space-y-2 text-sm text-zinc-600">
-                        <li><a href="/about.html" class="hover:text-zinc-900">
-                            <span class="lang-ar">من نحن</span>
-                            <span class="lang-en hidden">About</span>
-                        </a></li>
-                        <li><a href="/case-studies/abyan-capital.html" class="hover:text-zinc-900">
-                            <span class="lang-ar">دراسة حالة</span>
-                            <span class="lang-en hidden">Case Study</span>
-                        </a></li>
-                        <li><a href="/contact.html" class="hover:text-zinc-900">
-                            <span class="lang-ar">تواصل</span>
-                            <span class="lang-en hidden">Contact</span>
-                        </a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-3">
-                        <span class="lang-ar">قانوني</span>
-                        <span class="lang-en hidden">Legal</span>
-                    </h4>
-                    <ul class="space-y-2 text-sm text-zinc-600">
-                        <li><a href="/terms.html" class="hover:text-zinc-900">
-                            <span class="lang-ar">الشروط</span>
-                            <span class="lang-en hidden">Terms</span>
-                        </a></li>
-                        <li><a href="/privacy.html" class="hover:text-zinc-900">
-                            <span class="lang-ar">الخصوصية</span>
-                            <span class="lang-en hidden">Privacy</span>
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="pt-8 border-t border-zinc-200 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p class="text-sm text-zinc-600">
-                    <span class="lang-ar">© 2024 رياض البحرين للاستشارات ذ.م.م</span>
-                    <span class="lang-en hidden">© 2024 RIYADH AL BAHRAIN CONSULTANCY WLL</span>
-                </p>
-                <p class="text-sm text-zinc-600">CR No. 175236-1</p>
-            </div>
-        </div>
-    </footer>
+            function setLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem("language", lang);
+                document.documentElement.lang = lang;
+                document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
 
-    <!-- WhatsApp Float -->
-    <a href="https://wa.me/97339587730" target="_blank" class="fixed bottom-6 right-6 rtl:left-6 rtl:right-auto w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition z-50">
-        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.149-.67.149-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.123-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-    </a>
+                document.querySelectorAll(".lang-ar").forEach((el) => {
+                    el.classList.toggle("hidden", lang !== "ar");
+                });
+                document.querySelectorAll(".lang-en").forEach((el) => {
+                    el.classList.toggle("hidden", lang !== "en");
+                });
+            }
 
-    <script>
-        // Language toggle
-        let currentLang = localStorage.getItem('language') || 'ar';
-        
-        function setLanguage(lang) {
-            currentLang = lang;
-            localStorage.setItem('language', lang);
-            document.documentElement.lang = lang;
-            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-            
-            document.querySelectorAll('.lang-ar').forEach(el => {
-                el.classList.toggle('hidden', lang !== 'ar');
-            });
-            document.querySelectorAll('.lang-en').forEach(el => {
-                el.classList.toggle('hidden', lang !== 'en');
-            });
-        }
-        
-        function toggleLanguage() {
-            setLanguage(currentLang === 'ar' ? 'en' : 'ar');
-        }
-        
-        // Initialize
-        setLanguage(currentLang);
-    </script>
-</body>
+            function toggleLanguage() {
+                setLanguage(currentLang === "ar" ? "en" : "ar");
+            }
+
+            // Initialize
+            setLanguage(currentLang);
+        </script>
+    </body>
 </html>
