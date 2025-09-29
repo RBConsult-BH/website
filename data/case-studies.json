@@ -1,0 +1,125 @@
+[
+  {
+    "id": "fintech-mobile-app",
+    "slug": "fintech-mobile-app",
+    "title": {
+      "ar": "تطبيق مالي متقدم",
+      "en": "Advanced FinTech Mobile App"
+    },
+    "description": {
+      "ar": "تطوير تطبيق مصرفي شامل مع ميزات الدفع المتقدمة وأمان عالي المستوى",
+      "en": "Development of comprehensive banking app with advanced payment features and high-level security"
+    },
+    "industry": {
+      "ar": "التكنولوجيا المالية",
+      "en": "Financial Technology"
+    },
+    "services": [
+      { "ar": "تطوير Flutter", "en": "Flutter Development" },
+      { "ar": "تكامل API مصرفي", "en": "Banking API Integration" },
+      { "ar": "أمان التطبيقات", "en": "App Security" },
+      { "ar": "اختبارات الأمان", "en": "Security Testing" }
+    ],
+    "technologies": ["Flutter", "Dart", "Firebase", "REST API", "OAuth", "Biometric Auth"],
+    "image": "/clients/fintech-app.png",
+    "url": "/case-studies/fintech-mobile-app.html",
+    "featured": true,
+    "completed": "2024",
+    "results": {
+      "ar": [
+        "تقليل وقت المعاملات بنسبة 70%",
+        "زيادة مستوى الأمان بنسبة 95%",
+        "تحسين تجربة المستخدم بشكل كبير",
+        "تحقيق معدل رضا 98% من المستخدمين"
+      ],
+      "en": [
+        "70% reduction in transaction time",
+        "95% improvement in security level",
+        "Significant improvement in user experience",
+        "98% user satisfaction rate achieved"
+      ]
+    }
+  },
+  {
+    "id": "ecommerce-platform",
+    "slug": "ecommerce-platform",
+    "title": {
+      "ar": "منصة تجارة إلكترونية شاملة",
+      "en": "Comprehensive E-commerce Platform"
+    },
+    "description": {
+      "ar": "تطوير منصة تجارة إلكترونية متعددة البائعين مع نظام إدارة متقدم",
+      "en": "Development of multi-vendor e-commerce platform with advanced management system"
+    },
+    "industry": {
+      "ar": "التجارة الإلكترونية",
+      "en": "E-commerce"
+    },
+    "services": [
+      { "ar": "تطوير React", "en": "React Development" },
+      { "ar": "تطوير Node.js", "en": "Node.js Development" },
+      { "ar": "تكامل الدفع", "en": "Payment Integration" },
+      { "ar": "إدارة المخزون", "en": "Inventory Management" }
+    ],
+    "technologies": ["React", "Node.js", "PostgreSQL", "Stripe", "AWS", "Docker"],
+    "image": "/clients/ecommerce-platform.png",
+    "url": "/case-studies/ecommerce-platform.html",
+    "featured": false,
+    "completed": "2024",
+    "results": {
+      "ar": [
+        "زيادة المبيعات بنسبة 150%",
+        "تحسين سرعة التحميل بنسبة 60%",
+        "دعم أكثر من 1000 منتج",
+        "تقليل التكاليف التشغيلية بنسبة 40%"
+      ],
+      "en": [
+        "150% increase in sales",
+        "60% improvement in loading speed",
+        "Support for over 1000 products",
+        "40% reduction in operational costs"
+      ]
+    }
+  },
+  {
+    "id": "healthcare-app",
+    "slug": "healthcare-app",
+    "title": {
+      "ar": "تطبيق إدارة الرعاية الصحية",
+      "en": "Healthcare Management App"
+    },
+    "description": {
+      "ar": "تطبيق شامل لإدارة المواعيد الطبية والسجلات الصحية مع ميزات التطبيب عن بُعد",
+      "en": "Comprehensive app for managing medical appointments and health records with telemedicine features"
+    },
+    "industry": {
+      "ar": "الرعاية الصحية",
+      "en": "Healthcare"
+    },
+    "services": [
+      { "ar": "تطوير تطبيقات الجوال", "en": "Mobile App Development" },
+      { "ar": "تكامل API طبي", "en": "Medical API Integration" },
+      { "ar": "امتثال HIPAA", "en": "HIPAA Compliance" },
+      { "ar": "مكالمات فيديو", "en": "Video Calling" }
+    ],
+    "technologies": ["Flutter", "WebRTC", "Firebase", "HL7 FHIR", "AWS", "Encryption"],
+    "image": "/clients/healthcare-app.png",
+    "url": "/case-studies/healthcare-app.html",
+    "featured": false,
+    "completed": "2023",
+    "results": {
+      "ar": [
+        "تقليل أوقات الانتظار بنسبة 80%",
+        "زيادة رضا المرضى بنسبة 95%",
+        "توفير التكاليف بنسبة 50%",
+        "تحسين كفاءة الأطباء بنسبة 65%"
+      ],
+      "en": [
+        "80% reduction in waiting times",
+        "95% increase in patient satisfaction",
+        "50% cost savings",
+        "65% improvement in doctor efficiency"
+      ]
+    }
+  }
+]
