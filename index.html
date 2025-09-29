@@ -83,132 +83,115 @@
             }
         </script>
 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            gold: "#B99855",
-                            "gold-dark": "#A88744",
-                        },
-                    },
-                },
-            };
-        </script>
+        <!-- Custom CSS Framework -->
+        <link rel="stylesheet" href="/css/styles.css">
+        
+        <!-- Enhanced JavaScript Modules -->
+        <script src="/js/language.js"></script>
+        <script src="/js/case-studies.js"></script>
+        <script src="/js/components.js"></script>
     </head>
     <body class="bg-white text-zinc-900">
         <!-- Navigation -->
-        <nav
-            class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-zinc-100 z-50"
-        >
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="flex items-center justify-between h-16">
-                    <div class="flex items-center gap-8">
-                        <a href="/" class="flex items-center gap-3">
-                            <img
-                                src="/logo/logo-square-transparent.png"
-                                alt="RBConsult"
-                                class="w-8 h-8"
-                            />
-                            <span class="font-semibold text-lg">RBConsult</span>
-                        </a>
-                        <div class="hidden md:flex items-center gap-6">
-                            <a
-                                href="#services"
-                                class="text-sm text-zinc-600 hover:text-zinc-900 transition"
-                            >
-                                <span class="lang-ar">الخدمات</span>
-                                <span class="lang-en hidden">Services</span>
-                            </a>
-                            <a
-                                href="/case-studies/abyan-capital.html"
-                                class="text-sm text-zinc-600 hover:text-zinc-900 transition"
-                            >
-                                <span class="lang-ar">دراسة حالة</span>
-                                <span class="lang-en hidden">Case Study</span>
-                            </a>
-                            <a
-                                href="/about.html"
-                                class="text-sm text-zinc-600 hover:text-zinc-900 transition"
-                            >
-                                <span class="lang-ar">من نحن</span>
-                                <span class="lang-en hidden">About</span>
-                            </a>
-                            <a
-                                href="/contact.html"
-                                class="text-sm text-zinc-600 hover:text-zinc-900 transition"
-                            >
-                                <span class="lang-ar">تواصل</span>
-                                <span class="lang-en hidden">Contact</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <button
-                            onclick="toggleLanguage()"
-                            class="px-3 py-1.5 text-xs bg-zinc-100 hover:bg-zinc-200 rounded-md transition"
-                        >
-                            <span class="lang-ar">EN</span>
-                            <span class="lang-en hidden">AR</span>
-                        </button>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="flex items-center gap-8">
+                    <a href="/" class="flex items-center gap-3">
+                        <img
+                            src="/logo/logo-square-transparent.png"
+                            alt="RBConsult"
+                            class="w-8 h-8"
+                        />
+                        <span class="font-semibold text-lg">RBConsult</span>
+                    </a>
+                    <div class="hidden md:flex items-center gap-6">
                         <a
-                            href="https://cal.com/rbconsult/discovery"
-                            target="_blank"
-                            class="px-4 py-2 bg-zinc-900 text-white text-sm rounded-md hover:bg-zinc-800 transition"
+                            href="#services"
+                            class="text-sm text-zinc-600 hover:text-zinc-900 transition"
                         >
-                            <span class="lang-ar">
-                                احجز احجز مكالمة استكشافية
-                            </span>
-                            <span class="lang-en hidden"
-                                >Book a Discovery Call</span
-                            >
+                            <span class="lang-ar">الخدمات</span>
+                            <span class="lang-en hidden">Services</span>
+                        </a>
+                        <a
+                            href="/case-studies/abyan-capital.html"
+                            class="text-sm text-zinc-600 hover:text-zinc-900 transition"
+                        >
+                            <span class="lang-ar">دراسة حالة</span>
+                            <span class="lang-en hidden">Case Study</span>
+                        </a>
+                        <a
+                            href="/about.html"
+                            class="text-sm text-zinc-600 hover:text-zinc-900 transition"
+                        >
+                            <span class="lang-ar">من نحن</span>
+                            <span class="lang-en hidden">About</span>
+                        </a>
+                        <a
+                            href="/contact.html"
+                            class="text-sm text-zinc-600 hover:text-zinc-900 transition"
+                        >
+                            <span class="lang-ar">تواصل</span>
+                            <span class="lang-en hidden">Contact</span>
                         </a>
                     </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button
+                        class="language-toggle"
+                        data-language-toggle
+                        data-tooltip="Switch Language"
+                        data-tooltip-position="bottom"
+                    >
+                        <span class="lang-ar">EN</span>
+                        <span class="lang-en hidden">AR</span>
+                    </button>
+                    <a
+                        href="https://cal.com/rbconsult/discovery"
+                        target="_blank"
+                        class="btn btn-primary btn-modern"
+                        data-tooltip="Book a free consultation"
+                    >
+                        <span class="lang-ar">احجز مكالمة استكشافية</span>
+                        <span class="lang-en hidden">Book a Discovery Call</span>
+                    </a>
                 </div>
             </div>
         </nav>
 
         <!-- Hero Section -->
-        <section class="pt-32 pb-20 px-4">
-            <div class="max-w-6xl mx-auto">
-                <div class="max-w-3xl">
-                    <h1
-                        class="text-4xl md:text-5xl font-bold mb-6 leading-tight"
-                    >
-                        <span class="lang-ar"
-                            >تطوير برمجيات احترافي<br />للأعمال الحديثة</span
-                        >
-                        <span class="lang-en hidden"
-                            >Custom Software Development<br />for Modern
-                            Businesses</span
-                        >
+        <section class="pt-32 pb-20 px-4 hero-gradient animate-on-scroll">
+            <div class="container">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6 animate-fade-in">
+                        <span class="lang-ar">
+                            تطوير برمجيات احترافي<br />
+                            للأعمال الحديثة
+                        </span>
+                        <span class="lang-en hidden">
+                            Custom Software Development<br />
+                            for Modern Businesses
+                        </span>
                     </h1>
-                    <p class="text-xl text-zinc-600 mb-8">
-                        <span class="lang-ar"
-                            >نبني تطبيقات جوال ومواقع ويب احترافية باستخدام
-                            Flutter وReact والتقنيات الحديثة</span
-                        >
-                        <span class="lang-en hidden"
-                            >We build professional mobile applications and
-                            websites using Flutter, React, and modern
-                            technologies</span
-                        >
+                    <p class="text-lg text-zinc-600 mb-8 animate-slide-in-right">
+                        <span class="lang-ar">
+                            نبني تطبيقات جوال ومواقع ويب احترافية باستخدام Flutter وReact والتقنيات الحديثة
+                        </span>
+                        <span class="lang-en hidden">
+                            We build professional mobile applications and websites using Flutter, React, and modern technologies
+                        </span>
                     </p>
-                    <div class="flex flex-wrap gap-4">
+                    <div class="flex flex-wrap gap-4 justify-center">
                         <a
                             href="https://cal.com/rbconsult/discovery"
                             target="_blank"
-                            class="px-6 py-3 bg-zinc-900 text-white rounded-md hover:bg-zinc-800 transition"
+                            class="btn btn-primary btn-modern btn-ripple"
                         >
                             <span class="lang-ar">ابدأ مشروعك</span>
-                            <span class="lang-en hidden"
-                                >Start Your Project</span
-                            >
+                            <span class="lang-en hidden">Start Your Project</span>
                         </a>
                         <a
                             href="/case-studies/abyan-capital.html"
-                            class="px-6 py-3 border border-zinc-300 rounded-md hover:bg-zinc-50 transition"
+                            class="btn btn-secondary btn-ripple"
                         >
                             <span class="lang-ar">شاهد أعمالنا</span>
                             <span class="lang-en hidden">View Our Work</span>
@@ -238,7 +221,7 @@
                     <!-- Mobile App Development -->
                     <a
                         href="/app-development.html"
-                        class="group bg-white rounded-lg p-6 border border-zinc-200 hover:border-zinc-300 transition"
+                        class="service-card group block"
                     >
                         <div
                             class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zinc-200 transition"
@@ -284,7 +267,7 @@
                     <!-- Web Development -->
                     <a
                         href="/web-development.html"
-                        class="group bg-white rounded-lg p-6 border border-zinc-200 hover:border-zinc-300 transition"
+                        class="service-card group block"
                     >
                         <div
                             class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zinc-200 transition"
@@ -330,7 +313,7 @@
                     <!-- Adjust SDK Integration -->
                     <a
                         href="/adjust-integration.html"
-                        class="group bg-white rounded-lg p-6 border border-zinc-200 hover:border-zinc-300 transition"
+                        class="service-card group block"
                     >
                         <div
                             class="w-12 h-12 bg-zinc-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zinc-200 transition"
@@ -379,48 +362,20 @@
         </section>
 
         <!-- Case Study Preview -->
-        <section class="py-20">
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="bg-zinc-900 rounded-2xl p-8 md:p-12 text-white">
-                    <div class="max-w-3xl">
-                        <div class="text-sm text-zinc-400 mb-4">
-                            <span class="lang-ar">دراسة حالة</span>
-                            <span class="lang-en hidden">Case Study</span>
-                        </div>
-                        <h3 class="text-2xl md:text-3xl font-bold mb-4">
-                            Abyan Capital
-                        </h3>
-                        <p class="text-zinc-300 mb-6">
-                            <span class="lang-ar"
-                                >تكامل Adjust SDK لتتبع دقيق للمستخدمين وتحسين
-                                أداء الحملات الإعلانية</span
-                            >
-                            <span class="lang-en hidden"
-                                >Adjust SDK integration for precise user
-                                tracking and campaign optimization</span
-                            >
-                        </p>
-                        <a
-                            href="/case-studies/abyan-capital.html"
-                            class="inline-flex items-center gap-2 text-gold hover:text-gold-dark transition"
-                        >
-                            <span class="lang-ar">اقرأ المزيد</span>
-                            <span class="lang-en hidden">Read More</span>
-                            <svg
-                                class="w-4 h-4 rtl:rotate-180"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                            >
-                                <path
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M9 5l7 7-7 7"
-                                ></path>
-                            </svg>
-                        </a>
-                    </div>
+        <section class="py-20 animate-on-scroll">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">
+                        <span class="lang-ar">دراسات الحالة</span>
+                        <span class="lang-en hidden">Case Studies</span>
+                    </h2>
+                    <p class="text-zinc-600">
+                        <span class="lang-ar">مشاريع ناجحة حققت نتائج استثنائية</span>
+                        <span class="lang-en hidden">Successful projects that achieved exceptional results</span>
+                    </p>
+                </div>
+                <div id="featured-case-studies" class="grid md:grid-cols-1 gap-6 max-w-4xl mx-auto">
+                    <!-- Case studies will be loaded here by the Case Study Manager -->
                 </div>
             </div>
         </section>
@@ -770,30 +725,29 @@
             </svg>
         </a>
 
+        <!-- Modern Components and Enhancements -->
         <script>
-            // Language toggle
-            let currentLang = localStorage.getItem("language") || "ar";
-
-            function setLanguage(lang) {
-                currentLang = lang;
-                localStorage.setItem("language", lang);
-                document.documentElement.lang = lang;
-                document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-
-                document.querySelectorAll(".lang-ar").forEach((el) => {
-                    el.classList.toggle("hidden", lang !== "ar");
+            // Initialize enhanced features
+            document.addEventListener('DOMContentLoaded', function() {
+                // Add animation classes to elements
+                document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                    el.classList.add('animate-fade-in');
                 });
-                document.querySelectorAll(".lang-en").forEach((el) => {
-                    el.classList.toggle("hidden", lang !== "en");
+                
+                // Enhanced smooth scrolling
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
                 });
-            }
-
-            function toggleLanguage() {
-                setLanguage(currentLang === "ar" ? "en" : "ar");
-            }
-
-            // Initialize
-            setLanguage(currentLang);
+            });
         </script>
     </body>
 </html>

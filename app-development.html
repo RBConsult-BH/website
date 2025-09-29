@@ -1,53 +1,44 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>
-            Mobile App Development | Flutter & Native Technologies | RBConsult
-        </title>
+        <title>تطوير تطبيقات الجوال | Flutter والتقنيات الأصلية | RBConsult</title>
         <meta
             name="description"
-            content="Professional mobile app development using Flutter and native technologies. From concept to App Store launch with modern UI/UX design."
+            content="تطوير تطبيقات الجوال الاحترافية باستخدام Flutter والتقنيات الأصلية. من الفكرة إلى إطلاق التطبيق في متجر التطبيقات مع تصميم UI/UX حديث."
         />
         <meta
             name="keywords"
-            content="mobile app development, Flutter development, iOS development, Android development, cross-platform apps, app design, UI UX design, mobile developers"
+            content="تطوير تطبيقات الجوال, تطوير Flutter, تطوير iOS, تطوير Android, تطبيقات متعددة المنصات, تصميم التطبيقات, تصميم UI UX, مطورين تطبيقات الجوال"
         />
         <meta name="author" content="RBConsult" />
-        <meta
-            property="og:title"
-            content="Mobile App Development | Flutter & Native Technologies | RBConsult"
-        />
-        <meta
-            property="og:description"
-            content="Professional mobile app development with Flutter and native technologies. Expert team delivering premium apps from concept to App Store launch."
-        />
+        
+        <!-- Open Graph -->
+        <meta property="og:title" content="تطوير تطبيقات الجوال | Flutter والتقنيات الأصلية | RBConsult" />
+        <meta property="og:description" content="تطوير تطبيقات الجوال الاحترافية باستخدام Flutter والتقنيات الأصلية. فريق خبير يقدم تطبيقات متميزة من الفكرة إلى إطلاق التطبيق." />
         <meta property="og:type" content="website" />
-        <meta
-            property="og:url"
-            content="https://rbconsult.bh/app-development.html"
-        />
+        <meta property="og:url" content="https://rbconsult.bh/app-development.html" />
         <meta property="og:image" content="https://rbconsult.bh/og-image.png" />
+        
+        <!-- Twitter -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="rbconsult.bh" />
-        <meta
-            property="twitter:url"
-            content="https://rbconsult.bh/app-development.html"
-        />
-        <meta
-            name="twitter:title"
-            content="Mobile App Development | Flutter & Native Technologies"
-        />
-        <meta
-            name="twitter:description"
-            content="Professional mobile app development using Flutter and native technologies. Complete development from concept to App Store launch."
-        />
-        <meta
-            name="twitter:image"
-            content="https://rbconsult.bh/og-image.png"
-        />
-        <link
+        <meta property="twitter:url" content="https://rbconsult.bh/app-development.html" />
+        <meta name="twitter:title" content="تطوير تطبيقات الجوال | Flutter والتقنيات الأصلية" />
+        <meta name="twitter:description" content="تطوير تطبيقات الجوال الاحترافية باستخدام Flutter والتقنيات الأصلية. تطوير شامل من الفكرة إلى إطلاق التطبيق." />
+        <meta name="twitter:image" content="https://rbconsult.bh/og-image.png" />
+        
+        <link rel="canonical" href="https://rbconsult.bh/app-development.html" />
+        <link rel="icon" type="image/png" href="/logo/logo-square-transparent.png" />
+        
+        <!-- Custom CSS Framework -->
+        <link rel="stylesheet" href="/css/styles.css">
+        
+        <!-- Enhanced JavaScript Modules -->
+        <script src="/js/language.js"></script>
+        <script src="/js/case-studies.js"></script>
+        <script src="/js/components.js"></script>
             rel="canonical"
             href="https://rbconsult.bh/app-development.html"
         />
@@ -60,72 +51,104 @@
             type="image/png"
             href="/logo/logo-square-transparent.png"
         />
-        <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="bg-white text-zinc-900">
-        <nav
-            class="border-b border-zinc-200 bg-white/90 backdrop-blur-sm sticky top-0 z-50"
-        >
-            <div class="max-w-6xl mx-auto px-4">
-                <div class="flex justify-between items-center h-16">
-                    <a href="/" class="flex items-center space-x-2">
+        <!-- Navigation -->
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="flex items-center gap-8">
+                    <a href="/" class="flex items-center gap-3">
                         <img
                             src="/logo/logo-square-transparent.png"
                             alt="RBConsult"
                             class="w-8 h-8"
                         />
-                        <span class="font-semibold">RBConsult</span>
+                        <span class="font-semibold text-lg">RBConsult</span>
                     </a>
-                    <div class="hidden md:flex items-center space-x-8">
+                    <div class="hidden md:flex items-center gap-6">
+                        <a
+                            href="/"
+                            class="text-sm text-zinc-600 hover:text-zinc-900 transition"
+                        >
+                            <span class="lang-ar">الرئيسية</span>
+                            <span class="lang-en hidden">Home</span>
+                        </a>
                         <a
                             href="/web-development.html"
-                            class="text-sm text-zinc-600 hover:text-zinc-900"
-                            >Web Development</a
+                            class="text-sm text-zinc-600 hover:text-zinc-900 transition"
                         >
+                            <span class="lang-ar">تطوير المواقع</span>
+                            <span class="lang-en hidden">Web Development</span>
+                        </a>
                         <a
                             href="/app-development.html"
                             class="text-sm text-zinc-900 font-medium"
-                            >App Development</a
                         >
+                            <span class="lang-ar">تطوير التطبيقات</span>
+                            <span class="lang-en hidden">App Development</span>
+                        </a>
                         <a
                             href="/adjust-integration.html"
-                            class="text-sm text-zinc-600 hover:text-zinc-900"
-                            >Adjust SDK</a
+                            class="text-sm text-zinc-600 hover:text-zinc-900 transition"
                         >
+                            <span class="lang-ar">Adjust SDK</span>
+                            <span class="lang-en hidden">Adjust SDK</span>
+                        </a>
                         <a
                             href="/case-studies/abyan-capital.html"
-                            class="text-sm text-zinc-600 hover:text-zinc-900"
-                            >Case Study</a
+                            class="text-sm text-zinc-600 hover:text-zinc-900 transition"
                         >
-                        <a
-                            href="https://cal.com/rbconsult/discovery"
-                            target="_blank"
-                            rel="noopener"
-                            class="text-sm bg-zinc-900 text-white px-4 py-2 rounded-md hover:bg-zinc-800"
-                        >
-                            Book a Call
+                            <span class="lang-ar">دراسة حالة</span>
+                            <span class="lang-en hidden">Case Study</span>
                         </a>
                     </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button
+                        class="language-toggle"
+                        data-language-toggle
+                        data-tooltip="Switch Language"
+                        data-tooltip-position="bottom"
+                    >
+                        <span class="lang-ar">EN</span>
+                        <span class="lang-en hidden">AR</span>
+                    </button>
+                    <a
+                        href="https://cal.com/rbconsult/discovery"
+                        target="_blank"
+                        class="btn btn-primary btn-modern"
+                        data-tooltip="Book a free consultation"
+                    >
+                        <span class="lang-ar">احجز استشارة</span>
+                        <span class="lang-en hidden">Book a Call</span>
+                    </a>
                 </div>
             </div>
         </nav>
 
-        <section class="pt-20 pb-16 px-4">
-            <div class="max-w-6xl mx-auto">
+        <!-- Hero Section -->
+        <section class="pt-32 pb-20 px-4 hero-gradient animate-on-scroll">
+            <div class="container">
                 <div class="max-w-3xl">
                     <h1 class="text-4xl md:text-5xl font-bold mb-6">
-                        Mobile App Development
+                        <span class="lang-ar">تطوير تطبيقات الجوال</span>
+                        <span class="lang-en hidden">Mobile App Development</span>
                     </h1>
                     <p class="text-xl text-zinc-600 mb-6">
-                        We build high-performance mobile applications using
-                        Flutter and native technologies. From concept to App
-                        Store launch, we handle every aspect of mobile
-                        development.
+                        <span class="lang-ar">
+                            نبني تطبيقات جوال عالية الأداء باستخدام Flutter والتقنيات الأصلية. من الفكرة إلى إطلاق التطبيق في متجر التطبيقات، نتولى كل جانب من جوانب تطوير الهاتف المحمول.
+                        </span>
+                        <span class="lang-en hidden">
+                            We build high-performance mobile applications using Flutter and native technologies. From concept to App Store launch, we handle every aspect of mobile development.
+                        </span>
                     </p>
                     <p class="text-sm text-zinc-500 mb-8">
-                        We deliver software engineering services only. We do not
-                        offer advertising, telemarketing, or multi-level
-                        marketing services.
+                        <span class="lang-ar">
+                            نحن نقدم خدمات هندسة البرمجيات فقط. لا نقدم خدمات الإعلان أو التسويق عبر الهاتف أو التسويق متعدد المستويات.
+                        </span>
+                        <span class="lang-en hidden">
+                            We deliver software engineering services only. We do not offer advertising, telemarketing, or multi-level marketing services.
+                        </span>
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a
